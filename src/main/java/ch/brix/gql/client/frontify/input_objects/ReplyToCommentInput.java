@@ -9,7 +9,7 @@ public class ReplyToCommentInput extends ch.brix.gql.client.InputObject {
     return this;
   }
   /**
-   * `AssetComment` reply content. Can include `User` mentions by wrapping an authorized `Project` `User` Id in the form of `@[user:<id>]` where `<id>` is the `User` integer or global identifier.
+   * `AssetComment` reply content. Can include `User` mentions by wrapping an authorized `Project` `User` Id in the form of `@[user:&lt;id&gt;]` where `&lt;id&gt;` is the `User` integer or global identifier.
    */
   public ReplyToCommentInput reply(ch.brix.gql.client.frontify.scalars.StringScalar v) {
     values.put("reply", v);

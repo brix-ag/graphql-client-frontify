@@ -9,7 +9,7 @@ public class CreateAssetCommentInput extends ch.brix.gql.client.InputObject {
     return this;
   }
   /**
-   * `AssetComment` content. Can include `User` mentions by wrapping an authorized `Project` `User` Id in the form of `@[user:<id>]` where `<id>` is the `User` integer or global identifier.
+   * `AssetComment` content. Can include `User` mentions by wrapping an authorized `Project` `User` Id in the form of `@[user:&lt;id&gt;]` where `&lt;id&gt;` is the `User` integer or global identifier.
    */
   public CreateAssetCommentInput content(ch.brix.gql.client.frontify.scalars.StringScalar v) {
     values.put("content", v);

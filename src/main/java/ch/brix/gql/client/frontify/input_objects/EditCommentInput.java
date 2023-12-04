@@ -9,7 +9,7 @@ public class EditCommentInput extends ch.brix.gql.client.InputObject {
     return this;
   }
   /**
-   * `AssetComment` content to edit. Can include `User` mentions by wrapping an authorized `Project` `User` Id in the form of `@[user:<id>]` where `<id>` is the user identifier.
+   * `AssetComment` content to edit. Can include `User` mentions by wrapping an authorized `Project` `User` Id in the form of `@[user:&lt;id&gt;]` where `&lt;id&gt;` is the user identifier.
    */
   public EditCommentInput content(ch.brix.gql.client.frontify.scalars.StringScalar v) {
     values.put("content", v);
