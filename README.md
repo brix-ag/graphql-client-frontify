@@ -1,4 +1,12 @@
-> base package for the frontify client: ch.brix.gql.client.frontify
+> base package for the frontify client: **ch.brix.gql.client.frontify**
+
+```xml
+<dependency>
+   <groupId>ch.brix.gql.client</groupId>
+   <artifactId>frontify-client</artifactId>
+   <version>1.0.0</version>
+</dependency>
+```
 
 # GraphQL Client Usage
 
@@ -60,3 +68,8 @@ In the base package are two classes `Query` and `Mutation` with static methods t
        ...
    })
     ```
+
+# Versions
+
+#### 1.0.0
+> Generated & Released: 2023-12-04
