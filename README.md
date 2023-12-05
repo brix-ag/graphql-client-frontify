@@ -1,5 +1,3 @@
-> base package for the frontify client: **ch.brix.gql.client.frontify**
-
 ```xml
 <dependency>
    <groupId>ch.brix.gql.client</groupId>
@@ -14,7 +12,7 @@ A general explanation how the GraphQL clients by brix are working. In a good IDE
 
 ## Create a client
 
-In the base package you can find the class `Client` (take this one and not its parent) which can be instantiated. Constructor arguments:
+In the base package (ch.brix.gql.client.frontify) you can find the class `Client` which can be instantiated (take this one and not its super class). Constructor arguments:
 
 1. String endpoint: the endpoint for the graphQL requests
 2. (optional) the OkHttpClient
