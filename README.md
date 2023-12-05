@@ -10,7 +10,7 @@
 
 # GraphQL Client Usage
 
-A general explanation how the GraphQL clients by brix are working. In a good IDE all options can be seen with explanations right away. Basically all we do is type some letters and press enter, indentation is done automatically. Like this queries can be written very fast.
+A general explanation how the GraphQL clients by brix are working. In a good IDE all options can be seen with explanations right away. Basically all we do is type some letters and press enter (everything gets suggested), indentation is done automatically. Like this queries can be written very fast.
 
 ## Create a client
 
@@ -68,6 +68,12 @@ In the base package are two classes `Query` and `Mutation` with static methods t
        ...
    })
     ```
+   
+# About brix
+
+[brix](https://www.brix.ch/) is a Swiss software engineering company specialized in DAM and BPM.
+
+We actively use this client in our [Frontify Connector for CELUM](https://www.brix.ch/en/extensions/frontify-connect).
 
 # Versions
 
