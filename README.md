@@ -10,7 +10,7 @@
 
 # GraphQL Client Usage
 
-A general explanation how the GraphQL clients based on this one are working.
+A general explanation how the GraphQL clients by brix are working. In a good IDE all options can be seen with explanations right away. Basically all we do is type some letters and press enter, indentation is done automatically. Like this queries can be written very fast.
 
 ## Create a client
 
@@ -34,7 +34,7 @@ okHttpClient = new OkHttpClient.Builder()
 
 In the base package are two classes `Query` and `Mutation` with static methods to create calls (actually callBuilders, but they *don't* require a `build()` when finished).
 
-1. Use one of the static methods on the `Query` or `Mutation` class to get a call builder.
+1. Use one of the static methods on the `Query` or `Mutation` class to get a call builder. All the available methods can be seen.
 2. The call builder has the following methods:
     1. `args(ArgBuilder argBuilder)` if there are any arguments, there will always only be one matching ArgBuilder of that type, so there should be no confusion. An ArgBuilder has a method to set each argument, the method expects a specific scalar or an input object for which there are builders.
     2. `onType(OnTypeBuilder onTypeBuilder)` for each possible return type which has fields (so no unions, only their implementations, but interfaces can be used to request common fields of types, so they don't have to be listed for every type). As before the method expects a typed onTypeBuilder of which there is only one. 
@@ -57,7 +57,7 @@ In the base package are two classes `Query` and `Mutation` with static methods t
                                         .onImage(new On_Image()
                                                 .focalPoint())))));
     ```
-    Basically the same thing like when we would write the query manually, except that everything is done almost automatically because of the IDE suggestions and the javadoc including default values and deprecation notes helps too.
+    Basically the same thing like when we would write the query manually, except that everything is done almost automatically because of the IDE suggestions.
 3. The callBuilder created in 2. can be executed with the client, it knows the exact return type through generics and returns an object of that type, e.g.
     ```java
    Workspace workspace = client.execute(queryFromAbove);
