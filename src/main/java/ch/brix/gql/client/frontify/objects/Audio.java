@@ -145,4 +145,9 @@ public class Audio implements ch.brix.gql.client.frontify.interfaces.Node, ch.br
    */
   @com.google.gson.annotations.SerializedName("previewUrl")
   private ch.brix.gql.client.frontify.scalars.UrlScalar previewUrl;
+  /**
+   * Provides a `Url` for the custom user defined thumbnail or a system generated one when possible.
+   */
+  @com.google.gson.annotations.SerializedName("thumbnailUrl")
+  private ch.brix.gql.client.frontify.scalars.UrlScalar thumbnailUrl;
 }

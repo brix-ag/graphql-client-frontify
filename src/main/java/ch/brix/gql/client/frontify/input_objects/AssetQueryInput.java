@@ -37,7 +37,7 @@ public class AssetQueryInput extends ch.brix.gql.client.InputObject {
     return this;
   }
   /**
-   * **DEPRECATED** Filter the `Asset` types present in the result set.  This field will be removed. Use `types` instead. | Date: 2022-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Filter the `Asset` types present in the result set. This field will be removed. Use `types` instead. | Date: 2022-07-01T00:00:00.000+00:00
    */
   public AssetQueryInput type(java.util.List<ch.brix.gql.client.frontify.enums.AssetType> v) {
     values.put("type", v);

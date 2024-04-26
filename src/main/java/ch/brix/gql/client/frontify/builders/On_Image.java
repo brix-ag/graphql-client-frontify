@@ -189,6 +189,13 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * Provides a `Url` for the custom user defined thumbnail or a system generated one when possible.
+   */
+  public On_Image thumbnailUrl() {
+    _add_field("thumbnailUrl");
+    return this;
+  }
+  /**
    * Signed `Url` to download the original `Image` type file.
    */
   public On_Image downloadUrl(Image_downloadUrl callBuilder) {

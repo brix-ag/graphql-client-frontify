@@ -26,8 +26,8 @@ public class On_Workspace extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Amount of `Assets` contained in the `Library`/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00
-   * This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00
+   * **DEPRECATED** Amount of `Assets` contained in the `Library`/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00
+   * This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00
    */
   @java.lang.Deprecated
   public On_Workspace assetCount() {

@@ -498,6 +498,18 @@
               },
               "isDeprecated": false,
               "deprecationReason": null
+            },
+            {
+              "name": "thumbnailUrl",
+              "description": "Provides a `Url` for the custom user defined thumbnail or a system generated one when possible.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Url",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
             }
           ],
           "inputFields": null,
@@ -4194,6 +4206,18 @@
               "deprecationReason": null
             },
             {
+              "name": "thumbnailUrl",
+              "description": "Provides a `Url` for the custom user defined thumbnail or a system generated one when possible.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Url",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "downloadUrl",
               "description": "Signed `Url` to download the original `Document` type file.",
               "args": [
@@ -4772,6 +4796,18 @@
               "deprecationReason": null
             },
             {
+              "name": "thumbnailUrl",
+              "description": "Provides a `Url` for the custom user defined thumbnail or a system generated one when possible.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Url",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "downloadUrl",
               "description": "Signed `Url` to download the original `Image` type file.",
               "args": [
@@ -5328,6 +5364,18 @@
               "deprecationReason": null
             },
             {
+              "name": "thumbnailUrl",
+              "description": "Provides a `Url` for the custom user defined thumbnail or a system generated one when possible.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Url",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "downloadUrl",
               "description": "Signed `Url` to download the original `Video` type file.",
               "args": [
@@ -5879,6 +5927,18 @@
               "deprecationReason": null
             },
             {
+              "name": "thumbnailUrl",
+              "description": "Provides a `Url` for the custom user defined thumbnail or a system generated one when possible.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Url",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "downloadUrl",
               "description": "Signed `Url` to download the original `File` type file.",
               "args": [
@@ -6321,6 +6381,18 @@
                   "name": "Url",
                   "ofType": null
                 }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "thumbnailUrl",
+              "description": "Provides a `Url` for the custom user defined thumbnail or a system generated one when possible.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Url",
+                "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -8716,7 +8788,7 @@
             },
             {
               "name": "assetCount",
-              "description": "**DEPRECATED** Amount of `Assets` contained in the `Library`\/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00",
+              "description": "**DEPRECATED** Amount of `Assets` contained in the `Library`\/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00",
               "args": [],
               "type": {
                 "kind": "SCALAR",
@@ -8724,7 +8796,7 @@
                 "ofType": null
               },
               "isDeprecated": true,
-              "deprecationReason": "This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00"
+              "deprecationReason": "This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00"
             },
             {
               "name": "assets",
@@ -8994,7 +9066,7 @@
             },
             {
               "name": "assetCount",
-              "description": "**DEPRECATED** Amount of `Assets` contained in this `Library`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00",
+              "description": "**DEPRECATED** Amount of `Assets` contained in this `Library`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00",
               "args": [],
               "type": {
                 "kind": "SCALAR",
@@ -9002,7 +9074,7 @@
                 "ofType": null
               },
               "isDeprecated": true,
-              "deprecationReason": "This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00"
+              "deprecationReason": "This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00"
             },
             {
               "name": "metadataFields",
@@ -9289,7 +9361,7 @@
             },
             {
               "name": "type",
-              "description": "**DEPRECATED** Filter the `Asset` types present in the result set.  This field will be removed. Use `types` instead. | Date: 2022-07-01T00:00:00.000+00:00",
+              "description": "**DEPRECATED** Filter the `Asset` types present in the result set. This field will be removed. Use `types` instead. | Date: 2022-07-01T00:00:00.000+00:00",
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -9998,7 +10070,7 @@
           "fields": [
             {
               "name": "node",
-              "description": "`User` that has the least required permissions to collaborate on a `Library`. ",
+              "description": "`User` that has the least required permissions to collaborate on a `Library`.",
               "args": [],
               "type": {
                 "kind": "NON_NULL",
@@ -10175,7 +10247,7 @@
             },
             {
               "name": "assetCount",
-              "description": "**DEPRECATED** Amount of `Assets` contained in the `Library`\/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00",
+              "description": "**DEPRECATED** Amount of `Assets` contained in the `Library`\/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00",
               "args": [],
               "type": {
                 "kind": "SCALAR",
@@ -10183,7 +10255,7 @@
                 "ofType": null
               },
               "isDeprecated": true,
-              "deprecationReason": "This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00"
+              "deprecationReason": "This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00"
             },
             {
               "name": "assets",
@@ -10453,7 +10525,7 @@
             },
             {
               "name": "assetCount",
-              "description": "**DEPRECATED** Amount of `Assets` contained in the `Library`\/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00",
+              "description": "**DEPRECATED** Amount of `Assets` contained in the `Library`\/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00",
               "args": [],
               "type": {
                 "kind": "SCALAR",
@@ -10461,7 +10533,7 @@
                 "ofType": null
               },
               "isDeprecated": true,
-              "deprecationReason": "This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00"
+              "deprecationReason": "This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00"
             },
             {
               "name": "assets",
@@ -10731,7 +10803,7 @@
             },
             {
               "name": "assetCount",
-              "description": "**DEPRECATED** Amount of `Assets` contained in the `Library`\/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00",
+              "description": "**DEPRECATED** Amount of `Assets` contained in the `Library`\/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00",
               "args": [],
               "type": {
                 "kind": "SCALAR",
@@ -10739,7 +10811,7 @@
                 "ofType": null
               },
               "isDeprecated": true,
-              "deprecationReason": "This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00"
+              "deprecationReason": "This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00"
             },
             {
               "name": "assets",
@@ -12439,7 +12511,7 @@
           "fields": [
             {
               "name": "node",
-              "description": "`User` that has the least required permissions to collaborate on a `WorkspaceProject`. ",
+              "description": "`User` that has the least required permissions to collaborate on a `WorkspaceProject`.",
               "args": [],
               "type": {
                 "kind": "NON_NULL",
@@ -13161,6 +13233,18 @@
             {
               "name": "OLDEST",
               "description": "Sorts the results by the oldest entry`.",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NEWEST_ACTIVITY",
+              "description": "Sorts the results by the newest activity entry.",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "OLDEST_ACTIVITY",
+              "description": "Sorts the results by the oldest activity entry.",
               "isDeprecated": false,
               "deprecationReason": null
             }
@@ -14117,7 +14201,7 @@
             },
             {
               "name": "assetCount",
-              "description": "**DEPRECATED** Amount of `Assets` contained in the `Library`\/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00",
+              "description": "**DEPRECATED** Amount of `Assets` contained in the `Library`\/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00",
               "args": [],
               "type": {
                 "kind": "SCALAR",
@@ -14125,7 +14209,7 @@
                 "ofType": null
               },
               "isDeprecated": true,
-              "deprecationReason": "This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00"
+              "deprecationReason": "This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00"
             },
             {
               "name": "assets",

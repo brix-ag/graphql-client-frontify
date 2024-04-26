@@ -167,4 +167,11 @@ public class On_EmbeddedContent extends ch.brix.gql.client.TypeBuilder {
     _add_field("previewUrl");
     return this;
   }
+  /**
+   * Provides a `Url` for the custom user defined thumbnail or a system generated one when possible.
+   */
+  public On_EmbeddedContent thumbnailUrl() {
+    _add_field("thumbnailUrl");
+    return this;
+  }
 }

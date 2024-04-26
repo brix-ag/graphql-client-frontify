@@ -195,4 +195,11 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
     _add_call(callBuilder);
     return this;
   }
+  /**
+   * Provides a `Url` for the custom user defined thumbnail or a system generated one when possible.
+   */
+  public On_Audio thumbnailUrl() {
+    _add_field("thumbnailUrl");
+    return this;
+  }
 }

@@ -189,6 +189,13 @@ public class On_Document extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * Provides a `Url` for the custom user defined thumbnail or a system generated one when possible.
+   */
+  public On_Document thumbnailUrl() {
+    _add_field("thumbnailUrl");
+    return this;
+  }
+  /**
    * Signed `Url` to download the original `Document` type file.
    */
   public On_Document downloadUrl(Document_downloadUrl callBuilder) {

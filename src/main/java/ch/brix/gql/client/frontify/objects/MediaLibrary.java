@@ -18,8 +18,8 @@ public class MediaLibrary implements ch.brix.gql.client.frontify.interfaces.Node
   @com.google.gson.annotations.SerializedName("color")
   private ch.brix.gql.client.frontify.objects.RgbaColor color;
   /**
-   * **DEPRECATED** Amount of `Assets` contained in the `Library`/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00
-   * This field will be removed. Use `assets`.`total` instead. | Date: 2024-01-01T00:00:00.000+00:00
+   * **DEPRECATED** Amount of `Assets` contained in the `Library`/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00
+   * This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00
    */
   @java.lang.Deprecated
   @com.google.gson.annotations.SerializedName("assetCount")

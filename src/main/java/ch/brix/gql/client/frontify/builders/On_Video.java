@@ -189,6 +189,13 @@ public class On_Video extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * Provides a `Url` for the custom user defined thumbnail or a system generated one when possible.
+   */
+  public On_Video thumbnailUrl() {
+    _add_field("thumbnailUrl");
+    return this;
+  }
+  /**
    * Signed `Url` to download the original `Video` type file.
    */
   public On_Video downloadUrl(Video_downloadUrl callBuilder) {
