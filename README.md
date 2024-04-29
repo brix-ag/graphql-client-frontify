@@ -2,7 +2,7 @@
 <dependency>
    <groupId>ch.brix.gql.client</groupId>
    <artifactId>frontify-client</artifactId>
-   <version>1.0.0</version>
+   <version>1.0.1</version>
 </dependency>
 ```
 
