@@ -2,7 +2,7 @@
 <dependency>
    <groupId>ch.brix.gql.client</groupId>
    <artifactId>frontify-client</artifactId>
-   <version>1.0.1</version>
+   <version>1.0.2</version>
 </dependency>
 ```
 
@@ -82,3 +82,8 @@ We actively use this client in our [Frontify Connector for CELUM](https://www.br
 > Generated & Released: 2024-04-26
 
 - bug fix for object scalar deserialization
+
+#### 1.0.2
+> Released: 2024-04-30
+
+- bug fix for object/list scalar deserialization

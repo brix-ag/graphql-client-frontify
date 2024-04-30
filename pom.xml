@@ -4,7 +4,7 @@
 
   <groupId>ch.brix.gql.client</groupId>
   <artifactId>frontify-client</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
 
   <name>Frontify GraphQL Client</name>
@@ -43,7 +43,7 @@
     <dependency>
       <groupId>ch.brix.gql.client</groupId>
       <artifactId>client-core</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -104,6 +104,14 @@
           <serverId>ossrh</serverId>
           <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
           <autoReleaseAfterClose>true</autoReleaseAfterClose>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>15</source>
+          <target>15</target>
         </configuration>
       </plugin>
     </plugins>
