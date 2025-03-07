@@ -87,3 +87,6 @@ We actively use this client in our [Frontify Connector for CELUM](https://www.br
 > Released: 2024-04-30
 
 - bug fix for object/list scalar deserialization
+
+#### 1.0.3
+> Generated & Released: 2025-03-07
