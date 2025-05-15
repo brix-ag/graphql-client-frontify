@@ -63,14 +63,14 @@ public class On_RootQuery extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Retrieve a `CreativeTemplate` item by Id.
+   * Retrieve a `CreativeTemplate` item by Id.
    */
   public On_RootQuery creativeTemplate(RootQuery_creativeTemplate callBuilder) {
     _add_call(callBuilder);
     return this;
   }
   /**
-   * **BETA** Retrieve a `CreativeExport` item by `CreativeJob` Id.
+   * Retrieve a `CreativeExport` item by `CreativeJob` Id.
    */
   public On_RootQuery creativeExport(RootQuery_creativeExport callBuilder) {
     _add_call(callBuilder);
@@ -87,6 +87,13 @@ public class On_RootQuery extends ch.brix.gql.client.TypeBuilder {
    * Retrieve `Brand` list for current `Account`.
    */
   public On_RootQuery brands(RootQuery_brands callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Retrieve a `GuidelinePage` by its id.
+   */
+  public On_RootQuery guidelinePage(RootQuery_guidelinePage callBuilder) {
     _add_call(callBuilder);
     return this;
   }

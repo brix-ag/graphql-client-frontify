@@ -16,7 +16,7 @@ public class UploadFileInput extends ch.brix.gql.client.InputObject {
     return this;
   }
   /**
-   * **DEPRECATED** `File` chunk size in bytes. Value must be integer between 5MB and 1GB. Please, consider using bigger chunk sizes for huge files to prevent issues. This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `File` chunk size in bytes. Value must be integer between 5MB and 1GB. Please, consider using bigger chunk sizes for huge files to prevent issues. This field will be removed. | Date: 2026-01-01T00:00:00.000+00:00
    */
   @ch.brix.gql.client.DefaultValue("104857600")
   public UploadFileInput chunkSize(ch.brix.gql.client.frontify.scalars.BigIntScalar v) {

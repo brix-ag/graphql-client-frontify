@@ -72,15 +72,15 @@ public class RootQuery_node extends ch.brix.gql.client.CallBuilder<ch.brix.gql.c
     _add_on(typeBuilder);
     return this;
   }
+  public RootQuery_node onLibraryPageCollection(On_LibraryPageCollection typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
   public RootQuery_node onCustomMetadataProperty(On_CustomMetadataProperty typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
   public RootQuery_node onGuideline(On_Guideline typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RootQuery_node onLibraryPageCollection(On_LibraryPageCollection typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

@@ -9,7 +9,7 @@ public class UpdateAssetDataInput extends ch.brix.gql.client.InputObject {
     return this;
   }
   /**
-   * **BETA** Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.
+   * Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.
    */
   public UpdateAssetDataInput alternativeText(ch.brix.gql.client.frontify.scalars.StringScalar v) {
     values.put("alternativeText", v);

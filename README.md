@@ -90,3 +90,9 @@ We actively use this client in our [Frontify Connector for CELUM](https://www.br
 
 #### 1.0.3
 > Generated & Released: 2025-03-07
+
+#### 1.0.4
+
+> Generated & Released: 2025-05-15
+
+- Added ThrottledClient

@@ -54,7 +54,7 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.
+   * Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.
    */
   public On_Audio alternativeText() {
     _add_field("alternativeText");
@@ -216,6 +216,13 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
    */
   public On_Audio extension() {
     _add_field("extension");
+    return this;
+  }
+  /**
+   * `DateTime` of the `Asset` `File` creation.
+   */
+  public On_Audio fileCreatedAt() {
+    _add_field("fileCreatedAt");
     return this;
   }
   /**

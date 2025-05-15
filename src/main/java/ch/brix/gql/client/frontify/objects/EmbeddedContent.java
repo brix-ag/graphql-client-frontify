@@ -38,7 +38,7 @@ public class EmbeddedContent implements ch.brix.gql.client.frontify.interfaces.N
   @com.google.gson.annotations.SerializedName("description")
   private ch.brix.gql.client.frontify.scalars.StringScalar description;
   /**
-   * **BETA** Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.
+   * Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.
    */
   @com.google.gson.annotations.SerializedName("alternativeText")
   private ch.brix.gql.client.frontify.scalars.StringScalar alternativeText;

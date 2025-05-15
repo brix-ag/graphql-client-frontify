@@ -54,7 +54,7 @@ public class On_EmbeddedContent extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.
+   * Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.
    */
   public On_EmbeddedContent alternativeText() {
     _add_field("alternativeText");

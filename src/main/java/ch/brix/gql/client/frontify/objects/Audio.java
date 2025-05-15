@@ -38,7 +38,7 @@ public class Audio implements ch.brix.gql.client.frontify.interfaces.Node, ch.br
   @com.google.gson.annotations.SerializedName("description")
   private ch.brix.gql.client.frontify.scalars.StringScalar description;
   /**
-   * **BETA** Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.
+   * Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.
    */
   @com.google.gson.annotations.SerializedName("alternativeText")
   private ch.brix.gql.client.frontify.scalars.StringScalar alternativeText;
@@ -162,6 +162,11 @@ public class Audio implements ch.brix.gql.client.frontify.interfaces.Node, ch.br
    */
   @com.google.gson.annotations.SerializedName("extension")
   private ch.brix.gql.client.frontify.scalars.StringScalar extension;
+  /**
+   * `DateTime` of the `Asset` `File` creation.
+   */
+  @com.google.gson.annotations.SerializedName("fileCreatedAt")
+  private ch.brix.gql.client.frontify.scalars.DateTimeScalar fileCreatedAt;
   /**
    * Signed `Url` to download the original `Audio` type file.
    */

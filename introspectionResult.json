@@ -115,7 +115,7 @@
             },
             {
               "name": "alternativeText",
-              "description": "**BETA** Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
+              "description": "Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
               "args": [],
               "type": {
                 "kind": "SCALAR",
@@ -502,6 +502,18 @@
               "deprecationReason": null
             },
             {
+              "name": "fileCreatedAt",
+              "description": "`DateTime` of the `Asset` `File` creation.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "DateTime",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "downloadUrl",
               "description": "Signed `Url` to download the original `Audio` type file.",
               "args": [
@@ -708,17 +720,17 @@
             },
             {
               "kind": "OBJECT",
+              "name": "LibraryPageCollection",
+              "ofType": null
+            },
+            {
+              "kind": "OBJECT",
               "name": "CustomMetadataProperty",
               "ofType": null
             },
             {
               "kind": "OBJECT",
               "name": "Guideline",
-              "ofType": null
-            },
-            {
-              "kind": "OBJECT",
-              "name": "LibraryPageCollection",
               "ofType": null
             },
             {
@@ -4127,7 +4139,7 @@
             },
             {
               "name": "alternativeText",
-              "description": "**BETA** Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
+              "description": "Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
               "args": [],
               "type": {
                 "kind": "SCALAR",
@@ -4509,6 +4521,18 @@
                   "name": "String",
                   "ofType": null
                 }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "fileCreatedAt",
+              "description": "`DateTime` of the `Asset` `File` creation.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "DateTime",
+                "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -4799,7 +4823,7 @@
             },
             {
               "name": "alternativeText",
-              "description": "**BETA** Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
+              "description": "Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
               "args": [],
               "type": {
                 "kind": "SCALAR",
@@ -5181,6 +5205,18 @@
                   "name": "String",
                   "ofType": null
                 }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "fileCreatedAt",
+              "description": "`DateTime` of the `Asset` `File` creation.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "DateTime",
+                "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -5439,7 +5475,7 @@
             },
             {
               "name": "alternativeText",
-              "description": "**BETA** Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
+              "description": "Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
               "args": [],
               "type": {
                 "kind": "SCALAR",
@@ -5821,6 +5857,18 @@
                   "name": "String",
                   "ofType": null
                 }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "fileCreatedAt",
+              "description": "`DateTime` of the `Asset` `File` creation.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "DateTime",
+                "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -6095,7 +6143,7 @@
             },
             {
               "name": "alternativeText",
-              "description": "**BETA** Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
+              "description": "Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
               "args": [],
               "type": {
                 "kind": "SCALAR",
@@ -6482,6 +6530,18 @@
               "deprecationReason": null
             },
             {
+              "name": "fileCreatedAt",
+              "description": "`DateTime` of the `Asset` `File` creation.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "DateTime",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "previewUrl",
               "description": "`File` type icon in `svg` format.",
               "args": [],
@@ -6666,7 +6726,7 @@
             },
             {
               "name": "alternativeText",
-              "description": "**BETA** Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
+              "description": "Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
               "args": [],
               "type": {
                 "kind": "SCALAR",
@@ -12799,6 +12859,49 @@
               "deprecationReason": null
             },
             {
+              "name": "guidelines",
+              "description": "**BETA** Paginated list of `Guideline` items for `Brand`.",
+              "args": [
+                {
+                  "name": "language",
+                  "description": "**BETA** Specifies the language in which the Guidelines should be delivered. This field must be set at the highest level in the GraphQL hierarchy. If the requested language is unavailable, the default language will be used as a fallback.",
+                  "type": {
+                    "kind": "ENUM",
+                    "name": "LanguageCode",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "limit",
+                  "description": "**BETA** How many `GuidelineItems` to show per query. Min: 1, Max: 100.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": "25"
+                },
+                {
+                  "name": "page",
+                  "description": "Current page number.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": "1"
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "GuidelineItems",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "customMetadataProperties",
               "description": "`Brand` `CustomMetadataProperty` items list.",
               "args": [],
@@ -12824,7 +12927,7 @@
             },
             {
               "name": "creativeTemplates",
-              "description": "**BETA** Retrieve all `CreativeTemplate` items.",
+              "description": "Retrieve all `CreativeTemplate` items.",
               "args": [
                 {
                   "name": "limit",
@@ -12848,7 +12951,7 @@
                 },
                 {
                   "name": "query",
-                  "description": "**BETA** Define search criteria for `CreativeTemplate` items in a `Brand`.",
+                  "description": "Define search criteria for `CreativeTemplate` items in a `Brand`.",
                   "type": {
                     "kind": "INPUT_OBJECT",
                     "name": "CreativeTemplateQueryInput",
@@ -14092,43 +14195,1114 @@
           "possibleTypes": null
         },
         {
-          "kind": "INPUT_OBJECT",
-          "name": "CreativeTemplateQueryInput",
-          "description": null,
-          "fields": null,
-          "inputFields": [
-            {
-              "name": "sortBy",
-              "description": "**BETA** Sort order of the `CreativeTemplate` query result set.",
-              "type": {
-                "kind": "ENUM",
-                "name": "CreativeTemplateQuerySort",
-                "ofType": null
-              },
-              "defaultValue": null
-            }
-          ],
-          "interfaces": null,
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
           "kind": "ENUM",
-          "name": "CreativeTemplateQuerySort",
-          "description": "Query sorting option. Defines how the search results should be sorted.",
+          "name": "LanguageCode",
+          "description": "Language code based on the ISO 639-1 standard, represented as two-letter codes such as en (English), de (German), and es (Spanish).",
           "fields": null,
           "inputFields": null,
           "interfaces": null,
           "enumValues": [
             {
-              "name": "NEWEST",
-              "description": "Sorts the results by the newest entry.",
+              "name": "AB",
+              "description": "Abkhazian",
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "OLDEST",
-              "description": "Sorts the results by the oldest entry`.",
+              "name": "AA",
+              "description": "Afar",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "AF",
+              "description": "Afrikaans",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "AK",
+              "description": "Akan",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SQ",
+              "description": "Albanian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "AM",
+              "description": "Amharic",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "AR",
+              "description": "Arabic",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "AN",
+              "description": "Aragonese",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "HY",
+              "description": "Armenian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "AS",
+              "description": "Assamese",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "AV",
+              "description": "Avaric",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "AE",
+              "description": "Avestan",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "AY",
+              "description": "Aymara",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "AZ",
+              "description": "Azerbaijani",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "BM",
+              "description": "Bambara",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "BA",
+              "description": "Bashkir",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "EU",
+              "description": "Basque",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "BE",
+              "description": "Belarusian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "BN",
+              "description": "Bengali",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "BH",
+              "description": "Bihari languages",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "BI",
+              "description": "Bislama",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "BS",
+              "description": "Bosnian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "BR",
+              "description": "Breton",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "BG",
+              "description": "Bulgarian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "MY",
+              "description": "Burmese",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "CA",
+              "description": "Catalan, Valencian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KM",
+              "description": "Central Khmer",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "CH",
+              "description": "Chamorro",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "CE",
+              "description": "Chechen",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NY",
+              "description": "Chichewa, Chewa, Nyanja",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "ZH",
+              "description": "Chinese",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "CU",
+              "description": "Church Slavonic, Old Bulgarian, Old Church Slavonic",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "CV",
+              "description": "Chuvash",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KW",
+              "description": "Cornish",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "CO",
+              "description": "Corsican",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "CR",
+              "description": "Cree",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "HR",
+              "description": "Croatian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "CS",
+              "description": "Czech",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "DA",
+              "description": "Danish",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "DV",
+              "description": "Divehi, Dhivehi, Maldivian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NL",
+              "description": "Dutch, Flemish",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "DZ",
+              "description": "Dzongkha",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "EN",
+              "description": "English",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "EO",
+              "description": "Esperanto",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "ET",
+              "description": "Estonian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "EE",
+              "description": "Ewe",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "FO",
+              "description": "Faroese",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "FJ",
+              "description": "Fijian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "FI",
+              "description": "Finnish",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "FR",
+              "description": "French",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "FF",
+              "description": "Fulah",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "GD",
+              "description": "Gaelic, Scottish Gaelic",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "GL",
+              "description": "Galician",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "LG",
+              "description": "Ganda",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KA",
+              "description": "Georgian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "DE",
+              "description": "German",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KI",
+              "description": "Gikuyu, Kikuyu",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "EL",
+              "description": "Greek (Modern)",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KL",
+              "description": "Greenlandic, Kalaallisut",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "GN",
+              "description": "Guarani",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "GU",
+              "description": "Gujarati",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "HT",
+              "description": "Haitian, Haitian Creole",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "HA",
+              "description": "Hausa",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "HE",
+              "description": "Hebrew",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "HZ",
+              "description": "Herero",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "HI",
+              "description": "Hindi",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "HO",
+              "description": "Hiri Motu",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "HU",
+              "description": "Hungarian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "IS",
+              "description": "Icelandic",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "IO",
+              "description": "Ido",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "IG",
+              "description": "Igbo",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "ID",
+              "description": "Indonesian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "IA",
+              "description": "Interlingua (International Auxiliary Language Association)",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "IE",
+              "description": "Interlingue",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "IU",
+              "description": "Inuktitut",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "IK",
+              "description": "Inupiaq",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "GA",
+              "description": "Irish",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "IT",
+              "description": "Italian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "JA",
+              "description": "Japanese",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "JV",
+              "description": "Javanese",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KN",
+              "description": "Kannada",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KR",
+              "description": "Kanuri",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KS",
+              "description": "Kashmiri",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KK",
+              "description": "Kazakh",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "RW",
+              "description": "Kinyarwanda",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KV",
+              "description": "Komi",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KG",
+              "description": "Kongo",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KO",
+              "description": "Korean",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KJ",
+              "description": "Kwanyama, Kuanyama",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KU",
+              "description": "Kurdish",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "KY",
+              "description": "Kyrgyz",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "LO",
+              "description": "Lao",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "LA",
+              "description": "Latin",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "LV",
+              "description": "Latvian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "LB",
+              "description": "Letzeburgesch, Luxembourgish",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "LI",
+              "description": "Limburgish, Limburgan, Limburger",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "LN",
+              "description": "Lingala",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "LT",
+              "description": "Lithuanian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "LU",
+              "description": "Luba-Katanga",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "MK",
+              "description": "Macedonian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "MG",
+              "description": "Malagasy",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "MS",
+              "description": "Malay",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "ML",
+              "description": "Malayalam",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "MT",
+              "description": "Maltese",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "GV",
+              "description": "Manx",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "MI",
+              "description": "Maori",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "MR",
+              "description": "Marathi",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "MH",
+              "description": "Marshallese",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "RO",
+              "description": "Moldovan, Moldavian, Romanian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "MN",
+              "description": "Mongolian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NA",
+              "description": "Nauru",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NV",
+              "description": "Navajo, Navaho",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "ND",
+              "description": "Northern Ndebele",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NG",
+              "description": "Ndonga",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NE",
+              "description": "Nepali",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SE",
+              "description": "Northern Sami",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NO",
+              "description": "Norwegian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NB",
+              "description": "Norwegian Bokmål",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NN",
+              "description": "Norwegian Nynorsk",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "II",
+              "description": "Nuosu, Sichuan Yi",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "OC",
+              "description": "Occitan (post 1500)",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "OJ",
+              "description": "Ojibwa",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "OR",
+              "description": "Oriya",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "OM",
+              "description": "Oromo",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "OS",
+              "description": "Ossetian, Ossetic",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PI",
+              "description": "Pali",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PA",
+              "description": "Panjabi, Punjabi",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PS",
+              "description": "Pashto, Pushto",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "FA",
+              "description": "Persian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PL",
+              "description": "Polish",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "PT",
+              "description": "Portuguese",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "QU",
+              "description": "Quechua",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "RM",
+              "description": "Romansh",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "RN",
+              "description": "Rundi",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "RU",
+              "description": "Russian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SM",
+              "description": "Samoan",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SG",
+              "description": "Sango",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SA",
+              "description": "Sanskrit",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SC",
+              "description": "Sardinian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SR",
+              "description": "Serbian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SN",
+              "description": "Shona",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SD",
+              "description": "Sindhi",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SI",
+              "description": "Sinhala, Sinhalese",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SK",
+              "description": "Slovak",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SL",
+              "description": "Slovenian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SO",
+              "description": "Somali",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "ST",
+              "description": "Sotho, Southern",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NR",
+              "description": "South Ndebele",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "ES",
+              "description": "Spanish, Castilian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SU",
+              "description": "Sundanese",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SW",
+              "description": "Swahili",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SS",
+              "description": "Swati",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "SV",
+              "description": "Swedish",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TL",
+              "description": "Tagalog",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TY",
+              "description": "Tahitian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TG",
+              "description": "Tajik",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TA",
+              "description": "Tamil",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TT",
+              "description": "Tatar",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TE",
+              "description": "Telugu",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TH",
+              "description": "Thai",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "BO",
+              "description": "Tibetan",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TI",
+              "description": "Tigrinya",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TO",
+              "description": "Tonga (Tonga Islands)",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TS",
+              "description": "Tsonga",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TN",
+              "description": "Tswana",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TR",
+              "description": "Turkish",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TK",
+              "description": "Turkmen",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TW",
+              "description": "Twi",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "UG",
+              "description": "Uighur, Uyghur",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "UK",
+              "description": "Ukrainian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "UR",
+              "description": "Urdu",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "UZ",
+              "description": "Uzbek",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "VE",
+              "description": "Venda",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "VI",
+              "description": "Vietnamese",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "VO",
+              "description": "Volap_k",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "WA",
+              "description": "Walloon",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "CY",
+              "description": "Welsh",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "FY",
+              "description": "Western Frisian",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "WO",
+              "description": "Wolof",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "XH",
+              "description": "Xhosa",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "YI",
+              "description": "Yiddish",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "YO",
+              "description": "Yoruba",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "ZA",
+              "description": "Zhuang, Chuang",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "ZU",
+              "description": "Zulu",
               "isDeprecated": false,
               "deprecationReason": null
             }
@@ -14137,7 +15311,7 @@
         },
         {
           "kind": "OBJECT",
-          "name": "CreativeTemplateItems",
+          "name": "GuidelineItems",
           "description": null,
           "fields": [
             {
@@ -14206,19 +15380,15 @@
             },
             {
               "name": "items",
-              "description": "**BETA** List of type `CreativeTemplate`",
+              "description": "List of `Guideline` type projects.",
               "args": [],
               "type": {
-                "kind": "NON_NULL",
+                "kind": "LIST",
                 "name": null,
                 "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "OBJECT",
-                    "name": "CreativeTemplate",
-                    "ofType": null
-                  }
+                  "kind": "OBJECT",
+                  "name": "Guideline",
+                  "ofType": null
                 }
               },
               "isDeprecated": false,
@@ -14232,489 +15402,28 @@
         },
         {
           "kind": "OBJECT",
-          "name": "CreativeTemplate",
+          "name": "Language",
           "description": null,
           "fields": [
             {
-              "name": "id",
-              "description": "**BETA** `CreativeTemplate` id.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "brandId",
-              "description": "**BETA** Id of the `Brand` of the `CreativeTemplate`.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "name",
-              "description": "**BETA** Name of the `CreativeTemplate`.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "description",
-              "description": "**BETA** Description of the `CreativeTemplate`.",
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "pages",
-              "description": "**BETA** Retrieve list of all `CreativeTemplatePage` items belonging to `CreativeTemplate`.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "OBJECT",
-                      "name": "CreativeTemplatePage",
-                      "ofType": null
-                    }
-                  }
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "variable",
-              "description": "**BETA** Retrieve a `CreativeTemplateVariable` item by `CreativeTemplateVariable` key.",
-              "args": [
-                {
-                  "name": "key",
-                  "description": "**BETA** `CreativeTemplateVariable` key.",
-                  "type": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "SCALAR",
-                      "name": "String",
-                      "ofType": null
-                    }
-                  },
-                  "defaultValue": null
-                }
-              ],
-              "type": {
-                "kind": "OBJECT",
-                "name": "CreativeTemplateVariable",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "variables",
-              "description": "**BETA** Retrieve list of all `CreativeTemplateVariable` items belonging to `CreativeTemplate`.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "OBJECT",
-                      "name": "CreativeTemplateVariable",
-                      "ofType": null
-                    }
-                  }
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "assetId",
-              "description": "**BETA** Retrieve Asset ID.",
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "tags",
-              "description": "**BETA** Tags of the `CreativeTemplate`.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "OBJECT",
-                    "name": "Tag",
-                    "ofType": null
-                  }
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            }
-          ],
-          "inputFields": null,
-          "interfaces": [],
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "OBJECT",
-          "name": "CreativeTemplatePage",
-          "description": null,
-          "fields": [
-            {
-              "name": "previewUrl",
-              "description": "**BETA** Preview URL of `CreativeTemplatePage`.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Url",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "width",
-              "description": "**BETA** Width of the `CreativeTemplatePage`.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "height",
-              "description": "**BETA** Height of the `CreativeTemplatePage`.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "pageIndex",
-              "description": "**BETA** `CreativeTemplatePage` unique identifier.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "name",
-              "description": "**BETA** Name of the `CreativeTemplatePage`.",
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            }
-          ],
-          "inputFields": null,
-          "interfaces": [],
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "OBJECT",
-          "name": "CreativeTemplateVariable",
-          "description": null,
-          "fields": [
-            {
-              "name": "key",
-              "description": "**BETA** Key of the `CreativeTemplateVariable`.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "name",
-              "description": "**BETA** Name of the `CreativeTemplateVariable`.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "description",
-              "description": "**BETA** Description of the `CreativeTemplateVariable`.",
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "type",
-              "description": "**BETA** Type of the `CreativeTemplateVariable`.",
+              "name": "code",
+              "description": "**BETA** The ISO code of the language.",
               "args": [],
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
                 "ofType": {
                   "kind": "ENUM",
-                  "name": "CreativeTemplateVariableType",
+                  "name": "LanguageCode",
                   "ofType": null
                 }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "value",
-              "description": "**BETA** Value of the `CreativeTemplateVariable`. See `CreativeTemplateVariableType` for valid formats.",
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "Any",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "connectionCount",
-              "description": "**BETA** Number of template items connected to the `CreativeTemplateVariable`.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            }
-          ],
-          "inputFields": null,
-          "interfaces": [],
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "ENUM",
-          "name": "CreativeTemplateVariableType",
-          "description": "List of possible `CreativeTemplateVariable` types.",
-          "fields": null,
-          "inputFields": null,
-          "interfaces": null,
-          "enumValues": [
-            {
-              "name": "BOOL",
-              "description": "Boolean Variable Type, possible values are `true` or `false`",
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "NUMBER",
-              "description": "Number Variable Type",
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "TEXT",
-              "description": "Text content Variable Type",
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "IMAGE",
-              "description": "Image Variable Type, values are `AssetID`s for referencing",
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "COLOR",
-              "description": "Color Variable Type, you can either pass an rgba object or a HEX value as string",
-              "isDeprecated": false,
-              "deprecationReason": null
-            }
-          ],
-          "possibleTypes": null
-        },
-        {
-          "kind": "OBJECT",
-          "name": "CustomMetadataProperty",
-          "description": null,
-          "fields": [
-            {
-              "name": "id",
-              "description": "`CustomMetadataProperty` Id.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "creator",
-              "description": "`User` who created the `CustomMetadataProperty`.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "INTERFACE",
-                  "name": "User",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "createdAt",
-              "description": "`DateTime` of the `CustomMetadataProperty` creation.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "DateTime",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "modifier",
-              "description": "`User` who last modified the `CustomMetadataProperty`.",
-              "args": [],
-              "type": {
-                "kind": "INTERFACE",
-                "name": "User",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "modifiedAt",
-              "description": "`DateTime` of the `CustomMetadataProperty`'s last modification.",
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "DateTime",
-                "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
               "name": "name",
-              "description": "`CustomMetadataProperty` name.",
+              "description": "**BETA** The name of the language in English.",
               "args": [],
               "type": {
                 "kind": "NON_NULL",
@@ -14727,182 +15436,10 @@
               },
               "isDeprecated": false,
               "deprecationReason": null
-            },
-            {
-              "name": "type",
-              "description": "`CustomMetadataProperty` type details.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "INTERFACE",
-                  "name": "CustomMetadataPropertyType",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "helpText",
-              "description": "`CustomMetadataProperty` help text.",
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "isRequired",
-              "description": "Indicates if a `CustomMetadataProperty` is required to be defined.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Boolean",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "defaultValue",
-              "description": "`CustomMetadataProperty` value set to newly update `Assets` by default.",
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "Any",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
             }
           ],
           "inputFields": null,
-          "interfaces": [
-            {
-              "kind": "INTERFACE",
-              "name": "Node",
-              "ofType": null
-            }
-          ],
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "OBJECT",
-          "name": "Guideline",
-          "description": null,
-          "fields": [
-            {
-              "name": "id",
-              "description": "`Guideline` Id.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "name",
-              "description": "`Guideline` name.",
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "color",
-              "description": "`Guideline` color.",
-              "args": [],
-              "type": {
-                "kind": "OBJECT",
-                "name": "RgbaColor",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "url",
-              "description": "`Guideline` internal url.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Url",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "libraryPages",
-              "description": "Paginated list of `LibraryPage` items for `Guideline`.",
-              "args": [
-                {
-                  "name": "limit",
-                  "description": "How many `LibraryPageItems` to show per query. Min: 1, Max: 100.",
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "defaultValue": "25"
-                },
-                {
-                  "name": "page",
-                  "description": "Current page number.",
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "defaultValue": "1"
-                }
-              ],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "OBJECT",
-                  "name": "LibraryPageItems",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            }
-          ],
-          "inputFields": null,
-          "interfaces": [
-            {
-              "kind": "INTERFACE",
-              "name": "Node",
-              "ofType": null
-            }
-          ],
+          "interfaces": [],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -15338,6 +15875,1548 @@
           ],
           "inputFields": null,
           "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "GuidelinePageItems",
+          "description": null,
+          "fields": [
+            {
+              "name": "total",
+              "description": "Total amount of results.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "page",
+              "description": "Current page number.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "limit",
+              "description": "Number of results per page.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "hasNextPage",
+              "description": "Indicates if a next page is available or not",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "items",
+              "description": "**BETA** List of `GuidelinePage` items.",
+              "args": [],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "GuidelinePage",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "GuidelinePage",
+          "description": null,
+          "fields": [
+            {
+              "name": "id",
+              "description": "**BETA** The `GuidelinePage` id.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "title",
+              "description": "**BETA** The title of the `GuidelinePage`",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "modifiedAt",
+              "description": "**BETA** The timestamp of the most recent modification to the `GuidelinePage` or its contents. If not modified, this represents the creation time.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "DateTime",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "url",
+              "description": "**BETA** The url of the `GuidelinePage`",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Url",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "sections",
+              "description": "**BETA** A list of `GuidelinePageSection`s that belong to this `GuidelinePage`",
+              "args": [
+                {
+                  "name": "limit",
+                  "description": "**BETA** How many `GuidelinePageSection` to show per query.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": "25"
+                },
+                {
+                  "name": "page",
+                  "description": "**BETA** Current page number.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": "1"
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "GuidelinePageSectionItems",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "GuidelinePageSectionItems",
+          "description": null,
+          "fields": [
+            {
+              "name": "total",
+              "description": "Total amount of results.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "page",
+              "description": "Current page number.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "limit",
+              "description": "Number of results per page.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "hasNextPage",
+              "description": "Indicates if a next page is available or not",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "items",
+              "description": "**BETA** List of `GuidelinePageSection` items.",
+              "args": [],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "GuidelinePageSection",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "GuidelinePageSection",
+          "description": null,
+          "fields": [
+            {
+              "name": "id",
+              "description": "**BETA** `GuidelinePageSection` id.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "elements",
+              "description": "**BETA** `GuidelinePageSectionElement` that are located within this `GuidelinePageSection`.",
+              "args": [
+                {
+                  "name": "page",
+                  "description": "**BETA** Current page number.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": "1"
+                },
+                {
+                  "name": "limit",
+                  "description": "How many `GuidelinePageSectionElement` to show per query.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": "25"
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "GuidelinePageSectionElementItems",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "GuidelinePageSectionElementItems",
+          "description": null,
+          "fields": [
+            {
+              "name": "total",
+              "description": "Total amount of results.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "page",
+              "description": "Current page number.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "limit",
+              "description": "Number of results per page.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "hasNextPage",
+              "description": "Indicates if a next page is available or not",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "items",
+              "description": "**BETA** `GuidelinePageSectionElementUnion` items list.",
+              "args": [],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "UNION",
+                  "name": "GuidelinePageSectionElement",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "UNION",
+          "name": "GuidelinePageSectionElement",
+          "description": null,
+          "fields": null,
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": [
+            {
+              "kind": "OBJECT",
+              "name": "GuidelinePageHeading",
+              "ofType": null
+            },
+            {
+              "kind": "OBJECT",
+              "name": "GuidelinePageBlock",
+              "ofType": null
+            },
+            {
+              "kind": "OBJECT",
+              "name": "GuidelinePageBlockReference",
+              "ofType": null
+            }
+          ]
+        },
+        {
+          "kind": "OBJECT",
+          "name": "GuidelinePageHeading",
+          "description": null,
+          "fields": [
+            {
+              "name": "id",
+              "description": "**BETA** `GuidelinePageHeading` id.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "title",
+              "description": "**BETA** `GuidelinePageHeading` title.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "url",
+              "description": "**BETA** `GuidelinePageHeading` url.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Url",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "modifiedAt",
+              "description": "**BETA** The timestamp of the most recent modification to the `GuidelinePageHeading`. If not modified, this represents the creation time.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "DateTime",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "GuidelinePageBlock",
+          "description": null,
+          "fields": [
+            {
+              "name": "id",
+              "description": "**BETA** The id of the `GuidelinePageBlock`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "content",
+              "description": "**BETA** The searchable content of the `GuidelinePageBlock`. When the block cannot be serialized, this field is `null`.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "url",
+              "description": "**BETA** The url of the `GuidelinePageBlock`",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Url",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "modifiedAt",
+              "description": "**BETA** The timestamp of the most recent modification to the `GuidelinePageBlock`. If not modified, this represents the creation time.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "DateTime",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "GuidelinePageBlockReference",
+          "description": null,
+          "fields": [
+            {
+              "name": "id",
+              "description": "**BETA** The id of the `GuidelinePageBlockReference`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "block",
+              "description": "**BETA** The `GuidelinePageBlock` that this reference resolves to.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "GuidelinePageBlock",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "CreativeTemplateQueryInput",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "sortBy",
+              "description": "Sort order of the `CreativeTemplate` query result set.",
+              "type": {
+                "kind": "ENUM",
+                "name": "CreativeTemplateQuerySort",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "ENUM",
+          "name": "CreativeTemplateQuerySort",
+          "description": "Query sorting option. Defines how the search results should be sorted.",
+          "fields": null,
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": [
+            {
+              "name": "NEWEST",
+              "description": "Sorts the results by the newest entry.",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "OLDEST",
+              "description": "Sorts the results by the oldest entry`.",
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "CreativeTemplateItems",
+          "description": null,
+          "fields": [
+            {
+              "name": "total",
+              "description": "Total amount of results.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "page",
+              "description": "Current page number.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "limit",
+              "description": "Number of results per page.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "hasNextPage",
+              "description": "Indicates if a next page is available or not",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "items",
+              "description": "List of type `CreativeTemplate`",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "CreativeTemplate",
+                    "ofType": null
+                  }
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "CreativeTemplate",
+          "description": null,
+          "fields": [
+            {
+              "name": "id",
+              "description": "`CreativeTemplate` id.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "brandId",
+              "description": "Id of the `Brand` of the `CreativeTemplate`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "name",
+              "description": "Name of the `CreativeTemplate`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "description",
+              "description": "Description of the `CreativeTemplate`.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pages",
+              "description": "Retrieve list of all `CreativeTemplatePage` items belonging to `CreativeTemplate`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "OBJECT",
+                      "name": "CreativeTemplatePage",
+                      "ofType": null
+                    }
+                  }
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "variable",
+              "description": "Retrieve a `CreativeTemplateVariable` item by `CreativeTemplateVariable` key.",
+              "args": [
+                {
+                  "name": "key",
+                  "description": "`CreativeTemplateVariable` key.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "String",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "CreativeTemplateVariable",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "variables",
+              "description": "Retrieve list of all `CreativeTemplateVariable` items belonging to `CreativeTemplate`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "OBJECT",
+                      "name": "CreativeTemplateVariable",
+                      "ofType": null
+                    }
+                  }
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "assetId",
+              "description": "Retrieve Asset ID.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "tags",
+              "description": "Tags of the `CreativeTemplate`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "Tag",
+                    "ofType": null
+                  }
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "CreativeTemplatePage",
+          "description": null,
+          "fields": [
+            {
+              "name": "previewUrl",
+              "description": "Preview URL of `CreativeTemplatePage`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Url",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "width",
+              "description": "Width of the `CreativeTemplatePage`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "height",
+              "description": "Height of the `CreativeTemplatePage`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pageIndex",
+              "description": "`CreativeTemplatePage` unique identifier.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "name",
+              "description": "Name of the `CreativeTemplatePage`.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "CreativeTemplateVariable",
+          "description": null,
+          "fields": [
+            {
+              "name": "key",
+              "description": "Key of the `CreativeTemplateVariable`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "name",
+              "description": "Name of the `CreativeTemplateVariable`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "description",
+              "description": "Description of the `CreativeTemplateVariable`.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "type",
+              "description": "Type of the `CreativeTemplateVariable`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "CreativeTemplateVariableType",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "value",
+              "description": "Value of the `CreativeTemplateVariable`. See `CreativeTemplateVariableType` for valid formats.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Any",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "connectionCount",
+              "description": "Number of template items connected to the `CreativeTemplateVariable`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "ENUM",
+          "name": "CreativeTemplateVariableType",
+          "description": "List of possible `CreativeTemplateVariable` types.",
+          "fields": null,
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": [
+            {
+              "name": "BOOL",
+              "description": "Boolean Variable Type, possible values are `true` or `false`",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NUMBER",
+              "description": "Number Variable Type, values must be integers",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TEXT",
+              "description": "Text content Variable Type",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "IMAGE",
+              "description": "Image Variable Type, values are `AssetID`s for referencing",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "COLOR",
+              "description": "Color Variable Type, you can either pass an rgba object or a HEX value as string",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "FLOAT",
+              "description": "Float Variable Type",
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "CustomMetadataProperty",
+          "description": null,
+          "fields": [
+            {
+              "name": "id",
+              "description": "`CustomMetadataProperty` Id.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "creator",
+              "description": "`User` who created the `CustomMetadataProperty`.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INTERFACE",
+                  "name": "User",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "createdAt",
+              "description": "`DateTime` of the `CustomMetadataProperty` creation.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "DateTime",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "modifier",
+              "description": "`User` who last modified the `CustomMetadataProperty`.",
+              "args": [],
+              "type": {
+                "kind": "INTERFACE",
+                "name": "User",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "modifiedAt",
+              "description": "`DateTime` of the `CustomMetadataProperty`'s last modification.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "DateTime",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "name",
+              "description": "`CustomMetadataProperty` name.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "type",
+              "description": "`CustomMetadataProperty` type details.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "INTERFACE",
+                  "name": "CustomMetadataPropertyType",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "helpText",
+              "description": "`CustomMetadataProperty` help text.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "isRequired",
+              "description": "Indicates if a `CustomMetadataProperty` is required to be defined.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "defaultValue",
+              "description": "`CustomMetadataProperty` value set to newly update `Assets` by default.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Any",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [
+            {
+              "kind": "INTERFACE",
+              "name": "Node",
+              "ofType": null
+            }
+          ],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "Guideline",
+          "description": null,
+          "fields": [
+            {
+              "name": "id",
+              "description": "`Guideline` Id.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "name",
+              "description": "`Guideline` name.",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "color",
+              "description": "`Guideline` color.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "RgbaColor",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "url",
+              "description": "`Guideline` internal url.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Url",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "defaultLanguage",
+              "description": "**BETA** The default language of the `Guideline`, or `null` if not set.",
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "Language",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "translationLanguages",
+              "description": "**BETA** Languages in which the `Guideline` is available.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "Language",
+                    "ofType": null
+                  }
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "libraryPages",
+              "description": "Paginated list of `LibraryPage` items for `Guideline`.",
+              "args": [
+                {
+                  "name": "limit",
+                  "description": "How many `LibraryPageItems` to show per query. Min: 1, Max: 100.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": "25"
+                },
+                {
+                  "name": "page",
+                  "description": "Current page number.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": "1"
+                }
+              ],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "LibraryPageItems",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pages",
+              "description": "**BETA** A list of `GuidelinePage`s that belong to this `Guideline`",
+              "args": [
+                {
+                  "name": "limit",
+                  "description": "**BETA** How many `GuidelinePage` to show per query.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": "25"
+                },
+                {
+                  "name": "page",
+                  "description": "**BETA** Current page number.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": "1"
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "GuidelinePageItems",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [
+            {
+              "kind": "INTERFACE",
+              "name": "Node",
+              "ofType": null
+            }
+          ],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -16400,11 +18479,11 @@
             },
             {
               "name": "creativeTemplate",
-              "description": "**BETA** Retrieve a `CreativeTemplate` item by Id.",
+              "description": "Retrieve a `CreativeTemplate` item by Id.",
               "args": [
                 {
                   "name": "id",
-                  "description": "**BETA** `CreativeTemplate` Id.",
+                  "description": "`CreativeTemplate` Id.",
                   "type": {
                     "kind": "NON_NULL",
                     "name": null,
@@ -16427,11 +18506,11 @@
             },
             {
               "name": "creativeExport",
-              "description": "**BETA** Retrieve a `CreativeExport` item by `CreativeJob` Id.",
+              "description": "Retrieve a `CreativeExport` item by `CreativeJob` Id.",
               "args": [
                 {
                   "name": "id",
-                  "description": "**BETA** `CreativeJob` Id.",
+                  "description": "`CreativeJob` Id.",
                   "type": {
                     "kind": "NON_NULL",
                     "name": null,
@@ -16491,6 +18570,43 @@
                   "name": "Brand",
                   "ofType": null
                 }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "guidelinePage",
+              "description": "**BETA** Retrieve a `GuidelinePage` by its id.",
+              "args": [
+                {
+                  "name": "id",
+                  "description": "**BETA** The id of the `GuidelinePage` to retrieve.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "ID",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "language",
+                  "description": "**BETA** Specifies the language in which the GuidelinePage should be delivered. If the requested language is unavailable, the default language will be used as a fallback.",
+                  "type": {
+                    "kind": "ENUM",
+                    "name": "LanguageCode",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "GuidelinePage",
+                "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -16626,7 +18742,7 @@
           "fields": [
             {
               "name": "id",
-              "description": "**BETA** `CreativeJob` Id.",
+              "description": "`CreativeJob` Id.",
               "args": [],
               "type": {
                 "kind": "NON_NULL",
@@ -16642,7 +18758,7 @@
             },
             {
               "name": "status",
-              "description": "**BETA** `CreativeJob` status.",
+              "description": "`CreativeJob` status.",
               "args": [],
               "type": {
                 "kind": "NON_NULL",
@@ -16658,7 +18774,7 @@
             },
             {
               "name": "result",
-              "description": "**BETA** Generated Creative.",
+              "description": "Generated Creative.",
               "args": [],
               "type": {
                 "kind": "OBJECT",
@@ -16722,7 +18838,7 @@
           "fields": [
             {
               "name": "downloadUrl",
-              "description": "**BETA** Signed `Url` to download the Creative.",
+              "description": "Signed `Url` to download the Creative.",
               "args": [],
               "type": {
                 "kind": "NON_NULL",
@@ -16738,7 +18854,7 @@
             },
             {
               "name": "pageDownloadUrls",
-              "description": "**BETA** List of signed `Url`s to download each page of the Creative.",
+              "description": "List of signed `Url`s to download each page of the Creative.",
               "args": [],
               "type": {
                 "kind": "NON_NULL",
@@ -16762,7 +18878,7 @@
             },
             {
               "name": "asset",
-              "description": "**BETA** `Asset` details of the stored asset when save-to has been used.",
+              "description": "`Asset` details of the stored asset when save-to has been used.",
               "args": [],
               "type": {
                 "kind": "OBJECT",
@@ -18189,11 +20305,11 @@
             },
             {
               "name": "exportCreative",
-              "description": "**BETA** Export `CreativeTemplate` with provided parameters. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.",
+              "description": "Export `CreativeTemplate` with provided parameters. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.",
               "args": [
                 {
                   "name": "input",
-                  "description": "**BETA** `ExportCreative` input argument.",
+                  "description": "`ExportCreative` input argument.",
                   "type": {
                     "kind": "NON_NULL",
                     "name": null,
@@ -18647,33 +20763,6 @@
               "deprecationReason": null
             },
             {
-              "name": "uploadFile",
-              "description": "Upload a new file. This stores the binary file temporarily so it can be then permanently linked to a specific type (ie. `Asset`, `Attachment`, `Revision`) after the upload is complete by using a different mutation. Requires `basic:write` scope to be accessible.",
-              "args": [
-                {
-                  "name": "input",
-                  "description": "`UploadFile` input argument.",
-                  "type": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "INPUT_OBJECT",
-                      "name": "UploadFileInput",
-                      "ofType": null
-                    }
-                  },
-                  "defaultValue": null
-                }
-              ],
-              "type": {
-                "kind": "OBJECT",
-                "name": "UploadFile",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
               "name": "createBrand",
               "description": "**BETA** Create a new `Brand`. Requires `basic:write` scope to be accessible and `Account` permission level `EDIT`.",
               "args": [
@@ -18755,12 +20844,39 @@
               "deprecationReason": null
             },
             {
-              "name": "cancelExportCreatives",
-              "description": "**BETA** Cancels `CreativeJobs` by provided parameters. `CreativeJob` can be canceled prior to the `RENDERING` status. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.",
+              "name": "uploadFile",
+              "description": "Upload a new file. Requires `basic:write` scope to be accessible\n\nGenerates a temporary unique File ID and a list of presigned Urls to upload a binary file in multiple parts. The Id can be used, after the upload is completed, to permanently link the file to a specific type (ie `Asset`, `Attachment`, `Revision) through a different mutation.\n\nWhen `chunkSize` is provided as `null` (to be the future default), the number of upload parts and thus their corresponding part size will be computed dynamically based on the specified file size, following these rules:\n- Maxmum of 1000 parts.\n- For files of 5TB (maximum): 1000 parts of 5GB each.\n- For files less than 15MB: 1 single part of 15MB.\n- Otherwise: an inclusive range of [1, 1000] parts of [15MB, 5GB] each.",
               "args": [
                 {
                   "name": "input",
-                  "description": "**BETA** `CancelExportCreatives` input argument.",
+                  "description": "`UploadFile` input argument.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "UploadFileInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "UploadFile",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "cancelExportCreatives",
+              "description": "Cancels `CreativeJobs` by provided parameters. `CreativeJob` can be canceled prior to the `RENDERING` status. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.",
+              "args": [
+                {
+                  "name": "input",
+                  "description": "`CancelExportCreatives` input argument.",
                   "type": {
                     "kind": "NON_NULL",
                     "name": null,
@@ -19929,7 +22045,7 @@
             },
             {
               "name": "alternativeText",
-              "description": "**BETA** Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
+              "description": "Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -23858,7 +25974,7 @@
           "inputFields": [
             {
               "name": "templateId",
-              "description": "**BETA** `CreativeTemplateId` Id.",
+              "description": "`CreativeTemplateId` Id.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -23872,7 +25988,7 @@
             },
             {
               "name": "destination",
-              "description": "**BETA** `ExportCreativeDestinationInput` where the exported file will be uploaded.",
+              "description": "`ExportCreativeDestinationInput` where the exported file will be uploaded.",
               "type": {
                 "kind": "INPUT_OBJECT",
                 "name": "ExportCreativeDestinationInput",
@@ -23882,7 +25998,7 @@
             },
             {
               "name": "variables",
-              "description": "**BETA** List of `CreativeVariableInput` which will be applied to the template.",
+              "description": "List of `CreativeVariableInput` which will be applied to the template.",
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -23896,7 +26012,7 @@
             },
             {
               "name": "options",
-              "description": "**BETA** `ExportCreativeOptionsInput` data.",
+              "description": "`ExportCreativeOptionsInput` data.",
               "type": {
                 "kind": "INPUT_OBJECT",
                 "name": "ExportCreativeOptionsInput",
@@ -23917,7 +26033,7 @@
           "inputFields": [
             {
               "name": "destinationId",
-              "description": "**BETA** `Project` Id destination for the exported Creative.",
+              "description": "`Project` Id destination for the exported Creative.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -23931,7 +26047,7 @@
             },
             {
               "name": "title",
-              "description": "**BETA** `Title` of file.",
+              "description": "`Title` of file.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -23956,7 +26072,7 @@
           "inputFields": [
             {
               "name": "key",
-              "description": "**BETA** Template variable `Key`.",
+              "description": "Template variable `Key`.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -23970,7 +26086,7 @@
             },
             {
               "name": "value",
-              "description": "**BETA** `Value` of template variable.",
+              "description": "`Value` of template variable.",
               "type": {
                 "kind": "SCALAR",
                 "name": "Any",
@@ -23991,7 +26107,7 @@
           "inputFields": [
             {
               "name": "format",
-              "description": "**BETA** `Format` of exported file.",
+              "description": "`Format` of exported file.",
               "type": {
                 "kind": "ENUM",
                 "name": "CreativeExportFormat",
@@ -24001,7 +26117,7 @@
             },
             {
               "name": "quality",
-              "description": "**BETA** `Quality` of exported file. Supported only for `JPG` `Format`.",
+              "description": "`Quality` of exported file. Supported only for `JPG` `Format`.",
               "type": {
                 "kind": "ENUM",
                 "name": "CreativeExportQuality",
@@ -24011,7 +26127,7 @@
             },
             {
               "name": "hasTransparentBackground",
-              "description": "**BETA** `TransparentBackground` export parameter. Supported only by `PNG` `Format`.",
+              "description": "`TransparentBackground` export parameter. Supported only by `PNG` `Format`.",
               "type": {
                 "kind": "SCALAR",
                 "name": "Boolean",
@@ -24020,32 +26136,8 @@
               "defaultValue": null
             },
             {
-              "name": "hasCropmarks",
-              "description": "**BETA** `Cropmarks` export parameter.",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Boolean",
-                  "ofType": null
-                }
-              },
-              "defaultValue": "false"
-            },
-            {
-              "name": "bleed",
-              "description": "**BETA** `Bleed` export parameter.",
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "ExportCreativeBleedInput",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
               "name": "pages",
-              "description": "**BETA** List of pages to export. If provided, validates that all requested pages exist in a template before export. If not provided, all pages will be exported.",
+              "description": "List of pages to export. If provided, validates that all requested pages exist in a template before export. If not provided, all pages will be exported.",
               "type": {
                 "kind": "LIST",
                 "name": null,
@@ -24131,80 +26223,13 @@
           "possibleTypes": null
         },
         {
-          "kind": "INPUT_OBJECT",
-          "name": "ExportCreativeBleedInput",
-          "description": null,
-          "fields": null,
-          "inputFields": [
-            {
-              "name": "top",
-              "description": "**BETA** `Top` value in mm.",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Float",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "right",
-              "description": "**BETA** `Right` value in mm.",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Float",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "bottom",
-              "description": "**BETA** `Bottom` value in mm.",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Float",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "left",
-              "description": "**BETA** `Left` value in mm.",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Float",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            }
-          ],
-          "interfaces": null,
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
           "kind": "OBJECT",
           "name": "ExportCreative",
           "description": null,
           "fields": [
             {
               "name": "job",
-              "description": "**BETA** The newly created `CreativeJob`.",
+              "description": "The newly created `CreativeJob`.",
               "args": [],
               "type": {
                 "kind": "NON_NULL",
@@ -24793,7 +26818,7 @@
             },
             {
               "name": "alternativeText",
-              "description": "**BETA** Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
+              "description": "Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.",
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -25693,102 +27718,6 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "UploadFileInput",
-          "description": null,
-          "fields": null,
-          "inputFields": [
-            {
-              "name": "filename",
-              "description": "`File` name. This value will be passed on to the `fileId` input variable used in file mutations such as `createAsset`, `replaceAsset`, `createAttachment` or `addAssetPreviewImage`.",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "size",
-              "description": "`File` size in bytes. Value must be a positive integer up to 5TB.",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "BigInt",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "chunkSize",
-              "description": "**DEPRECATED** `File` chunk size in bytes. Value must be integer between 5MB and 1GB. Please, consider using bigger chunk sizes for huge files to prevent issues. This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00",
-              "type": {
-                "kind": "SCALAR",
-                "name": "BigInt",
-                "ofType": null
-              },
-              "defaultValue": "104857600"
-            }
-          ],
-          "interfaces": null,
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "OBJECT",
-          "name": "UploadFile",
-          "description": null,
-          "fields": [
-            {
-              "name": "id",
-              "description": "Signed Id.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "urls",
-              "description": "Arrays with upload `Urls` to upload the file.",
-              "args": [],
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "Url",
-                    "ofType": null
-                  }
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            }
-          ],
-          "inputFields": null,
-          "interfaces": [],
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "INPUT_OBJECT",
           "name": "CreateBrandInput",
           "description": null,
           "fields": null,
@@ -26000,13 +27929,109 @@
         },
         {
           "kind": "INPUT_OBJECT",
+          "name": "UploadFileInput",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "filename",
+              "description": "`File` name. This value will be passed on to the `fileId` input variable used in file mutations such as `createAsset`, `replaceAsset`, `createAttachment` or `addAssetPreviewImage`.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "size",
+              "description": "`File` size in bytes. Value must be a positive integer up to 5TB.",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "BigInt",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "chunkSize",
+              "description": "**DEPRECATED** `File` chunk size in bytes. Value must be integer between 5MB and 1GB. Please, consider using bigger chunk sizes for huge files to prevent issues. This field will be removed. | Date: 2026-01-01T00:00:00.000+00:00",
+              "type": {
+                "kind": "SCALAR",
+                "name": "BigInt",
+                "ofType": null
+              },
+              "defaultValue": "104857600"
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "UploadFile",
+          "description": null,
+          "fields": [
+            {
+              "name": "id",
+              "description": "Signed Id.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "urls",
+              "description": "List of presigned urls to upload the file parts.",
+              "args": [],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "Url",
+                    "ofType": null
+                  }
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
           "name": "CancelExportCreativesInput",
           "description": null,
           "fields": null,
           "inputFields": [
             {
               "name": "ids",
-              "description": "**BETA** List of `CreativeJob` Ids that should be canceled.",
+              "description": "List of `CreativeJob` Ids that should be canceled.",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -26034,7 +28059,7 @@
           "fields": [
             {
               "name": "canceledJobs",
-              "description": "**BETA** A list of `CreativeJobs` that have been canceled successfully.",
+              "description": "A list of `CreativeJobs` that have been canceled successfully.",
               "args": [],
               "type": {
                 "kind": "NON_NULL",

@@ -377,7 +377,7 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Export `CreativeTemplate` with provided parameters. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
+   * Export `CreativeTemplate` with provided parameters. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
    */
   public On_RootMutation exportCreative(RootMutation_exportCreative callBuilder) {
     _add_call(callBuilder);
@@ -496,13 +496,6 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * Upload a new file. This stores the binary file temporarily so it can be then permanently linked to a specific type (ie. `Asset`, `Attachment`, `Revision`) after the upload is complete by using a different mutation. Requires `basic:write` scope to be accessible.
-   */
-  public On_RootMutation uploadFile(RootMutation_uploadFile callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
    * **BETA** Create a new `Brand`. Requires `basic:write` scope to be accessible and `Account` permission level `EDIT`.
    */
   public On_RootMutation createBrand(RootMutation_createBrand callBuilder) {
@@ -524,7 +517,14 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Cancels `CreativeJobs` by provided parameters. `CreativeJob` can be canceled prior to the `RENDERING` status. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
+   * Upload a new file. Requires `basic:write` scope to be accessible<br><br>Generates a temporary unique File ID and a list of presigned Urls to upload a binary file in multiple parts. The Id can be used, after the upload is completed, to permanently link the file to a specific type (ie `Asset`, `Attachment`, `Revision) through a different mutation.<br><br>When `chunkSize` is provided as `null` (to be the future default), the number of upload parts and thus their corresponding part size will be computed dynamically based on the specified file size, following these rules:<br>- Maxmum of 1000 parts.<br>- For files of 5TB (maximum): 1000 parts of 5GB each.<br>- For files less than 15MB: 1 single part of 15MB.<br>- Otherwise: an inclusive range of [1, 1000] parts of [15MB, 5GB] each.
+   */
+  public On_RootMutation uploadFile(RootMutation_uploadFile callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * Cancels `CreativeJobs` by provided parameters. `CreativeJob` can be canceled prior to the `RENDERING` status. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
    */
   public On_RootMutation cancelExportCreatives(RootMutation_cancelExportCreatives callBuilder) {
     _add_call(callBuilder);

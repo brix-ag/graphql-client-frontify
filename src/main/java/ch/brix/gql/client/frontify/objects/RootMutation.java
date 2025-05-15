@@ -271,7 +271,7 @@ public class RootMutation {
   @com.google.gson.annotations.SerializedName("removeWorkflowTaskAssignees")
   private ch.brix.gql.client.frontify.objects.RemoveWorkflowTaskAssignees removeWorkflowTaskAssignees;
   /**
-   * **BETA** Export `CreativeTemplate` with provided parameters. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
+   * Export `CreativeTemplate` with provided parameters. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
    */
   @com.google.gson.annotations.SerializedName("exportCreative")
   private ch.brix.gql.client.frontify.objects.ExportCreative exportCreative;
@@ -356,11 +356,6 @@ public class RootMutation {
   @com.google.gson.annotations.SerializedName("updateWorkflowTask")
   private ch.brix.gql.client.frontify.objects.UpdateWorkflowTask updateWorkflowTask;
   /**
-   * Upload a new file. This stores the binary file temporarily so it can be then permanently linked to a specific type (ie. `Asset`, `Attachment`, `Revision`) after the upload is complete by using a different mutation. Requires `basic:write` scope to be accessible.
-   */
-  @com.google.gson.annotations.SerializedName("uploadFile")
-  private ch.brix.gql.client.frontify.objects.UploadFile uploadFile;
-  /**
    * **BETA** Create a new `Brand`. Requires `basic:write` scope to be accessible and `Account` permission level `EDIT`.
    */
   @com.google.gson.annotations.SerializedName("createBrand")
@@ -376,7 +371,12 @@ public class RootMutation {
   @com.google.gson.annotations.SerializedName("updateBrand")
   private ch.brix.gql.client.frontify.objects.UpdateBrand updateBrand;
   /**
-   * **BETA** Cancels `CreativeJobs` by provided parameters. `CreativeJob` can be canceled prior to the `RENDERING` status. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
+   * Upload a new file. Requires `basic:write` scope to be accessible<br><br>Generates a temporary unique File ID and a list of presigned Urls to upload a binary file in multiple parts. The Id can be used, after the upload is completed, to permanently link the file to a specific type (ie `Asset`, `Attachment`, `Revision) through a different mutation.<br><br>When `chunkSize` is provided as `null` (to be the future default), the number of upload parts and thus their corresponding part size will be computed dynamically based on the specified file size, following these rules:<br>- Maxmum of 1000 parts.<br>- For files of 5TB (maximum): 1000 parts of 5GB each.<br>- For files less than 15MB: 1 single part of 15MB.<br>- Otherwise: an inclusive range of [1, 1000] parts of [15MB, 5GB] each.
+   */
+  @com.google.gson.annotations.SerializedName("uploadFile")
+  private ch.brix.gql.client.frontify.objects.UploadFile uploadFile;
+  /**
+   * Cancels `CreativeJobs` by provided parameters. `CreativeJob` can be canceled prior to the `RENDERING` status. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
    */
   @com.google.gson.annotations.SerializedName("cancelExportCreatives")
   private ch.brix.gql.client.frontify.objects.CancelExportCreatives cancelExportCreatives;

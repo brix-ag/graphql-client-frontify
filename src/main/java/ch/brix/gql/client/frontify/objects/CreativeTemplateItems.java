@@ -23,7 +23,7 @@ public class CreativeTemplateItems {
   @com.google.gson.annotations.SerializedName("hasNextPage")
   private ch.brix.gql.client.frontify.scalars.BooleanScalar hasNextPage;
   /**
-   * **BETA** List of type `CreativeTemplate`
+   * List of type `CreativeTemplate`
    */
   @com.google.gson.annotations.SerializedName("items")
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.CreativeTemplate.class)

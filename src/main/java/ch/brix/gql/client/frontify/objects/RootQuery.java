@@ -46,12 +46,12 @@ public class RootQuery {
   @com.google.gson.annotations.SerializedName("asset")
   private ch.brix.gql.client.frontify.interfaces.Asset asset;
   /**
-   * **BETA** Retrieve a `CreativeTemplate` item by Id.
+   * Retrieve a `CreativeTemplate` item by Id.
    */
   @com.google.gson.annotations.SerializedName("creativeTemplate")
   private ch.brix.gql.client.frontify.objects.CreativeTemplate creativeTemplate;
   /**
-   * **BETA** Retrieve a `CreativeExport` item by `CreativeJob` Id.
+   * Retrieve a `CreativeExport` item by `CreativeJob` Id.
    */
   @com.google.gson.annotations.SerializedName("creativeExport")
   private ch.brix.gql.client.frontify.objects.CreativeExport creativeExport;
@@ -66,6 +66,11 @@ public class RootQuery {
   @com.google.gson.annotations.SerializedName("brands")
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.Brand.class)
   private java.util.List<ch.brix.gql.client.frontify.objects.Brand> brands;
+  /**
+   * **BETA** Retrieve a `GuidelinePage` by its id.
+   */
+  @com.google.gson.annotations.SerializedName("guidelinePage")
+  private ch.brix.gql.client.frontify.objects.GuidelinePage guidelinePage;
   /**
    * Retrieve `Node` details by Id.
    */

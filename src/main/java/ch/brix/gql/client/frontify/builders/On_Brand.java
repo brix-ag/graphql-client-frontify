@@ -79,6 +79,13 @@ public class On_Brand extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * **BETA** Paginated list of `Guideline` items for `Brand`.
+   */
+  public On_Brand guidelines(Brand_guidelines callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * `Brand` `CustomMetadataProperty` items list.
    */
   public On_Brand customMetadataProperties(Brand_customMetadataProperties callBuilder) {
@@ -86,7 +93,7 @@ public class On_Brand extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Retrieve all `CreativeTemplate` items.
+   * Retrieve all `CreativeTemplate` items.
    */
   public On_Brand creativeTemplates(Brand_creativeTemplates callBuilder) {
     _add_call(callBuilder);

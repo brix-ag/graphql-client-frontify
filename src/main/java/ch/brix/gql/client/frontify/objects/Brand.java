@@ -58,13 +58,18 @@ public class Brand implements ch.brix.gql.client.frontify.interfaces.Node {
   @com.google.gson.annotations.SerializedName("workspaceProjects")
   private ch.brix.gql.client.frontify.objects.WorkspaceItems workspaceProjects;
   /**
+   * **BETA** Paginated list of `Guideline` items for `Brand`.
+   */
+  @com.google.gson.annotations.SerializedName("guidelines")
+  private ch.brix.gql.client.frontify.objects.GuidelineItems guidelines;
+  /**
    * `Brand` `CustomMetadataProperty` items list.
    */
   @com.google.gson.annotations.SerializedName("customMetadataProperties")
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.CustomMetadataProperty.class)
   private java.util.List<ch.brix.gql.client.frontify.objects.CustomMetadataProperty> customMetadataProperties;
   /**
-   * **BETA** Retrieve all `CreativeTemplate` items.
+   * Retrieve all `CreativeTemplate` items.
    */
   @com.google.gson.annotations.SerializedName("creativeTemplates")
   private ch.brix.gql.client.frontify.objects.CreativeTemplateItems creativeTemplates;

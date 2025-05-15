@@ -33,9 +33,30 @@ public class On_Guideline extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * **BETA** The default language of the `Guideline`, or `null` if not set.
+   */
+  public On_Guideline defaultLanguage(Guideline_defaultLanguage callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Languages in which the `Guideline` is available.
+   */
+  public On_Guideline translationLanguages(Guideline_translationLanguages callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * Paginated list of `LibraryPage` items for `Guideline`.
    */
   public On_Guideline libraryPages(Guideline_libraryPages callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** A list of `GuidelinePage`s that belong to this `Guideline`
+   */
+  public On_Guideline pages(Guideline_pages callBuilder) {
     _add_call(callBuilder);
     return this;
   }

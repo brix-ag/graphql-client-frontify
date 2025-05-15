@@ -8,7 +8,7 @@ public class UploadFile {
   @com.google.gson.annotations.SerializedName("id")
   private ch.brix.gql.client.frontify.scalars.IdScalar id;
   /**
-   * Arrays with upload `Urls` to upload the file.
+   * List of presigned urls to upload the file parts.
    */
   @com.google.gson.annotations.SerializedName("urls")
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.scalars.UrlScalar.class)

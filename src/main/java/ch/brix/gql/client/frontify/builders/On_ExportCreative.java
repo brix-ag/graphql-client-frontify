@@ -5,7 +5,7 @@ public class On_ExportCreative extends ch.brix.gql.client.TypeBuilder {
     super(new ch.brix.gql.client.On("ExportCreative"));
   }
   /**
-   * **BETA** The newly created `CreativeJob`.
+   * The newly created `CreativeJob`.
    */
   public On_ExportCreative job(ExportCreative_job callBuilder) {
     _add_call(callBuilder);

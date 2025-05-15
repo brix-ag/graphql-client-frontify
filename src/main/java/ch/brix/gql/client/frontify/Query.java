@@ -52,13 +52,13 @@ public class Query {
     return new ch.brix.gql.client.frontify.builders.RootQuery_asset();
   }
   /**
-   * **BETA** Retrieve a `CreativeTemplate` item by Id.
+   * Retrieve a `CreativeTemplate` item by Id.
    */
   public static ch.brix.gql.client.frontify.builders.RootQuery_creativeTemplate creativeTemplate() {
     return new ch.brix.gql.client.frontify.builders.RootQuery_creativeTemplate();
   }
   /**
-   * **BETA** Retrieve a `CreativeExport` item by `CreativeJob` Id.
+   * Retrieve a `CreativeExport` item by `CreativeJob` Id.
    */
   public static ch.brix.gql.client.frontify.builders.RootQuery_creativeExport creativeExport() {
     return new ch.brix.gql.client.frontify.builders.RootQuery_creativeExport();
@@ -74,6 +74,12 @@ public class Query {
    */
   public static ch.brix.gql.client.frontify.builders.RootQuery_brands brands() {
     return new ch.brix.gql.client.frontify.builders.RootQuery_brands();
+  }
+  /**
+   * **BETA** Retrieve a `GuidelinePage` by its id.
+   */
+  public static ch.brix.gql.client.frontify.builders.RootQuery_guidelinePage guidelinePage() {
+    return new ch.brix.gql.client.frontify.builders.RootQuery_guidelinePage();
   }
   /**
    * Retrieve `Node` details by Id.

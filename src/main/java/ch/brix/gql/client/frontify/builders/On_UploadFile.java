@@ -12,7 +12,7 @@ public class On_UploadFile extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * Arrays with upload `Urls` to upload the file.
+   * List of presigned urls to upload the file parts.
    */
   public On_UploadFile urls() {
     _add_field("urls");

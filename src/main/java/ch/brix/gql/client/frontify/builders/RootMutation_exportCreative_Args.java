@@ -2,7 +2,7 @@ package ch.brix.gql.client.frontify.builders;
 
 public class RootMutation_exportCreative_Args extends ch.brix.gql.client.ArgsBuilder {
   /**
-   * **BETA** `ExportCreative` input argument.
+   * `ExportCreative` input argument.
    * Default value: null
    */
   public RootMutation_exportCreative_Args input(ch.brix.gql.client.frontify.input_objects.ExportCreativeInput value) {

@@ -153,6 +153,24 @@ public class TypeRegistry extends ch.brix.gql.client.TypeRegistry {
     addType("WorkspaceProjectStateFilter", ch.brix.gql.client.frontify.enums.WorkspaceProjectStateFilter.class);
     addType("WorkspaceProjectQuerySort", ch.brix.gql.client.frontify.enums.WorkspaceProjectQuerySort.class);
     addType("WorkspaceItems", ch.brix.gql.client.frontify.objects.WorkspaceItems.class);
+    addType("LanguageCode", ch.brix.gql.client.frontify.enums.LanguageCode.class);
+    addType("GuidelineItems", ch.brix.gql.client.frontify.objects.GuidelineItems.class);
+    addType("Language", ch.brix.gql.client.frontify.objects.Language.class);
+    addType("LibraryPageItems", ch.brix.gql.client.frontify.objects.LibraryPageItems.class);
+    addType("LibraryType", ch.brix.gql.client.frontify.enums.LibraryType.class);
+    addType("LibraryPageCollectionItems", ch.brix.gql.client.frontify.objects.LibraryPageCollectionItems.class);
+    addType("LibraryPageCollection", ch.brix.gql.client.frontify.objects.LibraryPageCollection.class);
+    addType("LibraryPageAssetQueryInput", ch.brix.gql.client.frontify.input_objects.LibraryPageAssetQueryInput.class);
+    addType("LibraryPageAssetItems", ch.brix.gql.client.frontify.objects.LibraryPageAssetItems.class);
+    addType("GuidelinePageItems", ch.brix.gql.client.frontify.objects.GuidelinePageItems.class);
+    addType("GuidelinePage", ch.brix.gql.client.frontify.objects.GuidelinePage.class);
+    addType("GuidelinePageSectionItems", ch.brix.gql.client.frontify.objects.GuidelinePageSectionItems.class);
+    addType("GuidelinePageSection", ch.brix.gql.client.frontify.objects.GuidelinePageSection.class);
+    addType("GuidelinePageSectionElementItems", ch.brix.gql.client.frontify.objects.GuidelinePageSectionElementItems.class);
+    addType("GuidelinePageSectionElement", ch.brix.gql.client.frontify.unions.GuidelinePageSectionElement.class);
+    addType("GuidelinePageHeading", ch.brix.gql.client.frontify.objects.GuidelinePageHeading.class);
+    addType("GuidelinePageBlock", ch.brix.gql.client.frontify.objects.GuidelinePageBlock.class);
+    addType("GuidelinePageBlockReference", ch.brix.gql.client.frontify.objects.GuidelinePageBlockReference.class);
     addType("CreativeTemplateQueryInput", ch.brix.gql.client.frontify.input_objects.CreativeTemplateQueryInput.class);
     addType("CreativeTemplateQuerySort", ch.brix.gql.client.frontify.enums.CreativeTemplateQuerySort.class);
     addType("CreativeTemplateItems", ch.brix.gql.client.frontify.objects.CreativeTemplateItems.class);
@@ -162,12 +180,6 @@ public class TypeRegistry extends ch.brix.gql.client.TypeRegistry {
     addType("CreativeTemplateVariableType", ch.brix.gql.client.frontify.enums.CreativeTemplateVariableType.class);
     addType("CustomMetadataProperty", ch.brix.gql.client.frontify.objects.CustomMetadataProperty.class);
     addType("Guideline", ch.brix.gql.client.frontify.objects.Guideline.class);
-    addType("LibraryPageItems", ch.brix.gql.client.frontify.objects.LibraryPageItems.class);
-    addType("LibraryType", ch.brix.gql.client.frontify.enums.LibraryType.class);
-    addType("LibraryPageCollectionItems", ch.brix.gql.client.frontify.objects.LibraryPageCollectionItems.class);
-    addType("LibraryPageCollection", ch.brix.gql.client.frontify.objects.LibraryPageCollection.class);
-    addType("LibraryPageAssetQueryInput", ch.brix.gql.client.frontify.input_objects.LibraryPageAssetQueryInput.class);
-    addType("LibraryPageAssetItems", ch.brix.gql.client.frontify.objects.LibraryPageAssetItems.class);
     addType("Collection", ch.brix.gql.client.frontify.objects.Collection.class);
     addType("LibraryPage", ch.brix.gql.client.frontify.objects.LibraryPage.class);
     addType("ProjectWebhook", ch.brix.gql.client.frontify.objects.ProjectWebhook.class);
@@ -311,7 +323,6 @@ public class TypeRegistry extends ch.brix.gql.client.TypeRegistry {
     addType("ExportCreativeOptionsInput", ch.brix.gql.client.frontify.input_objects.ExportCreativeOptionsInput.class);
     addType("CreativeExportFormat", ch.brix.gql.client.frontify.enums.CreativeExportFormat.class);
     addType("CreativeExportQuality", ch.brix.gql.client.frontify.enums.CreativeExportQuality.class);
-    addType("ExportCreativeBleedInput", ch.brix.gql.client.frontify.input_objects.ExportCreativeBleedInput.class);
     addType("ExportCreative", ch.brix.gql.client.frontify.objects.ExportCreative.class);
     addType("ReopenAssetCommentInput", ch.brix.gql.client.frontify.input_objects.ReopenAssetCommentInput.class);
     addType("ReopenAssetComment", ch.brix.gql.client.frontify.objects.ReopenAssetComment.class);
@@ -356,8 +367,6 @@ public class TypeRegistry extends ch.brix.gql.client.TypeRegistry {
     addType("UpdateWorkflowTaskInput", ch.brix.gql.client.frontify.input_objects.UpdateWorkflowTaskInput.class);
     addType("UpdateWorkflowTaskDataInput", ch.brix.gql.client.frontify.input_objects.UpdateWorkflowTaskDataInput.class);
     addType("UpdateWorkflowTask", ch.brix.gql.client.frontify.objects.UpdateWorkflowTask.class);
-    addType("UploadFileInput", ch.brix.gql.client.frontify.input_objects.UploadFileInput.class);
-    addType("UploadFile", ch.brix.gql.client.frontify.objects.UploadFile.class);
     addType("CreateBrandInput", ch.brix.gql.client.frontify.input_objects.CreateBrandInput.class);
     addType("CreateBrand", ch.brix.gql.client.frontify.objects.CreateBrand.class);
     addType("DeleteBrandInput", ch.brix.gql.client.frontify.input_objects.DeleteBrandInput.class);
@@ -365,6 +374,8 @@ public class TypeRegistry extends ch.brix.gql.client.TypeRegistry {
     addType("UpdateBrandInput", ch.brix.gql.client.frontify.input_objects.UpdateBrandInput.class);
     addType("UpdateBrandDataInput", ch.brix.gql.client.frontify.input_objects.UpdateBrandDataInput.class);
     addType("UpdateBrand", ch.brix.gql.client.frontify.objects.UpdateBrand.class);
+    addType("UploadFileInput", ch.brix.gql.client.frontify.input_objects.UploadFileInput.class);
+    addType("UploadFile", ch.brix.gql.client.frontify.objects.UploadFile.class);
     addType("CancelExportCreativesInput", ch.brix.gql.client.frontify.input_objects.CancelExportCreativesInput.class);
     addType("CancelExportCreatives", ch.brix.gql.client.frontify.objects.CancelExportCreatives.class);
   }

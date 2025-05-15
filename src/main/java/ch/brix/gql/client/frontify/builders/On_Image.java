@@ -54,7 +54,7 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.
+   * Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.
    */
   public On_Image alternativeText() {
     _add_field("alternativeText");
@@ -216,6 +216,13 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
    */
   public On_Image extension() {
     _add_field("extension");
+    return this;
+  }
+  /**
+   * `DateTime` of the `Asset` `File` creation.
+   */
+  public On_Image fileCreatedAt() {
+    _add_field("fileCreatedAt");
     return this;
   }
   /**

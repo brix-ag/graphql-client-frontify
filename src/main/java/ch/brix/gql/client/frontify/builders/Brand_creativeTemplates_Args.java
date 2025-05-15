@@ -18,7 +18,7 @@ public class Brand_creativeTemplates_Args extends ch.brix.gql.client.ArgsBuilder
     return this;
   }
   /**
-   * **BETA** Define search criteria for `CreativeTemplate` items in a `Brand`.
+   * Define search criteria for `CreativeTemplate` items in a `Brand`.
    * Default value: null
    */
   public Brand_creativeTemplates_Args query(ch.brix.gql.client.frontify.input_objects.CreativeTemplateQueryInput value) {

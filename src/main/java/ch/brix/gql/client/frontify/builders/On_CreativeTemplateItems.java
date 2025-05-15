@@ -33,7 +33,7 @@ public class On_CreativeTemplateItems extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** List of type `CreativeTemplate`
+   * List of type `CreativeTemplate`
    */
   public On_CreativeTemplateItems items(CreativeTemplateItems_items callBuilder) {
     _add_call(callBuilder);
