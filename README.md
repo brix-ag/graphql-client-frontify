@@ -96,3 +96,9 @@ We actively use this client in our [Frontify Connector for CELUM](https://www.br
 > Generated & Released: 2025-05-15
 
 - Added ThrottledClient
+
+#### 1.0.5
+
+> Released: 2025-05-16
+
+- Updated client core to be able to get the status code on failure (introduced HttpException)
