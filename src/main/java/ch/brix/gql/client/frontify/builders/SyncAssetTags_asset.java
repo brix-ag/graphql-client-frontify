@@ -12,11 +12,7 @@ public class SyncAssetTags_asset extends ch.brix.gql.client.CallBuilder<ch.brix.
     _add_on(typeBuilder);
     return this;
   }
-  public SyncAssetTags_asset onImage(On_Image typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public SyncAssetTags_asset onVideo(On_Video typeBuilder) {
+  public SyncAssetTags_asset onEmbeddedContent(On_EmbeddedContent typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -24,7 +20,11 @@ public class SyncAssetTags_asset extends ch.brix.gql.client.CallBuilder<ch.brix.
     _add_on(typeBuilder);
     return this;
   }
-  public SyncAssetTags_asset onEmbeddedContent(On_EmbeddedContent typeBuilder) {
+  public SyncAssetTags_asset onImage(On_Image typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public SyncAssetTags_asset onVideo(On_Video typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

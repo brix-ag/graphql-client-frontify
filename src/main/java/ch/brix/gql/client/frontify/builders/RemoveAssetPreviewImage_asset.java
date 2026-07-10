@@ -12,11 +12,7 @@ public class RemoveAssetPreviewImage_asset extends ch.brix.gql.client.CallBuilde
     _add_on(typeBuilder);
     return this;
   }
-  public RemoveAssetPreviewImage_asset onImage(On_Image typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RemoveAssetPreviewImage_asset onVideo(On_Video typeBuilder) {
+  public RemoveAssetPreviewImage_asset onEmbeddedContent(On_EmbeddedContent typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -24,7 +20,11 @@ public class RemoveAssetPreviewImage_asset extends ch.brix.gql.client.CallBuilde
     _add_on(typeBuilder);
     return this;
   }
-  public RemoveAssetPreviewImage_asset onEmbeddedContent(On_EmbeddedContent typeBuilder) {
+  public RemoveAssetPreviewImage_asset onImage(On_Image typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RemoveAssetPreviewImage_asset onVideo(On_Video typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

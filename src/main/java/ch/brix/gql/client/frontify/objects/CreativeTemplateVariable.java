@@ -28,6 +28,12 @@ public class CreativeTemplateVariable {
   @com.google.gson.annotations.SerializedName("value")
   private ch.brix.gql.client.frontify.scalars.AnyScalar value;
   /**
+   * Allowed values for `CreativeTemplateVariable` value of type color.
+   */
+  @com.google.gson.annotations.SerializedName("allowedColorValues")
+  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.CreativeColor.class)
+  private java.util.List<ch.brix.gql.client.frontify.objects.CreativeColor> allowedColorValues;
+  /**
    * Number of template items connected to the `CreativeTemplateVariable`.
    */
   @com.google.gson.annotations.SerializedName("connectionCount")

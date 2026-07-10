@@ -12,11 +12,7 @@ public class LibraryPageAssetItems_items extends ch.brix.gql.client.CallBuilder<
     _add_on(typeBuilder);
     return this;
   }
-  public LibraryPageAssetItems_items onImage(On_Image typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public LibraryPageAssetItems_items onVideo(On_Video typeBuilder) {
+  public LibraryPageAssetItems_items onEmbeddedContent(On_EmbeddedContent typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -24,7 +20,11 @@ public class LibraryPageAssetItems_items extends ch.brix.gql.client.CallBuilder<
     _add_on(typeBuilder);
     return this;
   }
-  public LibraryPageAssetItems_items onEmbeddedContent(On_EmbeddedContent typeBuilder) {
+  public LibraryPageAssetItems_items onImage(On_Image typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public LibraryPageAssetItems_items onVideo(On_Video typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

@@ -54,6 +54,13 @@ public class On_Asset extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.
+   */
+  public On_Asset alternativeText() {
+    _add_field("alternativeText");
+    return this;
+  }
+  /**
    * List of `Asset`'s `Attachments`.
    */
   public On_Asset attachments(Asset_attachments callBuilder) {
@@ -82,7 +89,7 @@ public class On_Asset extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** `Asset` will be available only during the defined `DateTime` range.When `null` it represents an unspecified start and/or open-ended date.
+   * `Asset` will be available only during the defined `DateTime` range.When `null` it represents an unspecified start and/or open-ended date.
    */
   public On_Asset availability(Asset_availability callBuilder) {
     _add_call(callBuilder);
@@ -103,12 +110,19 @@ public class On_Asset extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Metadata values details. This field will be removed. Use `customMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `customMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Metadata values details. This field will be removed. Use `customMetadata` instead. | Date: 2026-07-01
+   * This field will be removed. Use `customMetadata` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_Asset metadataValues(Asset_metadataValues callBuilder) {
     _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * Represents the Author of the `Asset`. Example: Photographer Name.
+   */
+  public On_Asset author() {
+    _add_field("author");
     return this;
   }
   /**
@@ -122,6 +136,13 @@ public class On_Asset extends ch.brix.gql.client.TypeBuilder {
    * Paginated list of `Asset` items related to `Asset`.
    */
   public On_Asset relatedAssets(Asset_relatedAssets callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * Paginated list of `AssetRevision` items for `Asset`, newest first.
+   */
+  public On_Asset revisions(Asset_revisions callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -147,9 +168,9 @@ public class On_Asset extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** The `WorkflowTask` this `Asset` is linked to.
+   * `AssetVariant` items of the asset. Only available for assets in icon and logo libraries.
    */
-  public On_Asset workflowTask(Asset_workflowTask callBuilder) {
+  public On_Asset variants(Asset_variants callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -157,13 +178,6 @@ public class On_Asset extends ch.brix.gql.client.TypeBuilder {
    * `Location` of the `Asset`.
    */
   public On_Asset location(Asset_location callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Background color of the `Asset` preview.
-   */
-  public On_Asset previewBackgroundColor(Asset_previewBackgroundColor callBuilder) {
     _add_call(callBuilder);
     return this;
   }

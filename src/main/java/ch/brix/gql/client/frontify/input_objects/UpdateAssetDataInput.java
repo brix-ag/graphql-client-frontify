@@ -16,13 +16,6 @@ public class UpdateAssetDataInput extends ch.brix.gql.client.InputObject {
     return this;
   }
   /**
-   * **BETA** Indicates whether the `Asset` is decorative and not meant to be read by screen readers. If true, alternative text is ignored.
-   */
-  public UpdateAssetDataInput isDecorative(ch.brix.gql.client.frontify.scalars.BooleanScalar v) {
-    values.put("isDecorative", v);
-    return this;
-  }
-  /**
    * `Asset` filename, including extension.
    */
   public UpdateAssetDataInput filename(ch.brix.gql.client.frontify.scalars.StringScalar v) {
@@ -44,6 +37,13 @@ public class UpdateAssetDataInput extends ch.brix.gql.client.InputObject {
     return this;
   }
   /**
+   * Modify availability start date. `Asset` becomes available once the defined date is reached.
+   */
+  public UpdateAssetDataInput beginsAt(ch.brix.gql.client.frontify.scalars.DateTimeScalar v) {
+    values.put("beginsAt", v);
+    return this;
+  }
+  /**
    * Modify expiry date. `Asset` will expire once the defined date is reached.
    */
   public UpdateAssetDataInput expiresAt(ch.brix.gql.client.frontify.scalars.DateTimeScalar v) {
@@ -55,13 +55,6 @@ public class UpdateAssetDataInput extends ch.brix.gql.client.InputObject {
    */
   public UpdateAssetDataInput author(ch.brix.gql.client.frontify.scalars.StringScalar v) {
     values.put("author", v);
-    return this;
-  }
-  /**
-   * **BETA** Background color of the `Asset` preview.
-   */
-  public UpdateAssetDataInput previewBackgroundColor(ch.brix.gql.client.frontify.input_objects.RgbaColorInput v) {
-    values.put("previewBackgroundColor", v);
     return this;
   }
 }

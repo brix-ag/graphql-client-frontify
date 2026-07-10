@@ -5,8 +5,8 @@ public class On_MetadataField extends ch.brix.gql.client.TypeBuilder {
     super(new ch.brix.gql.client.On("MetadataField"));
   }
   /**
-   * **DEPRECATED** `MetadataField` Id. This field will be removed. Use `CustomMetadataProperty.id` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `CustomMetadataProperty.id` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `MetadataField` Id. This field will be removed. Use `CustomMetadataProperty.id` instead. | Date: 2026-07-01
+   * This field will be removed. Use `CustomMetadataProperty.id` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataField id() {
@@ -14,8 +14,8 @@ public class On_MetadataField extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `User` who created the `MetadataField`. This field will be removed. Use `CustomMetadataProperty.creator` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `CustomMetadataProperty.creator` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `User` who created the `MetadataField`. This field will be removed. Use `CustomMetadataProperty.creator` instead. | Date: 2026-07-01
+   * This field will be removed. Use `CustomMetadataProperty.creator` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataField creator(MetadataField_creator callBuilder) {
@@ -23,8 +23,8 @@ public class On_MetadataField extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `DateTime` of the `MetadataField` creation. This field will be removed. Use `CustomMetadataProperty.createdAt` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `CustomMetadataProperty.createdAt` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `DateTime` of the `MetadataField` creation. This field will be removed. Use `CustomMetadataProperty.createdAt` instead. | Date: 2026-07-01
+   * This field will be removed. Use `CustomMetadataProperty.createdAt` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataField createdAt() {
@@ -32,8 +32,8 @@ public class On_MetadataField extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `User` who last modified `MetadataField`. This field will be removed. Use `CustomMetadataProperty.modifier` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `CustomMetadataProperty.modifier` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `User` who last modified `MetadataField`. This field will be removed. Use `CustomMetadataProperty.modifier` instead. | Date: 2026-07-01
+   * This field will be removed. Use `CustomMetadataProperty.modifier` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataField modifier(MetadataField_modifier callBuilder) {
@@ -41,8 +41,8 @@ public class On_MetadataField extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `DateTime` of the `MetadataField`'s last modification. This field will be removed. Use `CustomMetadataProperty.modifiedAt` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `CustomMetadataProperty.modifiedAt` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `DateTime` of the `MetadataField`'s last modification. This field will be removed. Use `CustomMetadataProperty.modifiedAt` instead. | Date: 2026-07-01
+   * This field will be removed. Use `CustomMetadataProperty.modifiedAt` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataField modifiedAt() {
@@ -50,8 +50,8 @@ public class On_MetadataField extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `MetadataField`'s name. This field will be removed. Use `CustomMetadataProperty.name` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `CustomMetadataProperty.name` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `MetadataField`'s name. This field will be removed. Use `CustomMetadataProperty.name` instead. | Date: 2026-07-01
+   * This field will be removed. Use `CustomMetadataProperty.name` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataField label() {
@@ -59,8 +59,8 @@ public class On_MetadataField extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `MetadataField`'s type. This field will be removed. Use `CustomMetadataProperty.type.name` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `CustomMetadataProperty.type.name` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `MetadataField`'s type. This field will be removed. Use `CustomMetadataProperty.type.name` instead. | Date: 2026-07-01
+   * This field will be removed. Use `CustomMetadataProperty.type.name` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataField type() {
@@ -68,8 +68,8 @@ public class On_MetadataField extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Possible values for `SELECT` type `MetadataField`. This field will be removed. Use `CustomMetadataProperty.type.options` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `CustomMetadataProperty.type.options` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Possible values for `SELECT` type `MetadataField`. This field will be removed. Use `CustomMetadataProperty.type.options` instead. | Date: 2026-07-01
+   * This field will be removed. Use `CustomMetadataProperty.type.options` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataField values(MetadataField_values callBuilder) {
@@ -77,8 +77,8 @@ public class On_MetadataField extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Optional default value of the `MetadataField`. This field will be removed. Use `CustomMetadataProperty.defaultValue` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `CustomMetadataProperty.defaultValue` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Optional default value of the `MetadataField`. This field will be removed. Use `CustomMetadataProperty.defaultValue` instead. | Date: 2026-07-01
+   * This field will be removed. Use `CustomMetadataProperty.defaultValue` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataField defaultValue() {
@@ -86,8 +86,8 @@ public class On_MetadataField extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Allow multiple values in `SELECT` type `MetadataField`. This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Allow multiple values in `SELECT` type `MetadataField`. This field will be removed. | Date: 2026-07-01
+   * This field will be removed. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataField allowMultipleValues() {
@@ -95,8 +95,8 @@ public class On_MetadataField extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Allow an empty value as a valid `SELECT` type `MetadataField` value. This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Allow an empty value as a valid `SELECT` type `MetadataField` value. This field will be removed. | Date: 2026-07-01
+   * This field will be removed. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataField allowEmptyValue() {
@@ -104,8 +104,8 @@ public class On_MetadataField extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Allow users to search for `MetadataField` values. This field will be removed. Use `CustomMetadataProperty.isSearchable` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `CustomMetadataProperty.isSearchable` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Allow users to search for `MetadataField` values. This field will be removed. Use `CustomMetadataProperty.isSearchable` instead. | Date: 2026-07-01
+   * This field will be removed. Use `CustomMetadataProperty.isSearchable` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataField isSearchable() {
@@ -113,8 +113,8 @@ public class On_MetadataField extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Allow users to edit `MetadataField` values. This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Allow users to edit `MetadataField` values. This field will be removed. | Date: 2026-07-01
+   * This field will be removed. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataField isEditable() {
@@ -122,8 +122,8 @@ public class On_MetadataField extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Show/hide `MetadataField` values. This field will be removed. Use `CustomMetadataProperty.isViewable` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `CustomMetadataProperty.isViewable` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Show/hide `MetadataField` values. This field will be removed. Use `CustomMetadataProperty.isViewable` instead. | Date: 2026-07-01
+   * This field will be removed. Use `CustomMetadataProperty.isViewable` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataField isVisible() {

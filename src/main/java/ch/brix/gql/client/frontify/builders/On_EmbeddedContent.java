@@ -61,13 +61,6 @@ public class On_EmbeddedContent extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Indicates whether the `Asset` is decorative and not meant to be read by screen readers. If true, alternative text is ignored.
-   */
-  public On_EmbeddedContent isDecorative() {
-    _add_field("isDecorative");
-    return this;
-  }
-  /**
    * `Attachment` items linked to `Asset`.
    */
   public On_EmbeddedContent attachments(EmbeddedContent_attachments callBuilder) {
@@ -89,20 +82,11 @@ public class On_EmbeddedContent extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `MetadataValue` items linked to `Asset`. This field will be removed. Use `customMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `customMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `MetadataValue` items linked to `Asset`. This field will be removed. Use `customMetadata` instead. | Date: 2026-07-01
+   * This field will be removed. Use `customMetadata` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_EmbeddedContent metadataValues(EmbeddedContent_metadataValues callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **DEPRECATED** `ExternalProduct` items linked to `Asset`. This field will be removed. | Date: 2025-01-01T00:00:00.000+00:00
-   * This field will be removed. | Date: 2025-01-01T00:00:00.000+00:00
-   */
-  @java.lang.Deprecated
-  public On_EmbeddedContent externalProducts(EmbeddedContent_externalProducts callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -114,7 +98,7 @@ public class On_EmbeddedContent extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** `Asset` will be available only during the defined `DateTime` range.When `null` it represents an unspecified start and/or open-ended date.
+   * `Asset` will be available only during the defined `DateTime` range. When `null` it represents an unspecified start and/or open-ended date.
    */
   public On_EmbeddedContent availability(EmbeddedContent_availability callBuilder) {
     _add_call(callBuilder);
@@ -156,6 +140,13 @@ public class On_EmbeddedContent extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * Paginated list of `AssetRevision` items for `Asset`, newest first.
+   */
+  public On_EmbeddedContent revisions(EmbeddedContent_revisions callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * Paginated list of `AssetComment` items for `Asset`.
    */
   public On_EmbeddedContent comments(EmbeddedContent_comments callBuilder) {
@@ -177,9 +168,9 @@ public class On_EmbeddedContent extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** The `WorkflowTask` this `Asset` is linked to.
+   * `AssetVariant` items of the asset. Only available for assets in icon and logo libraries.
    */
-  public On_EmbeddedContent workflowTask(EmbeddedContent_workflowTask callBuilder) {
+  public On_EmbeddedContent variants(EmbeddedContent_variants callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -187,13 +178,6 @@ public class On_EmbeddedContent extends ch.brix.gql.client.TypeBuilder {
    * `Location` of the `Asset`.
    */
   public On_EmbeddedContent location(EmbeddedContent_location callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Background color of the `Asset` preview.
-   */
-  public On_EmbeddedContent previewBackgroundColor(EmbeddedContent_previewBackgroundColor callBuilder) {
     _add_call(callBuilder);
     return this;
   }

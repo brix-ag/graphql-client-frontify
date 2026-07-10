@@ -12,8 +12,8 @@ public class On_DeleteCollection extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `Collection` details. This field will be removed. Use `id` instead. | Date: 2024-01-01T00:00:00.000+00:00
-   * This field will be removed. Use `id` instead. | Date: 2024-01-01T00:00:00.000+00:00
+   * **DEPRECATED** `Collection` details. This field will be removed. Use `id` instead. | Date: 2024-01-01
+   * This field will be removed. Use `id` instead. | Date: 2024-01-01
    */
   @java.lang.Deprecated
   public On_DeleteCollection collection(DeleteCollection_collection callBuilder) {

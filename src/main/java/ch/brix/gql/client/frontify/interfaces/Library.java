@@ -3,7 +3,7 @@ package ch.brix.gql.client.frontify.interfaces;
 /**
  * `LibraryInterface` for `Library` returnable types.
  */
-@ch.brix.gql.client.PossibleTypes({ch.brix.gql.client.frontify.objects.MediaLibrary.class, ch.brix.gql.client.frontify.objects.IconLibrary.class, ch.brix.gql.client.frontify.objects.LogoLibrary.class, ch.brix.gql.client.frontify.objects.DocumentLibrary.class})
+@ch.brix.gql.client.PossibleTypes({ch.brix.gql.client.frontify.objects.DocumentLibrary.class, ch.brix.gql.client.frontify.objects.IconLibrary.class, ch.brix.gql.client.frontify.objects.LogoLibrary.class, ch.brix.gql.client.frontify.objects.MediaLibrary.class})
 public interface Library {
   /**
    * `Library` Id.
@@ -18,14 +18,14 @@ public interface Library {
    */
   ch.brix.gql.client.frontify.objects.RgbaColor getColor();
   /**
-   * **DEPRECATED** Amount of `Assets` contained in this `Library`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Amount of `Assets` contained in this `Library`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01
+   * This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01
    */
   @java.lang.Deprecated
   ch.brix.gql.client.frontify.scalars.IntScalar getAssetCount();
   /**
-   * **DEPRECATED** Retrieve list of all `MetadataFields` belonging to this `Library`. This field will be removed. Use `customMetadataProperties` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `customMetadataProperties` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Retrieve list of all `MetadataFields` belonging to this `Library`. This field will be removed. Use `customMetadataProperties` instead. | Date: 2026-07-01
+   * This field will be removed. Use `customMetadataProperties` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.MetadataField.class)
@@ -55,10 +55,6 @@ public interface Library {
    * Check current `User` permissions in a specific `Library`.
    */
   ch.brix.gql.client.frontify.objects.LibraryUserPermissions getCurrentUserPermissions();
-  /**
-   * **BETA** The `Workflow` belonging to the given `Library`.
-   */
-  ch.brix.gql.client.frontify.objects.Workflow getWorkflow();
   /**
    * List of `CustomMetadataProperty` items belonging to a `Library`.
    */

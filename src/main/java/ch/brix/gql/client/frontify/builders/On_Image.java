@@ -61,13 +61,6 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Indicates whether the `Asset` is decorative and not meant to be read by screen readers. If true, alternative text is ignored.
-   */
-  public On_Image isDecorative() {
-    _add_field("isDecorative");
-    return this;
-  }
-  /**
    * `Attachment` items linked to `Asset`.
    */
   public On_Image attachments(Image_attachments callBuilder) {
@@ -89,20 +82,11 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `MetadataValue` items linked to `Asset`. This field will be removed. Use `customMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `customMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `MetadataValue` items linked to `Asset`. This field will be removed. Use `customMetadata` instead. | Date: 2026-07-01
+   * This field will be removed. Use `customMetadata` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_Image metadataValues(Image_metadataValues callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **DEPRECATED** `ExternalProduct` items linked to `Asset`. This field will be removed. | Date: 2025-01-01T00:00:00.000+00:00
-   * This field will be removed. | Date: 2025-01-01T00:00:00.000+00:00
-   */
-  @java.lang.Deprecated
-  public On_Image externalProducts(Image_externalProducts callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -114,7 +98,7 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** `Asset` will be available only during the defined `DateTime` range.When `null` it represents an unspecified start and/or open-ended date.
+   * `Asset` will be available only during the defined `DateTime` range. When `null` it represents an unspecified start and/or open-ended date.
    */
   public On_Image availability(Image_availability callBuilder) {
     _add_call(callBuilder);
@@ -156,6 +140,13 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * Paginated list of `AssetRevision` items for `Asset`, newest first.
+   */
+  public On_Image revisions(Image_revisions callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * Paginated list of `AssetComment` items for `Asset`.
    */
   public On_Image comments(Image_comments callBuilder) {
@@ -177,9 +168,9 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** The `WorkflowTask` this `Asset` is linked to.
+   * `AssetVariant` items of the asset. Only available for assets in icon and logo libraries.
    */
-  public On_Image workflowTask(Image_workflowTask callBuilder) {
+  public On_Image variants(Image_variants callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -187,13 +178,6 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
    * `Location` of the `Asset`.
    */
   public On_Image location(Image_location callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Background color of the `Asset` preview.
-   */
-  public On_Image previewBackgroundColor(Image_previewBackgroundColor callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -240,7 +224,7 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * Signed `Url` to download the original `Image` type file.
+   * Signed `Url` to download the original `Image` type file. Is null if the asset is download-protected and there is no approved and still valid download request.
    */
   public On_Image downloadUrl(Image_downloadUrl callBuilder) {
     _add_call(callBuilder);

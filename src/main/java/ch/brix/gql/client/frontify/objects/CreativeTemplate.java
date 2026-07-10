@@ -8,8 +8,10 @@ public class CreativeTemplate {
   @com.google.gson.annotations.SerializedName("id")
   private ch.brix.gql.client.frontify.scalars.IdScalar id;
   /**
-   * Id of the `Brand` of the `CreativeTemplate`.
+   * **DEPRECATED** Id of the `Brand` of the `CreativeTemplate`. This field will be removed. | Date: 2027-01-01
+   * This field will be removed. | Date: 2027-01-01
    */
+  @java.lang.Deprecated
   @com.google.gson.annotations.SerializedName("brandId")
   private ch.brix.gql.client.frontify.scalars.IdScalar brandId;
   /**
@@ -29,6 +31,12 @@ public class CreativeTemplate {
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.CreativeTemplatePage.class)
   private java.util.List<ch.brix.gql.client.frontify.objects.CreativeTemplatePage> pages;
   /**
+   * Retrieve list of all `CreativeTemplateExportOption` items belonging to `CreativeTemplate`.
+   */
+  @com.google.gson.annotations.SerializedName("exportOptions")
+  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.CreativeTemplateExportOption.class)
+  private java.util.List<ch.brix.gql.client.frontify.objects.CreativeTemplateExportOption> exportOptions;
+  /**
    * Retrieve a `CreativeTemplateVariable` item by `CreativeTemplateVariable` key.
    */
   @com.google.gson.annotations.SerializedName("variable")
@@ -40,8 +48,10 @@ public class CreativeTemplate {
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.CreativeTemplateVariable.class)
   private java.util.List<ch.brix.gql.client.frontify.objects.CreativeTemplateVariable> variables;
   /**
-   * Retrieve Asset ID.
+   * **DEPRECATED** Retrieve Asset ID. This field will be removed. | Date: 2027-01-01
+   * This field will be removed. | Date: 2027-01-01
    */
+  @java.lang.Deprecated
   @com.google.gson.annotations.SerializedName("assetId")
   private ch.brix.gql.client.frontify.scalars.IdScalar assetId;
   /**

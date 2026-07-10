@@ -17,4 +17,12 @@ public class Collection_assets_Args extends ch.brix.gql.client.ArgsBuilder {
     _add_arg("page", value);
     return this;
   }
+  /**
+   * Define search criteria for the returned `Assets`.
+   * Default value: null
+   */
+  public Collection_assets_Args query(ch.brix.gql.client.frontify.input_objects.LibraryCollectionQueryInput value) {
+    _add_arg("query", value);
+    return this;
+  }
 }

@@ -3,8 +3,8 @@ package ch.brix.gql.client.frontify.objects;
 @lombok.Data
 public class LibraryRootFolder {
   /**
-   * **DEPRECATED** The `SubFolderItems` of the current `Library`/`Workspace`. This field will be removed. Use `folders` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `folders` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** The `SubFolderItems` of the current `Library`/`Workspace`. This field will be removed. Use `folders` instead. | Date: 2025-07-01
+   * This field will be removed. Use `folders` instead. | Date: 2025-07-01
    */
   @java.lang.Deprecated
   @com.google.gson.annotations.SerializedName("subFolders")

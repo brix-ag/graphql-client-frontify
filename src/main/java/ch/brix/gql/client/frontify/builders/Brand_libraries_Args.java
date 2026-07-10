@@ -17,12 +17,4 @@ public class Brand_libraries_Args extends ch.brix.gql.client.ArgsBuilder {
     _add_arg("page", value);
     return this;
   }
-  /**
-   * **BETA** Define search criteria for `Library` items in a `Brand`.
-   * Default value: null
-   */
-  public Brand_libraries_Args query(ch.brix.gql.client.frontify.input_objects.LibraryQueryInput value) {
-    _add_arg("query", value);
-    return this;
-  }
 }

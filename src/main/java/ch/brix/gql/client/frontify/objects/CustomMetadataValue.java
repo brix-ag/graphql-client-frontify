@@ -8,7 +8,7 @@ public class CustomMetadataValue implements ch.brix.gql.client.frontify.interfac
   @com.google.gson.annotations.SerializedName("property")
   private ch.brix.gql.client.frontify.objects.CustomMetadataProperty property;
   /**
-   * `CustomMetadataProperty` value. Returns an object with `optionId` and `text` property values (for `SELECT` type only) or a string for other `CustomMetadataProperty` single value items.
+   * `CustomMetadataProperty` value. For `SELECT`, returns an object with `optionId` and `text`. For `CATALOG`, returns an opaque catalog selection ID string resolvable with `catalogSelection(id:)`. For other single-value property types, returns the stored value as `String`/`Float`/`Int`/`DateTime`.
    */
   @com.google.gson.annotations.SerializedName("value")
   private ch.brix.gql.client.frontify.scalars.AnyScalar value;

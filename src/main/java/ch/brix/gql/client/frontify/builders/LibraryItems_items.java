@@ -4,7 +4,7 @@ public class LibraryItems_items extends ch.brix.gql.client.CallBuilder<java.util
   public LibraryItems_items() {
     super(new ch.brix.gql.client.Call<>("items", "Library"));
   }
-  public LibraryItems_items onMediaLibrary(On_MediaLibrary typeBuilder) {
+  public LibraryItems_items onDocumentLibrary(On_DocumentLibrary typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -16,7 +16,7 @@ public class LibraryItems_items extends ch.brix.gql.client.CallBuilder<java.util
     _add_on(typeBuilder);
     return this;
   }
-  public LibraryItems_items onDocumentLibrary(On_DocumentLibrary typeBuilder) {
+  public LibraryItems_items onMediaLibrary(On_MediaLibrary typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

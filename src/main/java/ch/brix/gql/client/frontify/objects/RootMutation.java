@@ -8,8 +8,8 @@ public class RootMutation {
   @com.google.gson.annotations.SerializedName("addAssetLicense")
   private ch.brix.gql.client.frontify.objects.AddAssetLicense addAssetLicense;
   /**
-   * **DEPRECATED** Add a new relation between an existing `Asset` and an existing `MetadataField` with its value. The value will be automatically created and linked to its `MetadataField`. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`. This field will be removed. Use `addCustomMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `addCustomMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Add a new relation between an existing `Asset` and an existing `MetadataField` with its value. The value will be automatically created and linked to its `MetadataField`. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`. This field will be removed. Use `addCustomMetadata` instead. | Date: 2026-07-01
+   * This field will be removed. Use `addCustomMetadata` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   @com.google.gson.annotations.SerializedName("addAssetMetadataFieldValue")
@@ -45,26 +45,6 @@ public class RootMutation {
   @com.google.gson.annotations.SerializedName("addCustomMetadataPropertyOptions")
   private ch.brix.gql.client.frontify.objects.AddCustomMetadataPropertyOptions addCustomMetadataPropertyOptions;
   /**
-   * **BETA** Add a new `WorkflowChecklistItem` for a given `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("addWorkflowChecklistItem")
-  private ch.brix.gql.client.frontify.objects.AddWorkflowChecklistItem addWorkflowChecklistItem;
-  /**
-   * **BETA** Add a new `WorkflowChecklistPreset` for a given `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("addWorkflowChecklistPreset")
-  private ch.brix.gql.client.frontify.objects.AddWorkflowChecklistPreset addWorkflowChecklistPreset;
-  /**
-   * **BETA** Add assignees to an existing `WorkflowStatus`. Currently, only one assignee is supported. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("addWorkflowStatusAssignees")
-  private ch.brix.gql.client.frontify.objects.AddWorkflowStatusAssignees addWorkflowStatusAssignees;
-  /**
-   * **BETA** Add assignees to an existing `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("addWorkflowTaskAssignees")
-  private ch.brix.gql.client.frontify.objects.AddWorkflowTaskAssignees addWorkflowTaskAssignees;
-  /**
    * Create a new `Asset`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
    */
   @com.google.gson.annotations.SerializedName("createAsset")
@@ -74,6 +54,11 @@ public class RootMutation {
    */
   @com.google.gson.annotations.SerializedName("createAssetComment")
   private ch.brix.gql.client.frontify.objects.CreateAssetComment createAssetComment;
+  /**
+   * Create a new `AssetVariant`. Only supported for assets in icon and logo libraries. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
+   */
+  @com.google.gson.annotations.SerializedName("createAssetVariant")
+  private ch.brix.gql.client.frontify.objects.CreateAssetVariant createAssetVariant;
   /**
    * Create a new `Attachment`. Attachments require a valid parent ID string. This mutation currently only supports attachments for parents of `Asset` type. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
    */
@@ -105,22 +90,12 @@ public class RootMutation {
   @com.google.gson.annotations.SerializedName("createLicense")
   private ch.brix.gql.client.frontify.objects.CreateLicense createLicense;
   /**
-   * **DEPRECATED** Create a new `Project` `MetadataField` with your desired configuration. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`. This field will be removed. Use `createCustomMetadataProperty` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `createCustomMetadataProperty` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Create a new `Project` `MetadataField` with your desired configuration. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`. This field will be removed. Use `createCustomMetadataProperty` instead. | Date: 2026-07-01
+   * This field will be removed. Use `createCustomMetadataProperty` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   @com.google.gson.annotations.SerializedName("createMetadataField")
   private ch.brix.gql.client.frontify.objects.CreateMetadataField createMetadataField;
-  /**
-   * **BETA** Create new `WorkflowStatus` in a given `Workflow`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("createWorkflowStatus")
-  private ch.brix.gql.client.frontify.objects.CreateWorkflowStatus createWorkflowStatus;
-  /**
-   * **BETA** Create a new `WorkflowTask` for an `Asset` in a given `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("createAssetWorkflowTask")
-  private ch.brix.gql.client.frontify.objects.CreateAssetWorkflowTask createAssetWorkflowTask;
   /**
    * Create a new `Workspace` type `Project`. Requires `basic:write` scope to be accessible.
    */
@@ -132,10 +107,15 @@ public class RootMutation {
   @com.google.gson.annotations.SerializedName("deleteAsset")
   private ch.brix.gql.client.frontify.objects.DeleteAsset deleteAsset;
   /**
-   * Delete an existing `Attachment`. Requires `basic:write` scope to be accessible and depending on the `Attachment` type, either `Portal` or `Asset` permission level `EDIT`.
+   * Delete an existing `Attachment`. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
    */
   @com.google.gson.annotations.SerializedName("deleteAttachment")
   private ch.brix.gql.client.frontify.objects.DeleteAttachment deleteAttachment;
+  /**
+   * Delete an existing `AssetVariant`. Only supported for assets in icon and logo libraries. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
+   */
+  @com.google.gson.annotations.SerializedName("deleteAssetVariant")
+  private ch.brix.gql.client.frontify.objects.DeleteAssetVariant deleteAssetVariant;
   /**
    * Delete an existing `Collection`. Requires `basic:write` scope to be accessible and `Collection` permission level `EDIT`.
    */
@@ -162,32 +142,17 @@ public class RootMutation {
   @com.google.gson.annotations.SerializedName("deleteLicense")
   private ch.brix.gql.client.frontify.objects.DeleteLicense deleteLicense;
   /**
-   * **DEPRECATED** Delete an existing `Project` `MetadataField`. Existing `MetadataField`'s with the same value with be automatically removed. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`. This field will be removed. Use `deleteCustomMetadataProperty` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `deleteCustomMetadataProperty` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Delete an existing `Project` `MetadataField`. Existing `MetadataField`'s with the same value with be automatically removed. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`. This field will be removed. Use `deleteCustomMetadataProperty` instead. | Date: 2026-07-01
+   * This field will be removed. Use `deleteCustomMetadataProperty` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   @com.google.gson.annotations.SerializedName("deleteMetadataField")
   private ch.brix.gql.client.frontify.objects.DeleteMetadataField deleteMetadataField;
   /**
-   * **BETA** Delete an existing `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("deleteWorkflowStatus")
-  private ch.brix.gql.client.frontify.objects.DeleteWorkflowStatus deleteWorkflowStatus;
-  /**
-   * **BETA** Delete an existing `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("deleteWorkflowTask")
-  private ch.brix.gql.client.frontify.objects.DeleteWorkflowTask deleteWorkflowTask;
-  /**
    * Edit an existing `AssetComment`. Requires `basic:write` scope to be accessible and `Asset` permission level `COMMENT`.
    */
   @com.google.gson.annotations.SerializedName("editComment")
   private ch.brix.gql.client.frontify.objects.EditComment editComment;
-  /**
-   * Install `Webhook`. Requires `basic:write` and `webhook:write` scopes to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("installProjectWebhook")
-  private ch.brix.gql.client.frontify.objects.InstallProjectWebhook installProjectWebhook;
   /**
    * Invite `Project` user. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`. Limitations: Does not work if User Provisioning feature is enabled.
    */
@@ -204,11 +169,6 @@ public class RootMutation {
   @com.google.gson.annotations.SerializedName("moveFolders")
   private ch.brix.gql.client.frontify.objects.MoveFolders moveFolders;
   /**
-   * **BETA** Move one or more `WorkflowTask` to a new `WorkflowStatus`. All `EnterRule` of the destination `WorkflowStatus` have to be satisfied to be able to move. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("moveWorkflowTask")
-  private ch.brix.gql.client.frontify.objects.MoveWorkflowTask moveWorkflowTask;
-  /**
    * Remove an existing relation between an `Asset` and a `License`. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
    */
   @com.google.gson.annotations.SerializedName("removeAssetLicense")
@@ -218,11 +178,6 @@ public class RootMutation {
    */
   @com.google.gson.annotations.SerializedName("removeAssetPreviewImage")
   private ch.brix.gql.client.frontify.objects.RemoveAssetPreviewImage removeAssetPreviewImage;
-  /**
-   * **BETA** Remove existing relations between `Asset` items. The `relatedAssetIds` input field list is limited to 100 ids per request and cannot contain the same `assetId` input field value. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("removeAssetRelations")
-  private ch.brix.gql.client.frontify.objects.RemoveAssetRelations removeAssetRelations;
   /**
    * Remove existing `Asset` tags. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
    */
@@ -244,32 +199,12 @@ public class RootMutation {
   @com.google.gson.annotations.SerializedName("removeCustomMetadataPropertyOptions")
   private ch.brix.gql.client.frontify.objects.RemoveCustomMetadataPropertyOptions removeCustomMetadataPropertyOptions;
   /**
-   * **DEPRECATED** Remove existing `MetadataField` value.Existing relations to that `MetadataField` with the same value will be automatically removed.Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`. This field will be removed. Use `removeCustomMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `removeCustomMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Remove existing `MetadataField` value.Existing relations to that `MetadataField` with the same value will be automatically removed.Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`. This field will be removed. Use `removeCustomMetadata` instead. | Date: 2026-07-01
+   * This field will be removed. Use `removeCustomMetadata` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   @com.google.gson.annotations.SerializedName("removeMetadataValue")
   private ch.brix.gql.client.frontify.objects.RemoveMetadataValue removeMetadataValue;
-  /**
-   * **BETA** Remove a `WorkflowChecklistItem`.Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("removeWorkflowChecklistItem")
-  private ch.brix.gql.client.frontify.objects.RemoveWorkflowChecklistItem removeWorkflowChecklistItem;
-  /**
-   * **BETA** Remove a `WorkflowChecklistPreset`.Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("removeWorkflowChecklistPreset")
-  private ch.brix.gql.client.frontify.objects.RemoveWorkflowChecklistPreset removeWorkflowChecklistPreset;
-  /**
-   * **BETA** Remove assignees from an existing `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("removeWorkflowStatusAssignees")
-  private ch.brix.gql.client.frontify.objects.RemoveWorkflowStatusAssignees removeWorkflowStatusAssignees;
-  /**
-   * **BETA** Remove assignees from an existing `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("removeWorkflowTaskAssignees")
-  private ch.brix.gql.client.frontify.objects.RemoveWorkflowTaskAssignees removeWorkflowTaskAssignees;
   /**
    * Export `CreativeTemplate` with provided parameters. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
    */
@@ -286,6 +221,11 @@ public class RootMutation {
   @com.google.gson.annotations.SerializedName("replaceAsset")
   private ch.brix.gql.client.frontify.objects.ReplaceAsset replaceAsset;
   /**
+   * Replace an existing `AssetVariant`. Only supported for assets in icon and logo libraries. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
+   */
+  @com.google.gson.annotations.SerializedName("replaceAssetVariant")
+  private ch.brix.gql.client.frontify.objects.ReplaceAssetVariant replaceAssetVariant;
+  /**
    * Add a new reply to an existing `Asset` `Comment`. Requires `basic:write` scope to be accessible and `Asset` permission level `COMMENT`.
    */
   @com.google.gson.annotations.SerializedName("replyToComment")
@@ -296,11 +236,6 @@ public class RootMutation {
   @com.google.gson.annotations.SerializedName("resolveAssetComment")
   private ch.brix.gql.client.frontify.objects.ResolveAssetComment resolveAssetComment;
   /**
-   * **BETA** Set `CustomMetadataProperty` values to any supported parent (`WorkspaceProject` | `Asset`). Attention: Existing `CustomMetadataProperty` values for the selected parents will be overwritten and/or removed. Requires `basic:write` scope to be accessible and permission level `EDIT` for the respective parent.
-   */
-  @com.google.gson.annotations.SerializedName("setCustomMetadata")
-  private ch.brix.gql.client.frontify.objects.SetCustomMetadata setCustomMetadata;
-  /**
    * Replace the existing set of the `Assets` in the `Collection` with the new set of the `Assets`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
    */
   @com.google.gson.annotations.SerializedName("setCollectionAssets")
@@ -310,11 +245,6 @@ public class RootMutation {
    */
   @com.google.gson.annotations.SerializedName("syncAssetTags")
   private ch.brix.gql.client.frontify.objects.SyncAssetTags syncAssetTags;
-  /**
-   * Uninstall `Webhook`. Requires `basic:write` and `webhook:write` scopes to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("uninstallWebhook")
-  private ch.brix.gql.client.frontify.objects.UninstallWebhook uninstallWebhook;
   /**
    * Update an existing `Asset`. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
    */
@@ -336,42 +266,7 @@ public class RootMutation {
   @com.google.gson.annotations.SerializedName("updateFolder")
   private ch.brix.gql.client.frontify.objects.UpdateFolder updateFolder;
   /**
-   * **BETA** Update an existing `WorkflowChecklistItem`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("updateWorkflowChecklistItem")
-  private ch.brix.gql.client.frontify.objects.UpdateWorkflowChecklistItem updateWorkflowChecklistItem;
-  /**
-   * **BETA** Update an existing `WorkflowChecklistPreset`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("updateWorkflowChecklistPreset")
-  private ch.brix.gql.client.frontify.objects.UpdateWorkflowChecklistPreset updateWorkflowChecklistPreset;
-  /**
-   * **BETA** Update an existing `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("updateWorkflowStatus")
-  private ch.brix.gql.client.frontify.objects.UpdateWorkflowStatus updateWorkflowStatus;
-  /**
-   * **BETA** Update an existing `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("updateWorkflowTask")
-  private ch.brix.gql.client.frontify.objects.UpdateWorkflowTask updateWorkflowTask;
-  /**
-   * **BETA** Create a new `Brand`. Requires `basic:write` scope to be accessible and `Account` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("createBrand")
-  private ch.brix.gql.client.frontify.objects.CreateBrand createBrand;
-  /**
-   * **BETA** Delete an existing `Brand`. Requires `basic:write` scope to be accessible and `Brand` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("deleteBrand")
-  private ch.brix.gql.client.frontify.objects.DeleteBrand deleteBrand;
-  /**
-   * **BETA** Update an existing `Brand`. Requires `basic:write` scope to be accessible and `Brand` permission level `EDIT`.
-   */
-  @com.google.gson.annotations.SerializedName("updateBrand")
-  private ch.brix.gql.client.frontify.objects.UpdateBrand updateBrand;
-  /**
-   * Upload a new file. Requires `basic:write` scope to be accessible<br><br>Generates a temporary unique File ID and a list of presigned Urls to upload a binary file in multiple parts. The Id can be used, after the upload is completed, to permanently link the file to a specific type (ie `Asset`, `Attachment`, `Revision) through a different mutation.<br><br>When `chunkSize` is provided as `null` (to be the future default), the number of upload parts and thus their corresponding part size will be computed dynamically based on the specified file size, following these rules:<br>- Maxmum of 1000 parts.<br>- For files of 5TB (maximum): 1000 parts of 5GB each.<br>- For files less than 15MB: 1 single part of 15MB.<br>- Otherwise: an inclusive range of [1, 1000] parts of [15MB, 5GB] each.
+   * Upload a new file. Requires `basic:write` scope to be accessible<br><br>Creates a temporary unique file Id and returns presigned URLs for uploading a binary file in multiple parts.<br>After the upload is completed, this Id can be used (**once only**) to permanently link the file to a specific type (e.g., Asset, Attachment, Revision) via another mutation.<br><br>When `chunkSize` is provided as `null` (to be the future default), the number of upload parts and thus their corresponding part size will be computed dynamically based on the specified file size, following these rules:<br>- Maxmum of 1000 parts.<br>- For files of 5TB (maximum): 1000 parts of 5GB each.<br>- For files less than 15MB: 1 single part of 15MB.<br>- Otherwise: an inclusive range of [1, 1000] parts of [15MB, 5GB] each.
    */
   @com.google.gson.annotations.SerializedName("uploadFile")
   private ch.brix.gql.client.frontify.objects.UploadFile uploadFile;
@@ -380,4 +275,19 @@ public class RootMutation {
    */
   @com.google.gson.annotations.SerializedName("cancelExportCreatives")
   private ch.brix.gql.client.frontify.objects.CancelExportCreatives cancelExportCreatives;
+  /**
+   * Publish a marketplace app with the specified release notes and availability.
+   */
+  @com.google.gson.annotations.SerializedName("publishMarketplaceApp")
+  private ch.brix.gql.client.frontify.objects.PublishMarketplaceApp publishMarketplaceApp;
+  /**
+   * Install `Webhook`. Requires `basic:write` and `webhook:write` scopes to be accessible and `Project` permission level `EDIT`.
+   */
+  @com.google.gson.annotations.SerializedName("installProjectWebhook")
+  private ch.brix.gql.client.frontify.objects.InstallProjectWebhook installProjectWebhook;
+  /**
+   * Uninstall `Webhook`. Requires `basic:write` and `webhook:write` scopes to be accessible and `Project` permission level `EDIT`.
+   */
+  @com.google.gson.annotations.SerializedName("uninstallWebhook")
+  private ch.brix.gql.client.frontify.objects.UninstallWebhook uninstallWebhook;
 }

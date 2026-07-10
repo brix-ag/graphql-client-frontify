@@ -12,11 +12,7 @@ public class AssetItems_items extends ch.brix.gql.client.CallBuilder<java.util.L
     _add_on(typeBuilder);
     return this;
   }
-  public AssetItems_items onImage(On_Image typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public AssetItems_items onVideo(On_Video typeBuilder) {
+  public AssetItems_items onEmbeddedContent(On_EmbeddedContent typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -24,7 +20,11 @@ public class AssetItems_items extends ch.brix.gql.client.CallBuilder<java.util.L
     _add_on(typeBuilder);
     return this;
   }
-  public AssetItems_items onEmbeddedContent(On_EmbeddedContent typeBuilder) {
+  public AssetItems_items onImage(On_Image typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public AssetItems_items onVideo(On_Video typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

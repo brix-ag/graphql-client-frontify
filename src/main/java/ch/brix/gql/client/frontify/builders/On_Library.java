@@ -26,8 +26,8 @@ public class On_Library extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Amount of `Assets` contained in this `Library`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Amount of `Assets` contained in this `Library`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01
+   * This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01
    */
   @java.lang.Deprecated
   public On_Library assetCount() {
@@ -35,8 +35,8 @@ public class On_Library extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Retrieve list of all `MetadataFields` belonging to this `Library`. This field will be removed. Use `customMetadataProperties` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `customMetadataProperties` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Retrieve list of all `MetadataFields` belonging to this `Library`. This field will be removed. Use `customMetadataProperties` instead. | Date: 2026-07-01
+   * This field will be removed. Use `customMetadataProperties` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_Library metadataFields(Library_metadataFields callBuilder) {
@@ -82,13 +82,6 @@ public class On_Library extends ch.brix.gql.client.TypeBuilder {
    * Check current `User` permissions in a specific `Library`.
    */
   public On_Library currentUserPermissions(Library_currentUserPermissions callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** The `Workflow` belonging to the given `Library`.
-   */
-  public On_Library workflow(Library_workflow callBuilder) {
     _add_call(callBuilder);
     return this;
   }

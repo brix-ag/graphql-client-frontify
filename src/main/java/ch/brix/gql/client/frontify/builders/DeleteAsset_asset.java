@@ -12,11 +12,7 @@ public class DeleteAsset_asset extends ch.brix.gql.client.CallBuilder<ch.brix.gq
     _add_on(typeBuilder);
     return this;
   }
-  public DeleteAsset_asset onImage(On_Image typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public DeleteAsset_asset onVideo(On_Video typeBuilder) {
+  public DeleteAsset_asset onEmbeddedContent(On_EmbeddedContent typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -24,7 +20,11 @@ public class DeleteAsset_asset extends ch.brix.gql.client.CallBuilder<ch.brix.gq
     _add_on(typeBuilder);
     return this;
   }
-  public DeleteAsset_asset onEmbeddedContent(On_EmbeddedContent typeBuilder) {
+  public DeleteAsset_asset onImage(On_Image typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public DeleteAsset_asset onVideo(On_Video typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

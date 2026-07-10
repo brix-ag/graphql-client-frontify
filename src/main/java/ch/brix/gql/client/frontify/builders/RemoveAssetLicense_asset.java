@@ -12,11 +12,7 @@ public class RemoveAssetLicense_asset extends ch.brix.gql.client.CallBuilder<ch.
     _add_on(typeBuilder);
     return this;
   }
-  public RemoveAssetLicense_asset onImage(On_Image typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RemoveAssetLicense_asset onVideo(On_Video typeBuilder) {
+  public RemoveAssetLicense_asset onEmbeddedContent(On_EmbeddedContent typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -24,7 +20,11 @@ public class RemoveAssetLicense_asset extends ch.brix.gql.client.CallBuilder<ch.
     _add_on(typeBuilder);
     return this;
   }
-  public RemoveAssetLicense_asset onEmbeddedContent(On_EmbeddedContent typeBuilder) {
+  public RemoveAssetLicense_asset onImage(On_Image typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RemoveAssetLicense_asset onVideo(On_Video typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

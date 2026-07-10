@@ -12,11 +12,7 @@ public class MoveAssets_assets extends ch.brix.gql.client.CallBuilder<java.util.
     _add_on(typeBuilder);
     return this;
   }
-  public MoveAssets_assets onImage(On_Image typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public MoveAssets_assets onVideo(On_Video typeBuilder) {
+  public MoveAssets_assets onEmbeddedContent(On_EmbeddedContent typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -24,7 +20,11 @@ public class MoveAssets_assets extends ch.brix.gql.client.CallBuilder<java.util.
     _add_on(typeBuilder);
     return this;
   }
-  public MoveAssets_assets onEmbeddedContent(On_EmbeddedContent typeBuilder) {
+  public MoveAssets_assets onImage(On_Image typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public MoveAssets_assets onVideo(On_Video typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

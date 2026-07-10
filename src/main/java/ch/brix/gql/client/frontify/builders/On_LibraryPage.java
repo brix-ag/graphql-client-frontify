@@ -26,13 +26,6 @@ public class On_LibraryPage extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** `LibraryPage` `Collection` items list.
-   */
-  public On_LibraryPage collections(LibraryPage_collections callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
    * `LibraryPage` `Asset` items list.
    */
   public On_LibraryPage assets(LibraryPage_assets callBuilder) {

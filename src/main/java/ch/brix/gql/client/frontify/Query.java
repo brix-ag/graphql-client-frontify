@@ -14,8 +14,8 @@ public class Query {
     return new ch.brix.gql.client.frontify.builders.RootQuery_account();
   }
   /**
-   * **DEPRECATED** Retrieve `Project` details by Id. This field will be removed. Use `library` or `workspaceProject` instead. | Date: 2023-01-01T00:00:00.000+00:00
-   * This field will be removed. Use `library` or `workspaceProject` instead. | Date: 2023-01-01T00:00:00.000+00:00
+   * **DEPRECATED** Retrieve `Project` details by Id. This field will be removed. Use `library` or `workspaceProject` instead. | Date: 2023-01-01
+   * This field will be removed. Use `library` or `workspaceProject` instead. | Date: 2023-01-01
    */
   @java.lang.Deprecated
   public static ch.brix.gql.client.frontify.builders.RootQuery_project project() {
@@ -32,12 +32,6 @@ public class Query {
    */
   public static ch.brix.gql.client.frontify.builders.RootQuery_workspaceProject workspaceProject() {
     return new ch.brix.gql.client.frontify.builders.RootQuery_workspaceProject();
-  }
-  /**
-   * Retrieve `WebhookItems` related to current `Account`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootQuery_webhooks webhooks() {
-    return new ch.brix.gql.client.frontify.builders.RootQuery_webhooks();
   }
   /**
    * Retrieve `Assets` details by Ids.
@@ -76,15 +70,15 @@ public class Query {
     return new ch.brix.gql.client.frontify.builders.RootQuery_brands();
   }
   /**
-   * **BETA** Retrieve a `GuidelinePage` by its id.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootQuery_guidelinePage guidelinePage() {
-    return new ch.brix.gql.client.frontify.builders.RootQuery_guidelinePage();
-  }
-  /**
    * Retrieve `Node` details by Id.
    */
   public static ch.brix.gql.client.frontify.builders.RootQuery_node node() {
     return new ch.brix.gql.client.frontify.builders.RootQuery_node();
+  }
+  /**
+   * Retrieve `WebhookItems` related to current `Account`.
+   */
+  public static ch.brix.gql.client.frontify.builders.RootQuery_webhooks webhooks() {
+    return new ch.brix.gql.client.frontify.builders.RootQuery_webhooks();
   }
 }

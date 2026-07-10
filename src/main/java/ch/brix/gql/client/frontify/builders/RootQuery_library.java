@@ -8,7 +8,7 @@ public class RootQuery_library extends ch.brix.gql.client.CallBuilder<ch.brix.gq
     _set_args(argsBuilder);
     return this;
   }
-  public RootQuery_library onMediaLibrary(On_MediaLibrary typeBuilder) {
+  public RootQuery_library onDocumentLibrary(On_DocumentLibrary typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -20,7 +20,7 @@ public class RootQuery_library extends ch.brix.gql.client.CallBuilder<ch.brix.gq
     _add_on(typeBuilder);
     return this;
   }
-  public RootQuery_library onDocumentLibrary(On_DocumentLibrary typeBuilder) {
+  public RootQuery_library onMediaLibrary(On_MediaLibrary typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

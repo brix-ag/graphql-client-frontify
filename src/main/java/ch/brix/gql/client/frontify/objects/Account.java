@@ -17,9 +17,4 @@ public class Account implements ch.brix.gql.client.frontify.interfaces.Node {
    */
   @com.google.gson.annotations.SerializedName("userGroups")
   private ch.brix.gql.client.frontify.objects.UserGroupItems userGroups;
-  /**
-   * **BETA** List and search `AccountSearch` item(s).
-   */
-  @com.google.gson.annotations.SerializedName("search")
-  private ch.brix.gql.client.frontify.objects.AccountSearchItems search;
 }

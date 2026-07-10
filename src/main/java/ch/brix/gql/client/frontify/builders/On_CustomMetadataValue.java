@@ -12,7 +12,7 @@ public class On_CustomMetadataValue extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * `CustomMetadataProperty` value. Returns an object with `optionId` and `text` property values (for `SELECT` type only) or a string for other `CustomMetadataProperty` single value items.
+   * `CustomMetadataProperty` value. For `SELECT`, returns an object with `optionId` and `text`. For `CATALOG`, returns an opaque catalog selection ID string resolvable with `catalogSelection(id:)`. For other single-value property types, returns the stored value as `String`/`Float`/`Int`/`DateTime`.
    */
   public On_CustomMetadataValue value() {
     _add_field("value");

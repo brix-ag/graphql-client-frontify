@@ -16,11 +16,7 @@ public class RootQuery_assets extends ch.brix.gql.client.CallBuilder<java.util.L
     _add_on(typeBuilder);
     return this;
   }
-  public RootQuery_assets onImage(On_Image typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RootQuery_assets onVideo(On_Video typeBuilder) {
+  public RootQuery_assets onEmbeddedContent(On_EmbeddedContent typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -28,7 +24,11 @@ public class RootQuery_assets extends ch.brix.gql.client.CallBuilder<java.util.L
     _add_on(typeBuilder);
     return this;
   }
-  public RootQuery_assets onEmbeddedContent(On_EmbeddedContent typeBuilder) {
+  public RootQuery_assets onImage(On_Image typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RootQuery_assets onVideo(On_Video typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

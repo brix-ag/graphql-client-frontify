@@ -12,8 +12,10 @@ public class On_CreativeTemplate extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * Id of the `Brand` of the `CreativeTemplate`.
+   * **DEPRECATED** Id of the `Brand` of the `CreativeTemplate`. This field will be removed. | Date: 2027-01-01
+   * This field will be removed. | Date: 2027-01-01
    */
+  @java.lang.Deprecated
   public On_CreativeTemplate brandId() {
     _add_field("brandId");
     return this;
@@ -40,6 +42,13 @@ public class On_CreativeTemplate extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * Retrieve list of all `CreativeTemplateExportOption` items belonging to `CreativeTemplate`.
+   */
+  public On_CreativeTemplate exportOptions(CreativeTemplate_exportOptions callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * Retrieve a `CreativeTemplateVariable` item by `CreativeTemplateVariable` key.
    */
   public On_CreativeTemplate variable(CreativeTemplate_variable callBuilder) {
@@ -54,8 +63,10 @@ public class On_CreativeTemplate extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * Retrieve Asset ID.
+   * **DEPRECATED** Retrieve Asset ID. This field will be removed. | Date: 2027-01-01
+   * This field will be removed. | Date: 2027-01-01
    */
+  @java.lang.Deprecated
   public On_CreativeTemplate assetId() {
     _add_field("assetId");
     return this;

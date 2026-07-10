@@ -13,8 +13,8 @@ public class RootQuery {
   @com.google.gson.annotations.SerializedName("account")
   private ch.brix.gql.client.frontify.objects.Account account;
   /**
-   * **DEPRECATED** Retrieve `Project` details by Id. This field will be removed. Use `library` or `workspaceProject` instead. | Date: 2023-01-01T00:00:00.000+00:00
-   * This field will be removed. Use `library` or `workspaceProject` instead. | Date: 2023-01-01T00:00:00.000+00:00
+   * **DEPRECATED** Retrieve `Project` details by Id. This field will be removed. Use `library` or `workspaceProject` instead. | Date: 2023-01-01
+   * This field will be removed. Use `library` or `workspaceProject` instead. | Date: 2023-01-01
    */
   @java.lang.Deprecated
   @com.google.gson.annotations.SerializedName("project")
@@ -29,11 +29,6 @@ public class RootQuery {
    */
   @com.google.gson.annotations.SerializedName("workspaceProject")
   private ch.brix.gql.client.frontify.objects.Workspace workspaceProject;
-  /**
-   * Retrieve `WebhookItems` related to current `Account`.
-   */
-  @com.google.gson.annotations.SerializedName("webhooks")
-  private ch.brix.gql.client.frontify.objects.WebhookItems webhooks;
   /**
    * Retrieve `Assets` details by Ids.
    */
@@ -67,13 +62,13 @@ public class RootQuery {
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.Brand.class)
   private java.util.List<ch.brix.gql.client.frontify.objects.Brand> brands;
   /**
-   * **BETA** Retrieve a `GuidelinePage` by its id.
-   */
-  @com.google.gson.annotations.SerializedName("guidelinePage")
-  private ch.brix.gql.client.frontify.objects.GuidelinePage guidelinePage;
-  /**
    * Retrieve `Node` details by Id.
    */
   @com.google.gson.annotations.SerializedName("node")
   private ch.brix.gql.client.frontify.interfaces.Node node;
+  /**
+   * Retrieve `WebhookItems` related to current `Account`.
+   */
+  @com.google.gson.annotations.SerializedName("webhooks")
+  private ch.brix.gql.client.frontify.objects.WebhookItems webhooks;
 }

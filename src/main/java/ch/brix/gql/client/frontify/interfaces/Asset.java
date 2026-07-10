@@ -3,7 +3,7 @@ package ch.brix.gql.client.frontify.interfaces;
 /**
  * `AssetInterface` for `Asset` returnable types.
  */
-@ch.brix.gql.client.PossibleTypes({ch.brix.gql.client.frontify.objects.Audio.class, ch.brix.gql.client.frontify.objects.Document.class, ch.brix.gql.client.frontify.objects.Image.class, ch.brix.gql.client.frontify.objects.Video.class, ch.brix.gql.client.frontify.objects.File.class, ch.brix.gql.client.frontify.objects.EmbeddedContent.class})
+@ch.brix.gql.client.PossibleTypes({ch.brix.gql.client.frontify.objects.Audio.class, ch.brix.gql.client.frontify.objects.Document.class, ch.brix.gql.client.frontify.objects.EmbeddedContent.class, ch.brix.gql.client.frontify.objects.File.class, ch.brix.gql.client.frontify.objects.Image.class, ch.brix.gql.client.frontify.objects.Video.class})
 public interface Asset {
   /**
    * `Asset` id.
@@ -34,6 +34,10 @@ public interface Asset {
    */
   ch.brix.gql.client.frontify.scalars.StringScalar getDescription();
   /**
+   * Alternative text for the `Asset`. Used by screen readers when the asset is not decorative.
+   */
+  ch.brix.gql.client.frontify.scalars.StringScalar getAlternativeText();
+  /**
    * List of `Asset`'s `Attachments`.
    */
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.AssetAttachment.class)
@@ -52,7 +56,7 @@ public interface Asset {
    */
   ch.brix.gql.client.frontify.objects.Copyright getCopyright();
   /**
-   * **BETA** `Asset` will be available only during the defined `DateTime` range.When `null` it represents an unspecified start and/or open-ended date.
+   * `Asset` will be available only during the defined `DateTime` range.When `null` it represents an unspecified start and/or open-ended date.
    */
   ch.brix.gql.client.frontify.objects.DateTimeRange getAvailability();
   /**
@@ -65,12 +69,16 @@ public interface Asset {
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.License.class)
   java.util.List<ch.brix.gql.client.frontify.objects.License> getLicenses();
   /**
-   * **DEPRECATED** Metadata values details. This field will be removed. Use `customMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `customMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Metadata values details. This field will be removed. Use `customMetadata` instead. | Date: 2026-07-01
+   * This field will be removed. Use `customMetadata` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.MetadataValue.class)
   java.util.List<ch.brix.gql.client.frontify.objects.MetadataValue> getMetadataValues();
+  /**
+   * Represents the Author of the `Asset`. Example: Photographer Name.
+   */
+  ch.brix.gql.client.frontify.scalars.StringScalar getAuthor();
   /**
    * Represents the conversion status of the `Asset`. Example: FINISHED.
    */
@@ -79,6 +87,10 @@ public interface Asset {
    * Paginated list of `Asset` items related to `Asset`.
    */
   ch.brix.gql.client.frontify.objects.AssetItems getRelatedAssets();
+  /**
+   * Paginated list of `AssetRevision` items for `Asset`, newest first.
+   */
+  ch.brix.gql.client.frontify.objects.AssetRevisionItems getRevisions();
   /**
    * Paginated list of `AssetComment` items for `Asset`.
    */
@@ -93,15 +105,11 @@ public interface Asset {
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.interfaces.CustomMetadata.class)
   java.util.List<ch.brix.gql.client.frontify.interfaces.CustomMetadata> getCustomMetadata();
   /**
-   * **BETA** The `WorkflowTask` this `Asset` is linked to.
+   * `AssetVariant` items of the asset. Only available for assets in icon and logo libraries.
    */
-  ch.brix.gql.client.frontify.objects.WorkflowTask getWorkflowTask();
+  ch.brix.gql.client.frontify.objects.AssetVariantItems getVariants();
   /**
    * `Location` of the `Asset`.
    */
   ch.brix.gql.client.frontify.objects.AssetLocation getLocation();
-  /**
-   * **BETA** Background color of the `Asset` preview.
-   */
-  ch.brix.gql.client.frontify.objects.RgbaColor getPreviewBackgroundColor();
 }

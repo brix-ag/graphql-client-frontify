@@ -17,12 +17,4 @@ public class LibraryRootFolder_assets_Args extends ch.brix.gql.client.ArgsBuilde
     _add_arg("page", value);
     return this;
   }
-  /**
-   * **BETA** Define search criteria for the `AssetItems` in the `Library`/`Workspace`.
-   * Default value: null
-   */
-  public LibraryRootFolder_assets_Args query(ch.brix.gql.client.frontify.input_objects.FolderAssetQueryInput value) {
-    _add_arg("query", value);
-    return this;
-  }
 }

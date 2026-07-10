@@ -9,7 +9,13 @@ public enum CreativeExportFormat {
   @com.google.gson.annotations.SerializedName("JPG") 
   JPG,
   @com.google.gson.annotations.SerializedName("PDF") 
-  PDF;
+  PDF,
+  @com.google.gson.annotations.SerializedName("MP4") 
+  MP4,
+  @com.google.gson.annotations.SerializedName("GIF") 
+  GIF,
+  @com.google.gson.annotations.SerializedName("HTML") 
+  HTML;
   @java.lang.Override
   public java.lang.String toString() {
     com.google.gson.annotations.SerializedName sn = this.getClass().getDeclaredAnnotation(com.google.gson.annotations.SerializedName.class);

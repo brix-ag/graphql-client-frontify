@@ -33,7 +33,12 @@ public enum CreativeTemplateVariableType {
    * Float Variable Type
    */
   @com.google.gson.annotations.SerializedName("FLOAT") 
-  FLOAT;
+  FLOAT,
+  /**
+   * Position Variable Type, you need to pass an object with `left: number` and `top: number` properties
+   */
+  @com.google.gson.annotations.SerializedName("POSITION") 
+  POSITION;
   @java.lang.Override
   public java.lang.String toString() {
     com.google.gson.annotations.SerializedName sn = this.getClass().getDeclaredAnnotation(com.google.gson.annotations.SerializedName.class);

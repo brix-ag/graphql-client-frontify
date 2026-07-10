@@ -12,11 +12,7 @@ public class AddAssetRelations_relatedAssets extends ch.brix.gql.client.CallBuil
     _add_on(typeBuilder);
     return this;
   }
-  public AddAssetRelations_relatedAssets onImage(On_Image typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public AddAssetRelations_relatedAssets onVideo(On_Video typeBuilder) {
+  public AddAssetRelations_relatedAssets onEmbeddedContent(On_EmbeddedContent typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -24,7 +20,11 @@ public class AddAssetRelations_relatedAssets extends ch.brix.gql.client.CallBuil
     _add_on(typeBuilder);
     return this;
   }
-  public AddAssetRelations_relatedAssets onEmbeddedContent(On_EmbeddedContent typeBuilder) {
+  public AddAssetRelations_relatedAssets onImage(On_Image typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public AddAssetRelations_relatedAssets onVideo(On_Video typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

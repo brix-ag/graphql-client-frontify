@@ -19,8 +19,8 @@ public class On_RootQuery extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Retrieve `Project` details by Id. This field will be removed. Use `library` or `workspaceProject` instead. | Date: 2023-01-01T00:00:00.000+00:00
-   * This field will be removed. Use `library` or `workspaceProject` instead. | Date: 2023-01-01T00:00:00.000+00:00
+   * **DEPRECATED** Retrieve `Project` details by Id. This field will be removed. Use `library` or `workspaceProject` instead. | Date: 2023-01-01
+   * This field will be removed. Use `library` or `workspaceProject` instead. | Date: 2023-01-01
    */
   @java.lang.Deprecated
   public On_RootQuery project(RootQuery_project callBuilder) {
@@ -38,13 +38,6 @@ public class On_RootQuery extends ch.brix.gql.client.TypeBuilder {
    * Retrieve `WorkspaceProject` details by Id.
    */
   public On_RootQuery workspaceProject(RootQuery_workspaceProject callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * Retrieve `WebhookItems` related to current `Account`.
-   */
-  public On_RootQuery webhooks(RootQuery_webhooks callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -91,16 +84,16 @@ public class On_RootQuery extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Retrieve a `GuidelinePage` by its id.
+   * Retrieve `Node` details by Id.
    */
-  public On_RootQuery guidelinePage(RootQuery_guidelinePage callBuilder) {
+  public On_RootQuery node(RootQuery_node callBuilder) {
     _add_call(callBuilder);
     return this;
   }
   /**
-   * Retrieve `Node` details by Id.
+   * Retrieve `WebhookItems` related to current `Account`.
    */
-  public On_RootQuery node(RootQuery_node callBuilder) {
+  public On_RootQuery webhooks(RootQuery_webhooks callBuilder) {
     _add_call(callBuilder);
     return this;
   }

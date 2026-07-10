@@ -12,8 +12,8 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Add a new relation between an existing `Asset` and an existing `MetadataField` with its value. The value will be automatically created and linked to its `MetadataField`. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`. This field will be removed. Use `addCustomMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `addCustomMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Add a new relation between an existing `Asset` and an existing `MetadataField` with its value. The value will be automatically created and linked to its `MetadataField`. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`. This field will be removed. Use `addCustomMetadata` instead. | Date: 2026-07-01
+   * This field will be removed. Use `addCustomMetadata` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_RootMutation addAssetMetadataFieldValue(RootMutation_addAssetMetadataFieldValue callBuilder) {
@@ -63,34 +63,6 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Add a new `WorkflowChecklistItem` for a given `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation addWorkflowChecklistItem(RootMutation_addWorkflowChecklistItem callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Add a new `WorkflowChecklistPreset` for a given `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation addWorkflowChecklistPreset(RootMutation_addWorkflowChecklistPreset callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Add assignees to an existing `WorkflowStatus`. Currently, only one assignee is supported. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation addWorkflowStatusAssignees(RootMutation_addWorkflowStatusAssignees callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Add assignees to an existing `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation addWorkflowTaskAssignees(RootMutation_addWorkflowTaskAssignees callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
    * Create a new `Asset`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
    */
   public On_RootMutation createAsset(RootMutation_createAsset callBuilder) {
@@ -101,6 +73,13 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
    * Create a new `Asset` `Comment`. Requires `basic:write` scope to be accessible and `Asset` permission level `COMMENT`.
    */
   public On_RootMutation createAssetComment(RootMutation_createAssetComment callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * Create a new `AssetVariant`. Only supported for assets in icon and logo libraries. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
+   */
+  public On_RootMutation createAssetVariant(RootMutation_createAssetVariant callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -147,25 +126,11 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Create a new `Project` `MetadataField` with your desired configuration. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`. This field will be removed. Use `createCustomMetadataProperty` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `createCustomMetadataProperty` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Create a new `Project` `MetadataField` with your desired configuration. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`. This field will be removed. Use `createCustomMetadataProperty` instead. | Date: 2026-07-01
+   * This field will be removed. Use `createCustomMetadataProperty` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_RootMutation createMetadataField(RootMutation_createMetadataField callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Create new `WorkflowStatus` in a given `Workflow`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation createWorkflowStatus(RootMutation_createWorkflowStatus callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Create a new `WorkflowTask` for an `Asset` in a given `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation createAssetWorkflowTask(RootMutation_createAssetWorkflowTask callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -184,9 +149,16 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * Delete an existing `Attachment`. Requires `basic:write` scope to be accessible and depending on the `Attachment` type, either `Portal` or `Asset` permission level `EDIT`.
+   * Delete an existing `Attachment`. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
    */
   public On_RootMutation deleteAttachment(RootMutation_deleteAttachment callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * Delete an existing `AssetVariant`. Only supported for assets in icon and logo libraries. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
+   */
+  public On_RootMutation deleteAssetVariant(RootMutation_deleteAssetVariant callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -226,8 +198,8 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Delete an existing `Project` `MetadataField`. Existing `MetadataField`'s with the same value with be automatically removed. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`. This field will be removed. Use `deleteCustomMetadataProperty` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `deleteCustomMetadataProperty` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Delete an existing `Project` `MetadataField`. Existing `MetadataField`'s with the same value with be automatically removed. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`. This field will be removed. Use `deleteCustomMetadataProperty` instead. | Date: 2026-07-01
+   * This field will be removed. Use `deleteCustomMetadataProperty` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_RootMutation deleteMetadataField(RootMutation_deleteMetadataField callBuilder) {
@@ -235,30 +207,9 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Delete an existing `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation deleteWorkflowStatus(RootMutation_deleteWorkflowStatus callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Delete an existing `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation deleteWorkflowTask(RootMutation_deleteWorkflowTask callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
    * Edit an existing `AssetComment`. Requires `basic:write` scope to be accessible and `Asset` permission level `COMMENT`.
    */
   public On_RootMutation editComment(RootMutation_editComment callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * Install `Webhook`. Requires `basic:write` and `webhook:write` scopes to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation installProjectWebhook(RootMutation_installProjectWebhook callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -284,13 +235,6 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Move one or more `WorkflowTask` to a new `WorkflowStatus`. All `EnterRule` of the destination `WorkflowStatus` have to be satisfied to be able to move. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation moveWorkflowTask(RootMutation_moveWorkflowTask callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
    * Remove an existing relation between an `Asset` and a `License`. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
    */
   public On_RootMutation removeAssetLicense(RootMutation_removeAssetLicense callBuilder) {
@@ -301,13 +245,6 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
    * Remove existing `Asset` preview image. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
    */
   public On_RootMutation removeAssetPreviewImage(RootMutation_removeAssetPreviewImage callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Remove existing relations between `Asset` items. The `relatedAssetIds` input field list is limited to 100 ids per request and cannot contain the same `assetId` input field value. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
-   */
-  public On_RootMutation removeAssetRelations(RootMutation_removeAssetRelations callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -340,39 +277,11 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Remove existing `MetadataField` value.Existing relations to that `MetadataField` with the same value will be automatically removed.Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`. This field will be removed. Use `removeCustomMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `removeCustomMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Remove existing `MetadataField` value.Existing relations to that `MetadataField` with the same value will be automatically removed.Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`. This field will be removed. Use `removeCustomMetadata` instead. | Date: 2026-07-01
+   * This field will be removed. Use `removeCustomMetadata` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_RootMutation removeMetadataValue(RootMutation_removeMetadataValue callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Remove a `WorkflowChecklistItem`.Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation removeWorkflowChecklistItem(RootMutation_removeWorkflowChecklistItem callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Remove a `WorkflowChecklistPreset`.Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation removeWorkflowChecklistPreset(RootMutation_removeWorkflowChecklistPreset callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Remove assignees from an existing `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation removeWorkflowStatusAssignees(RootMutation_removeWorkflowStatusAssignees callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Remove assignees from an existing `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation removeWorkflowTaskAssignees(RootMutation_removeWorkflowTaskAssignees callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -398,6 +307,13 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * Replace an existing `AssetVariant`. Only supported for assets in icon and logo libraries. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
+   */
+  public On_RootMutation replaceAssetVariant(RootMutation_replaceAssetVariant callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * Add a new reply to an existing `Asset` `Comment`. Requires `basic:write` scope to be accessible and `Asset` permission level `COMMENT`.
    */
   public On_RootMutation replyToComment(RootMutation_replyToComment callBuilder) {
@@ -412,13 +328,6 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Set `CustomMetadataProperty` values to any supported parent (`WorkspaceProject` | `Asset`). Attention: Existing `CustomMetadataProperty` values for the selected parents will be overwritten and/or removed. Requires `basic:write` scope to be accessible and permission level `EDIT` for the respective parent.
-   */
-  public On_RootMutation setCustomMetadata(RootMutation_setCustomMetadata callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
    * Replace the existing set of the `Assets` in the `Collection` with the new set of the `Assets`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
    */
   public On_RootMutation setCollectionAssets(RootMutation_setCollectionAssets callBuilder) {
@@ -429,13 +338,6 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
    * Sync `Asset` tags. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
    */
   public On_RootMutation syncAssetTags(RootMutation_syncAssetTags callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * Uninstall `Webhook`. Requires `basic:write` and `webhook:write` scopes to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation uninstallWebhook(RootMutation_uninstallWebhook callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -468,56 +370,7 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Update an existing `WorkflowChecklistItem`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation updateWorkflowChecklistItem(RootMutation_updateWorkflowChecklistItem callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Update an existing `WorkflowChecklistPreset`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation updateWorkflowChecklistPreset(RootMutation_updateWorkflowChecklistPreset callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Update an existing `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation updateWorkflowStatus(RootMutation_updateWorkflowStatus callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Update an existing `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public On_RootMutation updateWorkflowTask(RootMutation_updateWorkflowTask callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Create a new `Brand`. Requires `basic:write` scope to be accessible and `Account` permission level `EDIT`.
-   */
-  public On_RootMutation createBrand(RootMutation_createBrand callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Delete an existing `Brand`. Requires `basic:write` scope to be accessible and `Brand` permission level `EDIT`.
-   */
-  public On_RootMutation deleteBrand(RootMutation_deleteBrand callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Update an existing `Brand`. Requires `basic:write` scope to be accessible and `Brand` permission level `EDIT`.
-   */
-  public On_RootMutation updateBrand(RootMutation_updateBrand callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * Upload a new file. Requires `basic:write` scope to be accessible<br><br>Generates a temporary unique File ID and a list of presigned Urls to upload a binary file in multiple parts. The Id can be used, after the upload is completed, to permanently link the file to a specific type (ie `Asset`, `Attachment`, `Revision) through a different mutation.<br><br>When `chunkSize` is provided as `null` (to be the future default), the number of upload parts and thus their corresponding part size will be computed dynamically based on the specified file size, following these rules:<br>- Maxmum of 1000 parts.<br>- For files of 5TB (maximum): 1000 parts of 5GB each.<br>- For files less than 15MB: 1 single part of 15MB.<br>- Otherwise: an inclusive range of [1, 1000] parts of [15MB, 5GB] each.
+   * Upload a new file. Requires `basic:write` scope to be accessible<br><br>Creates a temporary unique file Id and returns presigned URLs for uploading a binary file in multiple parts.<br>After the upload is completed, this Id can be used (**once only**) to permanently link the file to a specific type (e.g., Asset, Attachment, Revision) via another mutation.<br><br>When `chunkSize` is provided as `null` (to be the future default), the number of upload parts and thus their corresponding part size will be computed dynamically based on the specified file size, following these rules:<br>- Maxmum of 1000 parts.<br>- For files of 5TB (maximum): 1000 parts of 5GB each.<br>- For files less than 15MB: 1 single part of 15MB.<br>- Otherwise: an inclusive range of [1, 1000] parts of [15MB, 5GB] each.
    */
   public On_RootMutation uploadFile(RootMutation_uploadFile callBuilder) {
     _add_call(callBuilder);
@@ -527,6 +380,27 @@ public class On_RootMutation extends ch.brix.gql.client.TypeBuilder {
    * Cancels `CreativeJobs` by provided parameters. `CreativeJob` can be canceled prior to the `RENDERING` status. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
    */
   public On_RootMutation cancelExportCreatives(RootMutation_cancelExportCreatives callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * Publish a marketplace app with the specified release notes and availability.
+   */
+  public On_RootMutation publishMarketplaceApp(RootMutation_publishMarketplaceApp callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * Install `Webhook`. Requires `basic:write` and `webhook:write` scopes to be accessible and `Project` permission level `EDIT`.
+   */
+  public On_RootMutation installProjectWebhook(RootMutation_installProjectWebhook callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * Uninstall `Webhook`. Requires `basic:write` and `webhook:write` scopes to be accessible and `Project` permission level `EDIT`.
+   */
+  public On_RootMutation uninstallWebhook(RootMutation_uninstallWebhook callBuilder) {
     _add_call(callBuilder);
     return this;
   }

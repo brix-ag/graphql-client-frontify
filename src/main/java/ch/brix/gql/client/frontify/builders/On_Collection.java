@@ -26,8 +26,8 @@ public class On_Collection extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `Collection`'s privacy state setting. This field will be removed. | Date: 2024-01-01T00:00:00.000+00:00
-   * This field will be removed. | Date: 2024-01-01T00:00:00.000+00:00
+   * **DEPRECATED** `Collection`'s privacy state setting. This field will be removed. | Date: 2024-01-01
+   * This field will be removed. | Date: 2024-01-01
    */
   @java.lang.Deprecated
   public On_Collection isPrivate() {

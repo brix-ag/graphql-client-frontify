@@ -54,8 +54,8 @@ public class On_SubFolder extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** The `SubFolderItems` of the current `SubFolder`. This field will be removed. Use `folders` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `folders` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** The `SubFolderItems` of the current `SubFolder`. This field will be removed. Use `folders` instead. | Date: 2025-07-01
+   * This field will be removed. Use `folders` instead. | Date: 2025-07-01
    */
   @java.lang.Deprecated
   public On_SubFolder subFolders(SubFolder_subFolders callBuilder) {

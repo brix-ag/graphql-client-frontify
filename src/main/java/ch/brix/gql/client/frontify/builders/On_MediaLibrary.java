@@ -26,8 +26,8 @@ public class On_MediaLibrary extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Amount of `Assets` contained in the `Library`/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Amount of `Assets` contained in the `Library`/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01
+   * This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01
    */
   @java.lang.Deprecated
   public On_MediaLibrary assetCount() {
@@ -49,18 +49,11 @@ public class On_MediaLibrary extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `Library`/`Workspace` `MetadataField` items list. This field will be removed. Use `customMetadataProperties` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `customMetadataProperties` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `Library`/`Workspace` `MetadataField` items list. This field will be removed. Use `customMetadataProperties` instead. | Date: 2026-07-01
+   * This field will be removed. Use `customMetadataProperties` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MediaLibrary metadataFields(MediaLibrary_metadataFields callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** The `Workflow` belonging to the given `Library`/`Workspace`.
-   */
-  public On_MediaLibrary workflow(MediaLibrary_workflow callBuilder) {
     _add_call(callBuilder);
     return this;
   }

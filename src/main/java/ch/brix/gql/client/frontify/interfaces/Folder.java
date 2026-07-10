@@ -35,8 +35,8 @@ public interface Folder {
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.Breadcrumb.class)
   java.util.List<ch.brix.gql.client.frontify.objects.Breadcrumb> getBreadcrumbs();
   /**
-   * **DEPRECATED** The `SubFolderItems` of the current `Library`/`Workspace`/`SubFolder`. This field will be removed. Use `folders` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `folders` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** The `SubFolderItems` of the current `Library`/`Workspace`/`SubFolder`. This field will be removed. Use `folders` instead. | Date: 2025-07-01
+   * This field will be removed. Use `folders` instead. | Date: 2025-07-01
    */
   @java.lang.Deprecated
   ch.brix.gql.client.frontify.objects.SubFolderItems getSubFolders();

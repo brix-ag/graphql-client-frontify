@@ -2,7 +2,7 @@
 <dependency>
    <groupId>ch.brix.gql.client</groupId>
    <artifactId>frontify-client</artifactId>
-   <version>1.0.5</version>
+   <version>1.0.6</version>
 </dependency>
 ```
 
@@ -61,8 +61,8 @@ In the base package are two classes `Query` and `Mutation` with static methods t
    Workspace workspace = client.execute(queryFromAbove);
    List<Asset> assets = workspace.getAssets().getItems();
    assets.forEach(asset -> {
-       if (asset instanceof Image)
-           System.out.println(((Image) asset).getFocalPoint().getValue());
+       if (asset instanceof Image img)
+           System.out.println(img.getFocalPoint().getValue());
        ...
    })
     ```
@@ -102,3 +102,7 @@ We actively use this client in our [Frontify Connector for CELUM](https://www.br
 > Released: 2025-05-16
 
 - Updated client core to be able to get the status code on failure (introduced HttpException)
+
+#### 1.0.6
+
+> Generated & Released: 2026-07-10

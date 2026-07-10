@@ -13,13 +13,6 @@ public class Brand implements ch.brix.gql.client.frontify.interfaces.Node {
   @com.google.gson.annotations.SerializedName("name")
   private ch.brix.gql.client.frontify.scalars.StringScalar name;
   /**
-   * **DEPRECATED** `Brand` color. This field will be removed. Use `rgbaColor` instead. | Date: 2023-01-01T00:00:00.000+00:00
-   * This field will be removed. Use `rgbaColor` instead. | Date: 2023-01-01T00:00:00.000+00:00
-   */
-  @java.lang.Deprecated
-  @com.google.gson.annotations.SerializedName("color")
-  private ch.brix.gql.client.frontify.scalars.StringScalar color;
-  /**
    * `Brand` color.
    */
   @com.google.gson.annotations.SerializedName("rgbaColor")
@@ -35,18 +28,13 @@ public class Brand implements ch.brix.gql.client.frontify.interfaces.Node {
   @com.google.gson.annotations.SerializedName("slug")
   private ch.brix.gql.client.frontify.scalars.StringScalar slug;
   /**
-   * **DEPRECATED** Retrieve all `Projects`. This field will be removed. Use `libraries` or `workspaceProjects` instead. | Date: 2023-01-01T00:00:00.000+00:00
-   * This field will be removed. Use `libraries` or `workspaceProjects` instead. | Date: 2023-01-01T00:00:00.000+00:00
+   * **DEPRECATED** Retrieve all `Projects`. This field will be removed. Use `libraries` or `workspaceProjects` instead. | Date: 2023-01-01
+   * This field will be removed. Use `libraries` or `workspaceProjects` instead. | Date: 2023-01-01
    */
   @java.lang.Deprecated
   @com.google.gson.annotations.SerializedName("projects")
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.unions.Project.class)
   private java.util.List<ch.brix.gql.client.frontify.unions.Project> projects;
-  /**
-   * **BETA** Search for the assets on the brand level.
-   */
-  @com.google.gson.annotations.SerializedName("search")
-  private ch.brix.gql.client.frontify.objects.BrandSearchItems search;
   /**
    * Retrieve all `Library` items.
    */
@@ -57,11 +45,6 @@ public class Brand implements ch.brix.gql.client.frontify.interfaces.Node {
    */
   @com.google.gson.annotations.SerializedName("workspaceProjects")
   private ch.brix.gql.client.frontify.objects.WorkspaceItems workspaceProjects;
-  /**
-   * **BETA** Paginated list of `Guideline` items for `Brand`.
-   */
-  @com.google.gson.annotations.SerializedName("guidelines")
-  private ch.brix.gql.client.frontify.objects.GuidelineItems guidelines;
   /**
    * `Brand` `CustomMetadataProperty` items list.
    */

@@ -40,6 +40,13 @@ public class On_CreativeTemplateVariable extends ch.brix.gql.client.TypeBuilder 
     return this;
   }
   /**
+   * Allowed values for `CreativeTemplateVariable` value of type color.
+   */
+  public On_CreativeTemplateVariable allowedColorValues(CreativeTemplateVariable_allowedColorValues callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * Number of template items connected to the `CreativeTemplateVariable`.
    */
   public On_CreativeTemplateVariable connectionCount() {

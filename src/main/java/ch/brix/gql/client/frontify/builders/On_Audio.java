@@ -61,13 +61,6 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** Indicates whether the `Asset` is decorative and not meant to be read by screen readers. If true, alternative text is ignored.
-   */
-  public On_Audio isDecorative() {
-    _add_field("isDecorative");
-    return this;
-  }
-  /**
    * `Attachment` items linked to `Asset`.
    */
   public On_Audio attachments(Audio_attachments callBuilder) {
@@ -89,20 +82,11 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `MetadataValue` items linked to `Asset`. This field will be removed. Use `customMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `customMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `MetadataValue` items linked to `Asset`. This field will be removed. Use `customMetadata` instead. | Date: 2026-07-01
+   * This field will be removed. Use `customMetadata` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_Audio metadataValues(Audio_metadataValues callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **DEPRECATED** `ExternalProduct` items linked to `Asset`. This field will be removed. | Date: 2025-01-01T00:00:00.000+00:00
-   * This field will be removed. | Date: 2025-01-01T00:00:00.000+00:00
-   */
-  @java.lang.Deprecated
-  public On_Audio externalProducts(Audio_externalProducts callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -114,7 +98,7 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** `Asset` will be available only during the defined `DateTime` range.When `null` it represents an unspecified start and/or open-ended date.
+   * `Asset` will be available only during the defined `DateTime` range. When `null` it represents an unspecified start and/or open-ended date.
    */
   public On_Audio availability(Audio_availability callBuilder) {
     _add_call(callBuilder);
@@ -156,6 +140,13 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * Paginated list of `AssetRevision` items for `Asset`, newest first.
+   */
+  public On_Audio revisions(Audio_revisions callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * Paginated list of `AssetComment` items for `Asset`.
    */
   public On_Audio comments(Audio_comments callBuilder) {
@@ -177,9 +168,9 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **BETA** The `WorkflowTask` this `Asset` is linked to.
+   * `AssetVariant` items of the asset. Only available for assets in icon and logo libraries.
    */
-  public On_Audio workflowTask(Audio_workflowTask callBuilder) {
+  public On_Audio variants(Audio_variants callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -187,13 +178,6 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
    * `Location` of the `Asset`.
    */
   public On_Audio location(Audio_location callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Background color of the `Asset` preview.
-   */
-  public On_Audio previewBackgroundColor(Audio_previewBackgroundColor callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -226,7 +210,7 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * Signed `Url` to download the original `Audio` type file.
+   * Signed `Url` to download the original `Audio` type file. Is null if the asset is download-protected and there is no approved and still valid download request.
    */
   public On_Audio downloadUrl(Audio_downloadUrl callBuilder) {
     _add_call(callBuilder);
@@ -235,8 +219,8 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
   /**
    * Preview `Url` of converted `Audio` file in mp3 format.
    */
-  public On_Audio previewUrl(Audio_previewUrl callBuilder) {
-    _add_call(callBuilder);
+  public On_Audio previewUrl() {
+    _add_field("previewUrl");
     return this;
   }
   /**

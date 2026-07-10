@@ -12,8 +12,8 @@ public class On_User extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `User` email. This field will be removed. Use `AccountUser.email` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `AccountUser.email` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `User` email. This field will be removed. Use `AccountUser.email` instead. | Date: 2025-07-01
+   * This field will be removed. Use `AccountUser.email` instead. | Date: 2025-07-01
    */
   @java.lang.Deprecated
   public On_User email() {
@@ -28,8 +28,8 @@ public class On_User extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `User` avatar. This field will be removed. Use `AccountUser.avatar` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `AccountUser.avatar` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `User` avatar. This field will be removed. Use `AccountUser.avatar` instead. | Date: 2025-07-01
+   * This field will be removed. Use `AccountUser.avatar` instead. | Date: 2025-07-01
    */
   @java.lang.Deprecated
   public On_User avatar() {

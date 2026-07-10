@@ -25,11 +25,4 @@ public class On_Account extends ch.brix.gql.client.TypeBuilder {
     _add_call(callBuilder);
     return this;
   }
-  /**
-   * **BETA** List and search `AccountSearch` item(s).
-   */
-  public On_Account search(Account_search callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
 }

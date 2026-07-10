@@ -8,27 +8,11 @@ public class RootQuery_node extends ch.brix.gql.client.CallBuilder<ch.brix.gql.c
     _set_args(argsBuilder);
     return this;
   }
-  public RootQuery_node onAudio(On_Audio typeBuilder) {
+  public RootQuery_node onAccount(On_Account typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
-  public RootQuery_node onDocument(On_Document typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RootQuery_node onImage(On_Image typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RootQuery_node onVideo(On_Video typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RootQuery_node onFile(On_File typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RootQuery_node onEmbeddedContent(On_EmbeddedContent typeBuilder) {
+  public RootQuery_node onAccountUser(On_AccountUser typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -40,31 +24,7 @@ public class RootQuery_node extends ch.brix.gql.client.CallBuilder<ch.brix.gql.c
     _add_on(typeBuilder);
     return this;
   }
-  public RootQuery_node onSubFolder(On_SubFolder typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RootQuery_node onMediaLibrary(On_MediaLibrary typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RootQuery_node onIconLibrary(On_IconLibrary typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RootQuery_node onLogoLibrary(On_LogoLibrary typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RootQuery_node onDocumentLibrary(On_DocumentLibrary typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RootQuery_node onAccount(On_Account typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RootQuery_node onAccountUser(On_AccountUser typeBuilder) {
+  public RootQuery_node onAudio(On_Audio typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -72,7 +32,7 @@ public class RootQuery_node extends ch.brix.gql.client.CallBuilder<ch.brix.gql.c
     _add_on(typeBuilder);
     return this;
   }
-  public RootQuery_node onLibraryPageCollection(On_LibraryPageCollection typeBuilder) {
+  public RootQuery_node onCollection(On_Collection typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -80,11 +40,31 @@ public class RootQuery_node extends ch.brix.gql.client.CallBuilder<ch.brix.gql.c
     _add_on(typeBuilder);
     return this;
   }
+  public RootQuery_node onDocument(On_Document typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RootQuery_node onDocumentLibrary(On_DocumentLibrary typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RootQuery_node onEmbeddedContent(On_EmbeddedContent typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RootQuery_node onFile(On_File typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
   public RootQuery_node onGuideline(On_Guideline typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
-  public RootQuery_node onCollection(On_Collection typeBuilder) {
+  public RootQuery_node onIconLibrary(On_IconLibrary typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RootQuery_node onImage(On_Image typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -92,11 +72,27 @@ public class RootQuery_node extends ch.brix.gql.client.CallBuilder<ch.brix.gql.c
     _add_on(typeBuilder);
     return this;
   }
+  public RootQuery_node onLogoLibrary(On_LogoLibrary typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RootQuery_node onMediaLibrary(On_MediaLibrary typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
   public RootQuery_node onProjectWebhook(On_ProjectWebhook typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
+  public RootQuery_node onSubFolder(On_SubFolder typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
   public RootQuery_node onUserGroup(On_UserGroup typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RootQuery_node onVideo(On_Video typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

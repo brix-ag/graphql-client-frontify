@@ -17,7 +17,9 @@ public enum CustomMetadataPropertyTypeName {
   @com.google.gson.annotations.SerializedName("NUMBER") 
   NUMBER,
   @com.google.gson.annotations.SerializedName("URL") 
-  URL;
+  URL,
+  @com.google.gson.annotations.SerializedName("CATALOG") 
+  CATALOG;
   @java.lang.Override
   public java.lang.String toString() {
     com.google.gson.annotations.SerializedName sn = this.getClass().getDeclaredAnnotation(com.google.gson.annotations.SerializedName.class);

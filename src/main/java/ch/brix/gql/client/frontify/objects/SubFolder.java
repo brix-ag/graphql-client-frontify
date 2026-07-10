@@ -39,8 +39,8 @@ public class SubFolder implements ch.brix.gql.client.frontify.interfaces.Node, c
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.Breadcrumb.class)
   private java.util.List<ch.brix.gql.client.frontify.objects.Breadcrumb> breadcrumbs;
   /**
-   * **DEPRECATED** The `SubFolderItems` of the current `SubFolder`. This field will be removed. Use `folders` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `folders` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** The `SubFolderItems` of the current `SubFolder`. This field will be removed. Use `folders` instead. | Date: 2025-07-01
+   * This field will be removed. Use `folders` instead. | Date: 2025-07-01
    */
   @java.lang.Deprecated
   @com.google.gson.annotations.SerializedName("subFolders")

@@ -4,11 +4,11 @@ public class AssetComment_marking extends ch.brix.gql.client.CallBuilder<ch.brix
   public AssetComment_marking() {
     super(new ch.brix.gql.client.Call<>("marking", "Marking"));
   }
-  public AssetComment_marking onSimpleMarking(On_SimpleMarking typeBuilder) {
+  public AssetComment_marking onMultiPageMarking(On_MultiPageMarking typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
-  public AssetComment_marking onMultiPageMarking(On_MultiPageMarking typeBuilder) {
+  public AssetComment_marking onSimpleMarking(On_SimpleMarking typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

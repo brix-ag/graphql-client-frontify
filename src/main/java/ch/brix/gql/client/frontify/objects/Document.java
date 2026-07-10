@@ -43,11 +43,6 @@ public class Document implements ch.brix.gql.client.frontify.interfaces.Node, ch
   @com.google.gson.annotations.SerializedName("alternativeText")
   private ch.brix.gql.client.frontify.scalars.StringScalar alternativeText;
   /**
-   * **BETA** Indicates whether the `Asset` is decorative and not meant to be read by screen readers. If true, alternative text is ignored.
-   */
-  @com.google.gson.annotations.SerializedName("isDecorative")
-  private ch.brix.gql.client.frontify.scalars.BooleanScalar isDecorative;
-  /**
    * `Attachment` items linked to `Asset`.
    */
   @com.google.gson.annotations.SerializedName("attachments")
@@ -65,28 +60,20 @@ public class Document implements ch.brix.gql.client.frontify.interfaces.Node, ch
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.Tag.class)
   private java.util.List<ch.brix.gql.client.frontify.objects.Tag> tags;
   /**
-   * **DEPRECATED** `MetadataValue` items linked to `Asset`. This field will be removed. Use `customMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `customMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `MetadataValue` items linked to `Asset`. This field will be removed. Use `customMetadata` instead. | Date: 2026-07-01
+   * This field will be removed. Use `customMetadata` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   @com.google.gson.annotations.SerializedName("metadataValues")
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.MetadataValue.class)
   private java.util.List<ch.brix.gql.client.frontify.objects.MetadataValue> metadataValues;
   /**
-   * **DEPRECATED** `ExternalProduct` items linked to `Asset`. This field will be removed. | Date: 2025-01-01T00:00:00.000+00:00
-   * This field will be removed. | Date: 2025-01-01T00:00:00.000+00:00
-   */
-  @java.lang.Deprecated
-  @com.google.gson.annotations.SerializedName("externalProducts")
-  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.ExternalProduct.class)
-  private java.util.List<ch.brix.gql.client.frontify.objects.ExternalProduct> externalProducts;
-  /**
    * `Asset` copyright details.
    */
   @com.google.gson.annotations.SerializedName("copyright")
   private ch.brix.gql.client.frontify.objects.Copyright copyright;
   /**
-   * **BETA** `Asset` will be available only during the defined `DateTime` range.When `null` it represents an unspecified start and/or open-ended date.
+   * `Asset` will be available only during the defined `DateTime` range. When `null` it represents an unspecified start and/or open-ended date.
    */
   @com.google.gson.annotations.SerializedName("availability")
   private ch.brix.gql.client.frontify.objects.DateTimeRange availability;
@@ -117,6 +104,11 @@ public class Document implements ch.brix.gql.client.frontify.interfaces.Node, ch
   @com.google.gson.annotations.SerializedName("relatedAssets")
   private ch.brix.gql.client.frontify.objects.AssetItems relatedAssets;
   /**
+   * Paginated list of `AssetRevision` items for `Asset`, newest first.
+   */
+  @com.google.gson.annotations.SerializedName("revisions")
+  private ch.brix.gql.client.frontify.objects.AssetRevisionItems revisions;
+  /**
    * Paginated list of `AssetComment` items for `Asset`.
    */
   @com.google.gson.annotations.SerializedName("comments")
@@ -133,20 +125,15 @@ public class Document implements ch.brix.gql.client.frontify.interfaces.Node, ch
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.interfaces.CustomMetadata.class)
   private java.util.List<ch.brix.gql.client.frontify.interfaces.CustomMetadata> customMetadata;
   /**
-   * **BETA** The `WorkflowTask` this `Asset` is linked to.
+   * `AssetVariant` items of the asset. Only available for assets in icon and logo libraries.
    */
-  @com.google.gson.annotations.SerializedName("workflowTask")
-  private ch.brix.gql.client.frontify.objects.WorkflowTask workflowTask;
+  @com.google.gson.annotations.SerializedName("variants")
+  private ch.brix.gql.client.frontify.objects.AssetVariantItems variants;
   /**
    * `Location` of the `Asset`.
    */
   @com.google.gson.annotations.SerializedName("location")
   private ch.brix.gql.client.frontify.objects.AssetLocation location;
-  /**
-   * **BETA** Background color of the `Asset` preview.
-   */
-  @com.google.gson.annotations.SerializedName("previewBackgroundColor")
-  private ch.brix.gql.client.frontify.objects.RgbaColor previewBackgroundColor;
   /**
    * Original filename of the `Asset` `File`.
    */
@@ -178,7 +165,7 @@ public class Document implements ch.brix.gql.client.frontify.interfaces.Node, ch
   @com.google.gson.annotations.SerializedName("thumbnailUrl")
   private ch.brix.gql.client.frontify.scalars.UrlScalar thumbnailUrl;
   /**
-   * Signed `Url` to download the original `Document` type file.
+   * Signed `Url` to download the original `Document` type file. Is null if the asset is download-protected and there is no approved and still valid download request.
    */
   @com.google.gson.annotations.SerializedName("downloadUrl")
   private ch.brix.gql.client.frontify.scalars.UrlScalar downloadUrl;

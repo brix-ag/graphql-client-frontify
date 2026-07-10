@@ -8,8 +8,8 @@ public class Mutation {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_addAssetLicense());
   }
   /**
-   * **DEPRECATED** Add a new relation between an existing `Asset` and an existing `MetadataField` with its value. The value will be automatically created and linked to its `MetadataField`. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`. This field will be removed. Use `addCustomMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `addCustomMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Add a new relation between an existing `Asset` and an existing `MetadataField` with its value. The value will be automatically created and linked to its `MetadataField`. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`. This field will be removed. Use `addCustomMetadata` instead. | Date: 2026-07-01
+   * This field will be removed. Use `addCustomMetadata` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public static ch.brix.gql.client.frontify.builders.RootMutation_addAssetMetadataFieldValue addAssetMetadataFieldValue() {
@@ -52,30 +52,6 @@ public class Mutation {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_addCustomMetadataPropertyOptions());
   }
   /**
-   * **BETA** Add a new `WorkflowChecklistItem` for a given `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_addWorkflowChecklistItem addWorkflowChecklistItem() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_addWorkflowChecklistItem());
-  }
-  /**
-   * **BETA** Add a new `WorkflowChecklistPreset` for a given `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_addWorkflowChecklistPreset addWorkflowChecklistPreset() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_addWorkflowChecklistPreset());
-  }
-  /**
-   * **BETA** Add assignees to an existing `WorkflowStatus`. Currently, only one assignee is supported. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_addWorkflowStatusAssignees addWorkflowStatusAssignees() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_addWorkflowStatusAssignees());
-  }
-  /**
-   * **BETA** Add assignees to an existing `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_addWorkflowTaskAssignees addWorkflowTaskAssignees() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_addWorkflowTaskAssignees());
-  }
-  /**
    * Create a new `Asset`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
    */
   public static ch.brix.gql.client.frontify.builders.RootMutation_createAsset createAsset() {
@@ -86,6 +62,12 @@ public class Mutation {
    */
   public static ch.brix.gql.client.frontify.builders.RootMutation_createAssetComment createAssetComment() {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_createAssetComment());
+  }
+  /**
+   * Create a new `AssetVariant`. Only supported for assets in icon and logo libraries. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
+   */
+  public static ch.brix.gql.client.frontify.builders.RootMutation_createAssetVariant createAssetVariant() {
+    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_createAssetVariant());
   }
   /**
    * Create a new `Attachment`. Attachments require a valid parent ID string. This mutation currently only supports attachments for parents of `Asset` type. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
@@ -124,24 +106,12 @@ public class Mutation {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_createLicense());
   }
   /**
-   * **DEPRECATED** Create a new `Project` `MetadataField` with your desired configuration. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`. This field will be removed. Use `createCustomMetadataProperty` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `createCustomMetadataProperty` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Create a new `Project` `MetadataField` with your desired configuration. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`. This field will be removed. Use `createCustomMetadataProperty` instead. | Date: 2026-07-01
+   * This field will be removed. Use `createCustomMetadataProperty` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public static ch.brix.gql.client.frontify.builders.RootMutation_createMetadataField createMetadataField() {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_createMetadataField());
-  }
-  /**
-   * **BETA** Create new `WorkflowStatus` in a given `Workflow`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_createWorkflowStatus createWorkflowStatus() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_createWorkflowStatus());
-  }
-  /**
-   * **BETA** Create a new `WorkflowTask` for an `Asset` in a given `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_createAssetWorkflowTask createAssetWorkflowTask() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_createAssetWorkflowTask());
   }
   /**
    * Create a new `Workspace` type `Project`. Requires `basic:write` scope to be accessible.
@@ -156,10 +126,16 @@ public class Mutation {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_deleteAsset());
   }
   /**
-   * Delete an existing `Attachment`. Requires `basic:write` scope to be accessible and depending on the `Attachment` type, either `Portal` or `Asset` permission level `EDIT`.
+   * Delete an existing `Attachment`. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
    */
   public static ch.brix.gql.client.frontify.builders.RootMutation_deleteAttachment deleteAttachment() {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_deleteAttachment());
+  }
+  /**
+   * Delete an existing `AssetVariant`. Only supported for assets in icon and logo libraries. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
+   */
+  public static ch.brix.gql.client.frontify.builders.RootMutation_deleteAssetVariant deleteAssetVariant() {
+    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_deleteAssetVariant());
   }
   /**
    * Delete an existing `Collection`. Requires `basic:write` scope to be accessible and `Collection` permission level `EDIT`.
@@ -192,36 +168,18 @@ public class Mutation {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_deleteLicense());
   }
   /**
-   * **DEPRECATED** Delete an existing `Project` `MetadataField`. Existing `MetadataField`'s with the same value with be automatically removed. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`. This field will be removed. Use `deleteCustomMetadataProperty` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `deleteCustomMetadataProperty` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Delete an existing `Project` `MetadataField`. Existing `MetadataField`'s with the same value with be automatically removed. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`. This field will be removed. Use `deleteCustomMetadataProperty` instead. | Date: 2026-07-01
+   * This field will be removed. Use `deleteCustomMetadataProperty` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public static ch.brix.gql.client.frontify.builders.RootMutation_deleteMetadataField deleteMetadataField() {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_deleteMetadataField());
   }
   /**
-   * **BETA** Delete an existing `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_deleteWorkflowStatus deleteWorkflowStatus() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_deleteWorkflowStatus());
-  }
-  /**
-   * **BETA** Delete an existing `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_deleteWorkflowTask deleteWorkflowTask() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_deleteWorkflowTask());
-  }
-  /**
    * Edit an existing `AssetComment`. Requires `basic:write` scope to be accessible and `Asset` permission level `COMMENT`.
    */
   public static ch.brix.gql.client.frontify.builders.RootMutation_editComment editComment() {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_editComment());
-  }
-  /**
-   * Install `Webhook`. Requires `basic:write` and `webhook:write` scopes to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_installProjectWebhook installProjectWebhook() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_installProjectWebhook());
   }
   /**
    * Invite `Project` user. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`. Limitations: Does not work if User Provisioning feature is enabled.
@@ -242,12 +200,6 @@ public class Mutation {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_moveFolders());
   }
   /**
-   * **BETA** Move one or more `WorkflowTask` to a new `WorkflowStatus`. All `EnterRule` of the destination `WorkflowStatus` have to be satisfied to be able to move. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_moveWorkflowTask moveWorkflowTask() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_moveWorkflowTask());
-  }
-  /**
    * Remove an existing relation between an `Asset` and a `License`. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
    */
   public static ch.brix.gql.client.frontify.builders.RootMutation_removeAssetLicense removeAssetLicense() {
@@ -258,12 +210,6 @@ public class Mutation {
    */
   public static ch.brix.gql.client.frontify.builders.RootMutation_removeAssetPreviewImage removeAssetPreviewImage() {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_removeAssetPreviewImage());
-  }
-  /**
-   * **BETA** Remove existing relations between `Asset` items. The `relatedAssetIds` input field list is limited to 100 ids per request and cannot contain the same `assetId` input field value. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_removeAssetRelations removeAssetRelations() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_removeAssetRelations());
   }
   /**
    * Remove existing `Asset` tags. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
@@ -290,36 +236,12 @@ public class Mutation {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_removeCustomMetadataPropertyOptions());
   }
   /**
-   * **DEPRECATED** Remove existing `MetadataField` value.Existing relations to that `MetadataField` with the same value will be automatically removed.Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`. This field will be removed. Use `removeCustomMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `removeCustomMetadata` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Remove existing `MetadataField` value.Existing relations to that `MetadataField` with the same value will be automatically removed.Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`. This field will be removed. Use `removeCustomMetadata` instead. | Date: 2026-07-01
+   * This field will be removed. Use `removeCustomMetadata` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public static ch.brix.gql.client.frontify.builders.RootMutation_removeMetadataValue removeMetadataValue() {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_removeMetadataValue());
-  }
-  /**
-   * **BETA** Remove a `WorkflowChecklistItem`.Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_removeWorkflowChecklistItem removeWorkflowChecklistItem() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_removeWorkflowChecklistItem());
-  }
-  /**
-   * **BETA** Remove a `WorkflowChecklistPreset`.Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_removeWorkflowChecklistPreset removeWorkflowChecklistPreset() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_removeWorkflowChecklistPreset());
-  }
-  /**
-   * **BETA** Remove assignees from an existing `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_removeWorkflowStatusAssignees removeWorkflowStatusAssignees() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_removeWorkflowStatusAssignees());
-  }
-  /**
-   * **BETA** Remove assignees from an existing `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_removeWorkflowTaskAssignees removeWorkflowTaskAssignees() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_removeWorkflowTaskAssignees());
   }
   /**
    * Export `CreativeTemplate` with provided parameters. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
@@ -340,6 +262,12 @@ public class Mutation {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_replaceAsset());
   }
   /**
+   * Replace an existing `AssetVariant`. Only supported for assets in icon and logo libraries. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
+   */
+  public static ch.brix.gql.client.frontify.builders.RootMutation_replaceAssetVariant replaceAssetVariant() {
+    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_replaceAssetVariant());
+  }
+  /**
    * Add a new reply to an existing `Asset` `Comment`. Requires `basic:write` scope to be accessible and `Asset` permission level `COMMENT`.
    */
   public static ch.brix.gql.client.frontify.builders.RootMutation_replyToComment replyToComment() {
@@ -352,12 +280,6 @@ public class Mutation {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_resolveAssetComment());
   }
   /**
-   * **BETA** Set `CustomMetadataProperty` values to any supported parent (`WorkspaceProject` | `Asset`). Attention: Existing `CustomMetadataProperty` values for the selected parents will be overwritten and/or removed. Requires `basic:write` scope to be accessible and permission level `EDIT` for the respective parent.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_setCustomMetadata setCustomMetadata() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_setCustomMetadata());
-  }
-  /**
    * Replace the existing set of the `Assets` in the `Collection` with the new set of the `Assets`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
    */
   public static ch.brix.gql.client.frontify.builders.RootMutation_setCollectionAssets setCollectionAssets() {
@@ -368,12 +290,6 @@ public class Mutation {
    */
   public static ch.brix.gql.client.frontify.builders.RootMutation_syncAssetTags syncAssetTags() {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_syncAssetTags());
-  }
-  /**
-   * Uninstall `Webhook`. Requires `basic:write` and `webhook:write` scopes to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_uninstallWebhook uninstallWebhook() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_uninstallWebhook());
   }
   /**
    * Update an existing `Asset`. Requires `basic:write` scope to be accessible and `Asset` permission level `EDIT`.
@@ -400,49 +316,7 @@ public class Mutation {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_updateFolder());
   }
   /**
-   * **BETA** Update an existing `WorkflowChecklistItem`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_updateWorkflowChecklistItem updateWorkflowChecklistItem() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_updateWorkflowChecklistItem());
-  }
-  /**
-   * **BETA** Update an existing `WorkflowChecklistPreset`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_updateWorkflowChecklistPreset updateWorkflowChecklistPreset() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_updateWorkflowChecklistPreset());
-  }
-  /**
-   * **BETA** Update an existing `WorkflowStatus`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_updateWorkflowStatus updateWorkflowStatus() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_updateWorkflowStatus());
-  }
-  /**
-   * **BETA** Update an existing `WorkflowTask`. Requires `basic:write` scope to be accessible and `Project` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_updateWorkflowTask updateWorkflowTask() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_updateWorkflowTask());
-  }
-  /**
-   * **BETA** Create a new `Brand`. Requires `basic:write` scope to be accessible and `Account` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_createBrand createBrand() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_createBrand());
-  }
-  /**
-   * **BETA** Delete an existing `Brand`. Requires `basic:write` scope to be accessible and `Brand` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_deleteBrand deleteBrand() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_deleteBrand());
-  }
-  /**
-   * **BETA** Update an existing `Brand`. Requires `basic:write` scope to be accessible and `Brand` permission level `EDIT`.
-   */
-  public static ch.brix.gql.client.frontify.builders.RootMutation_updateBrand updateBrand() {
-    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_updateBrand());
-  }
-  /**
-   * Upload a new file. Requires `basic:write` scope to be accessible<br><br>Generates a temporary unique File ID and a list of presigned Urls to upload a binary file in multiple parts. The Id can be used, after the upload is completed, to permanently link the file to a specific type (ie `Asset`, `Attachment`, `Revision) through a different mutation.<br><br>When `chunkSize` is provided as `null` (to be the future default), the number of upload parts and thus their corresponding part size will be computed dynamically based on the specified file size, following these rules:<br>- Maxmum of 1000 parts.<br>- For files of 5TB (maximum): 1000 parts of 5GB each.<br>- For files less than 15MB: 1 single part of 15MB.<br>- Otherwise: an inclusive range of [1, 1000] parts of [15MB, 5GB] each.
+   * Upload a new file. Requires `basic:write` scope to be accessible<br><br>Creates a temporary unique file Id and returns presigned URLs for uploading a binary file in multiple parts.<br>After the upload is completed, this Id can be used (**once only**) to permanently link the file to a specific type (e.g., Asset, Attachment, Revision) via another mutation.<br><br>When `chunkSize` is provided as `null` (to be the future default), the number of upload parts and thus their corresponding part size will be computed dynamically based on the specified file size, following these rules:<br>- Maxmum of 1000 parts.<br>- For files of 5TB (maximum): 1000 parts of 5GB each.<br>- For files less than 15MB: 1 single part of 15MB.<br>- Otherwise: an inclusive range of [1, 1000] parts of [15MB, 5GB] each.
    */
   public static ch.brix.gql.client.frontify.builders.RootMutation_uploadFile uploadFile() {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_uploadFile());
@@ -452,5 +326,23 @@ public class Mutation {
    */
   public static ch.brix.gql.client.frontify.builders.RootMutation_cancelExportCreatives cancelExportCreatives() {
     return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_cancelExportCreatives());
+  }
+  /**
+   * Publish a marketplace app with the specified release notes and availability.
+   */
+  public static ch.brix.gql.client.frontify.builders.RootMutation_publishMarketplaceApp publishMarketplaceApp() {
+    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_publishMarketplaceApp());
+  }
+  /**
+   * Install `Webhook`. Requires `basic:write` and `webhook:write` scopes to be accessible and `Project` permission level `EDIT`.
+   */
+  public static ch.brix.gql.client.frontify.builders.RootMutation_installProjectWebhook installProjectWebhook() {
+    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_installProjectWebhook());
+  }
+  /**
+   * Uninstall `Webhook`. Requires `basic:write` and `webhook:write` scopes to be accessible and `Project` permission level `EDIT`.
+   */
+  public static ch.brix.gql.client.frontify.builders.RootMutation_uninstallWebhook uninstallWebhook() {
+    return ch.brix.gql.client.CallModifier.makeMutation(new ch.brix.gql.client.frontify.builders.RootMutation_uninstallWebhook());
   }
 }

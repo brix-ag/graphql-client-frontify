@@ -18,8 +18,8 @@ public class DocumentLibrary implements ch.brix.gql.client.frontify.interfaces.N
   @com.google.gson.annotations.SerializedName("color")
   private ch.brix.gql.client.frontify.objects.RgbaColor color;
   /**
-   * **DEPRECATED** Amount of `Assets` contained in the `Library`/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01T00:00:00.000+00:00
+   * **DEPRECATED** Amount of `Assets` contained in the `Library`/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01
+   * This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01
    */
   @java.lang.Deprecated
   @com.google.gson.annotations.SerializedName("assetCount")
@@ -36,18 +36,13 @@ public class DocumentLibrary implements ch.brix.gql.client.frontify.interfaces.N
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.License.class)
   private java.util.List<ch.brix.gql.client.frontify.objects.License> licenses;
   /**
-   * **DEPRECATED** `Library`/`Workspace` `MetadataField` items list. This field will be removed. Use `customMetadataProperties` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `customMetadataProperties` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `Library`/`Workspace` `MetadataField` items list. This field will be removed. Use `customMetadataProperties` instead. | Date: 2026-07-01
+   * This field will be removed. Use `customMetadataProperties` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   @com.google.gson.annotations.SerializedName("metadataFields")
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.MetadataField.class)
   private java.util.List<ch.brix.gql.client.frontify.objects.MetadataField> metadataFields;
-  /**
-   * **BETA** The `Workflow` belonging to the given `Library`/`Workspace`.
-   */
-  @com.google.gson.annotations.SerializedName("workflow")
-  private ch.brix.gql.client.frontify.objects.Workflow workflow;
   /**
    * Browse the `Library` `SubFolderItems` and `AssetItems`.
    */

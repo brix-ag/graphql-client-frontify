@@ -5,8 +5,8 @@ public class On_MetadataValue extends ch.brix.gql.client.TypeBuilder {
     super(new ch.brix.gql.client.On("MetadataValue"));
   }
   /**
-   * **DEPRECATED** `MetadataValue` Id. This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `MetadataValue` Id. This field will be removed. | Date: 2026-07-01
+   * This field will be removed. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataValue id() {
@@ -14,8 +14,8 @@ public class On_MetadataValue extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `User` who created the `MetadataValue`. This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `User` who created the `MetadataValue`. This field will be removed. | Date: 2026-07-01
+   * This field will be removed. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataValue creator(MetadataValue_creator callBuilder) {
@@ -23,8 +23,8 @@ public class On_MetadataValue extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `DateTime` of the `MetadataValue` creation. This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `DateTime` of the `MetadataValue` creation. This field will be removed. | Date: 2026-07-01
+   * This field will be removed. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataValue createdAt() {
@@ -32,8 +32,8 @@ public class On_MetadataValue extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `User` who last modified the `MetadataValue`. This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `User` who last modified the `MetadataValue`. This field will be removed. | Date: 2026-07-01
+   * This field will be removed. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataValue modifier(MetadataValue_modifier callBuilder) {
@@ -41,8 +41,8 @@ public class On_MetadataValue extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `DateTime` of the `MetadataValue`'s last modification. This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `DateTime` of the `MetadataValue`'s last modification. This field will be removed. | Date: 2026-07-01
+   * This field will be removed. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataValue modifiedAt() {
@@ -50,8 +50,8 @@ public class On_MetadataValue extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `MetadataField` associated to `MetadataValue`. This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `MetadataField` associated to `MetadataValue`. This field will be removed. | Date: 2026-07-01
+   * This field will be removed. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataValue metadataField(MetadataValue_metadataField callBuilder) {
@@ -59,8 +59,8 @@ public class On_MetadataValue extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `MetadataValue`'s value. This field will be removed. Use `CustomMetadataValueType.value` instead. | Date: 2025-07-01T00:00:00.000+00:00
-   * This field will be removed. Use `CustomMetadataValueType.value` instead. | Date: 2025-07-01T00:00:00.000+00:00
+   * **DEPRECATED** `MetadataValue`'s value. This field will be removed. Use `CustomMetadataValueType.value` instead. | Date: 2026-07-01
+   * This field will be removed. Use `CustomMetadataValueType.value` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_MetadataValue value() {

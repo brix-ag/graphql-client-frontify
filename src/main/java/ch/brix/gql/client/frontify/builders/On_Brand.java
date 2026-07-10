@@ -19,15 +19,6 @@ public class On_Brand extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** `Brand` color. This field will be removed. Use `rgbaColor` instead. | Date: 2023-01-01T00:00:00.000+00:00
-   * This field will be removed. Use `rgbaColor` instead. | Date: 2023-01-01T00:00:00.000+00:00
-   */
-  @java.lang.Deprecated
-  public On_Brand color() {
-    _add_field("color");
-    return this;
-  }
-  /**
    * `Brand` color.
    */
   public On_Brand rgbaColor(Brand_rgbaColor callBuilder) {
@@ -49,18 +40,11 @@ public class On_Brand extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Retrieve all `Projects`. This field will be removed. Use `libraries` or `workspaceProjects` instead. | Date: 2023-01-01T00:00:00.000+00:00
-   * This field will be removed. Use `libraries` or `workspaceProjects` instead. | Date: 2023-01-01T00:00:00.000+00:00
+   * **DEPRECATED** Retrieve all `Projects`. This field will be removed. Use `libraries` or `workspaceProjects` instead. | Date: 2023-01-01
+   * This field will be removed. Use `libraries` or `workspaceProjects` instead. | Date: 2023-01-01
    */
   @java.lang.Deprecated
   public On_Brand projects(Brand_projects callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Search for the assets on the brand level.
-   */
-  public On_Brand search(Brand_search callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -75,13 +59,6 @@ public class On_Brand extends ch.brix.gql.client.TypeBuilder {
    * Retrieve all `Workspace` items.
    */
   public On_Brand workspaceProjects(Brand_workspaceProjects callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * **BETA** Paginated list of `Guideline` items for `Brand`.
-   */
-  public On_Brand guidelines(Brand_guidelines callBuilder) {
     _add_call(callBuilder);
     return this;
   }
