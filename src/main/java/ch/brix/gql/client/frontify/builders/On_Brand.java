@@ -63,6 +63,13 @@ public class On_Brand extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * **BETA** Paginated list of `Guideline` items for `Brand`.
+   */
+  public On_Brand guidelines(Brand_guidelines callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * `Brand` `CustomMetadataProperty` items list.
    */
   public On_Brand customMetadataProperties(Brand_customMetadataProperties callBuilder) {
@@ -73,6 +80,27 @@ public class On_Brand extends ch.brix.gql.client.TypeBuilder {
    * Retrieve all `CreativeTemplate` items.
    */
   public On_Brand creativeTemplates(Brand_creativeTemplates callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** The brand essentials.
+   */
+  public On_Brand essentials(Brand_essentials callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Search for the assets on the brand level.
+   */
+  public On_Brand search(Brand_search callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Enhanced search for the assets on the brand level. Includes natural search and exact term search
+   */
+  public On_Brand enhancedSearch(Brand_enhancedSearch callBuilder) {
     _add_call(callBuilder);
     return this;
   }

@@ -23,18 +23,23 @@ public class ProjectWebhook implements ch.brix.gql.client.frontify.interfaces.No
   @com.google.gson.annotations.SerializedName("name")
   private ch.brix.gql.client.frontify.scalars.StringScalar name;
   /**
-   * The randomly generated secret of the current `Webhook`.
-   */
-  @com.google.gson.annotations.SerializedName("secret")
-  private ch.brix.gql.client.frontify.scalars.StringScalar secret;
-  /**
    * The `Url` which will be called by the `Webhook`
    */
   @com.google.gson.annotations.SerializedName("notificationUrl")
   private ch.brix.gql.client.frontify.scalars.UrlScalar notificationUrl;
   /**
+   * The randomly generated secret of the current `Webhook`.
+   */
+  @com.google.gson.annotations.SerializedName("secret")
+  private ch.brix.gql.client.frontify.scalars.StringScalar secret;
+  /**
    * Returns the associated `Project`.
    */
   @com.google.gson.annotations.SerializedName("project")
   private ch.brix.gql.client.frontify.unions.Project project;
+  /**
+   * **BETA** Version number of the `Webhook`.
+   */
+  @com.google.gson.annotations.SerializedName("version")
+  private ch.brix.gql.client.frontify.scalars.IntScalar version;
 }

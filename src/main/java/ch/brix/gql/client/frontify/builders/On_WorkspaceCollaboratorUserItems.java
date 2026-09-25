@@ -39,4 +39,11 @@ public class On_WorkspaceCollaboratorUserItems extends ch.brix.gql.client.TypeBu
     _add_call(callBuilder);
     return this;
   }
+  /**
+   * **BETA** List of `WorkspaceProjectCollaboratorUserEdgeType` edges.
+   */
+  public On_WorkspaceCollaboratorUserItems edges(WorkspaceCollaboratorUserItems_edges callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
 }

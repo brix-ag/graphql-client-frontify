@@ -28,4 +28,10 @@ public class LibraryCollaboratorUserItems {
   @com.google.gson.annotations.SerializedName("items")
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.interfaces.User.class)
   private java.util.List<ch.brix.gql.client.frontify.interfaces.User> items;
+  /**
+   * **BETA** List of `LibraryCollaboratorUserEdge` edges.
+   */
+  @com.google.gson.annotations.SerializedName("edges")
+  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.LibraryCollaboratorUserEdge.class)
+  private java.util.List<ch.brix.gql.client.frontify.objects.LibraryCollaboratorUserEdge> edges;
 }

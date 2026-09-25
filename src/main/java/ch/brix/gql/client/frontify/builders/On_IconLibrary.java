@@ -26,8 +26,8 @@ public class On_IconLibrary extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Amount of `Assets` contained in the `Library`/`Workspace`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01
-   * This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01
+   * **DEPRECATED** Amount of `Assets` contained in the `Library`/`Workspace`. This field will be removed. Use `assets.total` instead. | Date: 2024-07-01
+   * This field will be removed. Use `assets.total` instead. | Date: 2024-07-01
    */
   @java.lang.Deprecated
   public On_IconLibrary assetCount() {
@@ -42,18 +42,18 @@ public class On_IconLibrary extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * `Library`/`Workspace` `License` items list.
-   */
-  public On_IconLibrary licenses(IconLibrary_licenses callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
    * **DEPRECATED** `Library`/`Workspace` `MetadataField` items list. This field will be removed. Use `customMetadataProperties` instead. | Date: 2026-07-01
    * This field will be removed. Use `customMetadataProperties` instead. | Date: 2026-07-01
    */
   @java.lang.Deprecated
   public On_IconLibrary metadataFields(IconLibrary_metadataFields callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** The `Workflow` belonging to the given `Library`/`Workspace`.
+   */
+  public On_IconLibrary workflow(IconLibrary_workflow callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -89,6 +89,27 @@ public class On_IconLibrary extends ch.brix.gql.client.TypeBuilder {
    * `Library` `Collection` items list.
    */
   public On_IconLibrary collections(IconLibrary_collections callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * Fetch `Assets` in this `Library` by their externalId. Requires edit access to the `Library`.
+   */
+  public On_IconLibrary assetsByExternalId(IconLibrary_assetsByExternalId callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * Search this `Library`'s/`Workspace`'s `Assets` with fully typed filters. Backed by our search index rather than the primary database — results are eventually consistent, so an asset just created, edited, or deleted can take a few minutes (up to around 10) to be reflected.
+   */
+  public On_IconLibrary searchAssets(IconLibrary_searchAssets callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * `Library`/`Workspace` `License` items list.
+   */
+  public On_IconLibrary licenses(IconLibrary_licenses callBuilder) {
     _add_call(callBuilder);
     return this;
   }

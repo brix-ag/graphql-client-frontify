@@ -17,4 +17,12 @@ public class Brand_workspaceProjects_Args extends ch.brix.gql.client.ArgsBuilder
     _add_arg("page", value);
     return this;
   }
+  /**
+   * **BETA** Define search criteria for `WorkspaceProject` items in a `Brand`.
+   * Default value: null
+   */
+  public Brand_workspaceProjects_Args query(ch.brix.gql.client.frontify.input_objects.WorkspaceProjectQueryInput value) {
+    _add_arg("query", value);
+    return this;
+  }
 }

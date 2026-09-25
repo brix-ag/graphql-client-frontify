@@ -61,13 +61,6 @@ public class On_Asset extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * List of `Asset`'s `Attachments`.
-   */
-  public On_Asset attachments(Asset_attachments callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
    * External Id of the `Asset`.
    */
   public On_Asset externalId() {
@@ -100,13 +93,6 @@ public class On_Asset extends ch.brix.gql.client.TypeBuilder {
    */
   public On_Asset expiresAt() {
     _add_field("expiresAt");
-    return this;
-  }
-  /**
-   * List of `Asset`'s licenses.
-   */
-  public On_Asset licenses(Asset_licenses callBuilder) {
-    _add_call(callBuilder);
     return this;
   }
   /**
@@ -168,6 +154,13 @@ public class On_Asset extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * **BETA** The `WorkflowTask` this `Asset` is linked to.
+   */
+  public On_Asset workflowTask(Asset_workflowTask callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * `AssetVariant` items of the asset. Only available for assets in icon and logo libraries.
    */
   public On_Asset variants(Asset_variants callBuilder) {
@@ -178,6 +171,41 @@ public class On_Asset extends ch.brix.gql.client.TypeBuilder {
    * `Location` of the `Asset`.
    */
   public On_Asset location(Asset_location callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Background color of the `Asset` preview.
+   */
+  public On_Asset previewBackgroundColor(Asset_previewBackgroundColor callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * List of `Asset`'s `Attachments`.
+   */
+  public On_Asset attachments(Asset_attachments callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** AI provenance read from the asset's current file, or `null` if none has been extracted yet.
+   */
+  public On_Asset provenance(Asset_provenance callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * List of `Asset`'s licenses.
+   */
+  public On_Asset licenses(Asset_licenses callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** List of `Target` items linked to `Asset`
+   */
+  public On_Asset targets(Asset_targets callBuilder) {
     _add_call(callBuilder);
     return this;
   }

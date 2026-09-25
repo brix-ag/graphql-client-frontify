@@ -61,10 +61,10 @@ public class On_File extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * `Attachment` items linked to `Asset`.
+   * Indicates whether the `Asset` is decorative and not meant to be read by screen readers. If true, alternative text is ignored.
    */
-  public On_File attachments(File_attachments callBuilder) {
-    _add_call(callBuilder);
+  public On_File isDecorative() {
+    _add_field("isDecorative");
     return this;
   }
   /**
@@ -109,13 +109,6 @@ public class On_File extends ch.brix.gql.client.TypeBuilder {
    */
   public On_File expiresAt() {
     _add_field("expiresAt");
-    return this;
-  }
-  /**
-   * `License` items linked to `Asset`.
-   */
-  public On_File licenses(File_licenses callBuilder) {
-    _add_call(callBuilder);
     return this;
   }
   /**
@@ -168,6 +161,13 @@ public class On_File extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * **BETA** The `WorkflowTask` this `Asset` is linked to.
+   */
+  public On_File workflowTask(File_workflowTask callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * `AssetVariant` items of the asset. Only available for assets in icon and logo libraries.
    */
   public On_File variants(File_variants callBuilder) {
@@ -178,6 +178,13 @@ public class On_File extends ch.brix.gql.client.TypeBuilder {
    * `Location` of the `Asset`.
    */
   public On_File location(File_location callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Background color of the `Asset` preview.
+   */
+  public On_File previewBackgroundColor(File_previewBackgroundColor callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -227,6 +234,34 @@ public class On_File extends ch.brix.gql.client.TypeBuilder {
    * Signed `Url` to download the original `File` type file. Is null if the asset is download-protected and there is no approved and still valid download request.
    */
   public On_File downloadUrl(File_downloadUrl callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * `Attachment` items linked to `Asset`.
+   */
+  public On_File attachments(File_attachments callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** AI provenance read from the asset's current file, or `null` if none has been extracted yet.
+   */
+  public On_File provenance(File_provenance callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * `License` items linked to `Asset`.
+   */
+  public On_File licenses(File_licenses callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** List of `Target` related to `Asset`
+   */
+  public On_File targets(File_targets callBuilder) {
     _add_call(callBuilder);
     return this;
   }

@@ -62,10 +62,40 @@ public class RootQuery {
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.Brand.class)
   private java.util.List<ch.brix.gql.client.frontify.objects.Brand> brands;
   /**
+   * **BETA** Retrieve a `Catalog` by its id.
+   */
+  @com.google.gson.annotations.SerializedName("catalog")
+  private ch.brix.gql.client.frontify.objects.Catalog catalog;
+  /**
+   * **BETA** Retrieve a `CatalogSelection` by its id.
+   */
+  @com.google.gson.annotations.SerializedName("catalogSelection")
+  private ch.brix.gql.client.frontify.objects.CatalogSelection catalogSelection;
+  /**
+   * **BETA** Retrieve a `GuidelinePage` by its id.
+   */
+  @com.google.gson.annotations.SerializedName("guidelinePage")
+  private ch.brix.gql.client.frontify.objects.GuidelinePage guidelinePage;
+  /**
+   * **BETA** Retrieve a `GuidelinePageBlock` by its id.
+   */
+  @com.google.gson.annotations.SerializedName("guidelinePageBlock")
+  private ch.brix.gql.client.frontify.interfaces.GuidelinePageBlockInterface guidelinePageBlock;
+  /**
    * Retrieve `Node` details by Id.
    */
   @com.google.gson.annotations.SerializedName("node")
   private ch.brix.gql.client.frontify.interfaces.Node node;
+  /**
+   * **BETA** Retrieve a single `Guideline` navigation item by the Id of any navigation item type. Returns `null` when the<br>item does not exist or is not visible to the requester.
+   */
+  @com.google.gson.annotations.SerializedName("guidelineNavigationItem")
+  private ch.brix.gql.client.frontify.unions.GuidelineNavigationItem guidelineNavigationItem;
+  /**
+   * **BETA** Retrieve the account-bound ServiceApps
+   */
+  @com.google.gson.annotations.SerializedName("serviceApps")
+  private ch.brix.gql.client.frontify.objects.ServiceAppItems serviceApps;
   /**
    * Retrieve `WebhookItems` related to current `Account`.
    */

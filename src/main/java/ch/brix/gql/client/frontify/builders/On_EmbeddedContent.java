@@ -61,10 +61,10 @@ public class On_EmbeddedContent extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * `Attachment` items linked to `Asset`.
+   * Indicates whether the `Asset` is decorative and not meant to be read by screen readers. If true, alternative text is ignored.
    */
-  public On_EmbeddedContent attachments(EmbeddedContent_attachments callBuilder) {
-    _add_call(callBuilder);
+  public On_EmbeddedContent isDecorative() {
+    _add_field("isDecorative");
     return this;
   }
   /**
@@ -109,13 +109,6 @@ public class On_EmbeddedContent extends ch.brix.gql.client.TypeBuilder {
    */
   public On_EmbeddedContent expiresAt() {
     _add_field("expiresAt");
-    return this;
-  }
-  /**
-   * `License` items linked to `Asset`.
-   */
-  public On_EmbeddedContent licenses(EmbeddedContent_licenses callBuilder) {
-    _add_call(callBuilder);
     return this;
   }
   /**
@@ -168,6 +161,13 @@ public class On_EmbeddedContent extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * **BETA** The `WorkflowTask` this `Asset` is linked to.
+   */
+  public On_EmbeddedContent workflowTask(EmbeddedContent_workflowTask callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * `AssetVariant` items of the asset. Only available for assets in icon and logo libraries.
    */
   public On_EmbeddedContent variants(EmbeddedContent_variants callBuilder) {
@@ -178,6 +178,13 @@ public class On_EmbeddedContent extends ch.brix.gql.client.TypeBuilder {
    * `Location` of the `Asset`.
    */
   public On_EmbeddedContent location(EmbeddedContent_location callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Background color of the `Asset` preview.
+   */
+  public On_EmbeddedContent previewBackgroundColor(EmbeddedContent_previewBackgroundColor callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -193,6 +200,34 @@ public class On_EmbeddedContent extends ch.brix.gql.client.TypeBuilder {
    */
   public On_EmbeddedContent thumbnailUrl() {
     _add_field("thumbnailUrl");
+    return this;
+  }
+  /**
+   * `Attachment` items linked to `Asset`.
+   */
+  public On_EmbeddedContent attachments(EmbeddedContent_attachments callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** AI provenance read from the asset's current file, or `null` if none has been extracted yet.
+   */
+  public On_EmbeddedContent provenance(EmbeddedContent_provenance callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * `License` items linked to `Asset`.
+   */
+  public On_EmbeddedContent licenses(EmbeddedContent_licenses callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** List of `Target` related to `Asset`
+   */
+  public On_EmbeddedContent targets(EmbeddedContent_targets callBuilder) {
+    _add_call(callBuilder);
     return this;
   }
 }

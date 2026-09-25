@@ -4,6 +4,10 @@ public class EmbeddedContent_customMetadata extends ch.brix.gql.client.CallBuild
   public EmbeddedContent_customMetadata() {
     super(new ch.brix.gql.client.Call<>("customMetadata", "CustomMetadata"));
   }
+  public EmbeddedContent_customMetadata onCustomMetadataCatalogValue(On_CustomMetadataCatalogValue typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
   public EmbeddedContent_customMetadata onCustomMetadataValue(On_CustomMetadataValue typeBuilder) {
     _add_on(typeBuilder);
     return this;

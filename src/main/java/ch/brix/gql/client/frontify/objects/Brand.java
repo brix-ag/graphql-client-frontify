@@ -46,6 +46,11 @@ public class Brand implements ch.brix.gql.client.frontify.interfaces.Node {
   @com.google.gson.annotations.SerializedName("workspaceProjects")
   private ch.brix.gql.client.frontify.objects.WorkspaceItems workspaceProjects;
   /**
+   * **BETA** Paginated list of `Guideline` items for `Brand`.
+   */
+  @com.google.gson.annotations.SerializedName("guidelines")
+  private ch.brix.gql.client.frontify.objects.GuidelineItems guidelines;
+  /**
    * `Brand` `CustomMetadataProperty` items list.
    */
   @com.google.gson.annotations.SerializedName("customMetadataProperties")
@@ -56,4 +61,19 @@ public class Brand implements ch.brix.gql.client.frontify.interfaces.Node {
    */
   @com.google.gson.annotations.SerializedName("creativeTemplates")
   private ch.brix.gql.client.frontify.objects.CreativeTemplateItems creativeTemplates;
+  /**
+   * **BETA** The brand essentials.
+   */
+  @com.google.gson.annotations.SerializedName("essentials")
+  private ch.brix.gql.client.frontify.objects.BrandEssentials essentials;
+  /**
+   * **BETA** Search for the assets on the brand level.
+   */
+  @com.google.gson.annotations.SerializedName("search")
+  private ch.brix.gql.client.frontify.objects.BrandSearchItems search;
+  /**
+   * **BETA** Enhanced search for the assets on the brand level. Includes natural search and exact term search
+   */
+  @com.google.gson.annotations.SerializedName("enhancedSearch")
+  private ch.brix.gql.client.frontify.objects.BrandEnhancedSearchItems enhancedSearch;
 }

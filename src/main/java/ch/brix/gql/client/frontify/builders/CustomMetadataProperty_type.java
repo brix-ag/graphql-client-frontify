@@ -4,6 +4,10 @@ public class CustomMetadataProperty_type extends ch.brix.gql.client.CallBuilder<
   public CustomMetadataProperty_type() {
     super(new ch.brix.gql.client.Call<>("type", "CustomMetadataPropertyType"));
   }
+  public CustomMetadataProperty_type onCustomMetadataPropertyTypeCatalog(On_CustomMetadataPropertyTypeCatalog typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
   public CustomMetadataProperty_type onCustomMetadataPropertyTypeDate(On_CustomMetadataPropertyTypeDate typeBuilder) {
     _add_on(typeBuilder);
     return this;

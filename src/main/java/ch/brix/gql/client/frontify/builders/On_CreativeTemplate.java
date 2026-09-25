@@ -35,6 +35,13 @@ public class On_CreativeTemplate extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * **BETA** Mode of the `CreativeTemplate`.
+   */
+  public On_CreativeTemplate mode() {
+    _add_field("mode");
+    return this;
+  }
+  /**
    * Retrieve list of all `CreativeTemplatePage` items belonging to `CreativeTemplate`.
    */
   public On_CreativeTemplate pages(CreativeTemplate_pages callBuilder) {

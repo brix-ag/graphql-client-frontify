@@ -1,0 +1,10 @@
+package ch.brix.gql.client.frontify.objects;
+
+@lombok.Data
+public class CreateGuidelinePageSection {
+  /**
+   * **BETA** The `GuidelinePageSection` that was just created.
+   */
+  @com.google.gson.annotations.SerializedName("section")
+  private ch.brix.gql.client.frontify.objects.GuidelinePageSection section;
+}

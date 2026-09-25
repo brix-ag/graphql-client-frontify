@@ -68,10 +68,45 @@ public class On_CustomMetadataProperty extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * **BETA** Indicates if a `CustomMetadataProperty` is searchable.
+   */
+  public On_CustomMetadataProperty isSearchable() {
+    _add_field("isSearchable");
+    return this;
+  }
+  /**
+   * **BETA** Indicates if a `CustomMetadataProperty` is viewable. This is a stored flag that hides the property from users entirely, independent of the current user's access. See `currentUserPermissions` for the per-request, access-rule-based canEdit/canAdmin checks.
+   */
+  public On_CustomMetadataProperty isViewable() {
+    _add_field("isViewable");
+    return this;
+  }
+  /**
    * `CustomMetadataProperty` value set to newly update `Assets` by default.
    */
   public On_CustomMetadataProperty defaultValue() {
     _add_field("defaultValue");
+    return this;
+  }
+  /**
+   * **BETA** `CustomMetadataPropertyDependency` details.
+   */
+  public On_CustomMetadataProperty dependency(CustomMetadataProperty_dependency callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** `CustomMetadataProperty` Ids that cannot be used as dependee properties.
+   */
+  public On_CustomMetadataProperty forbiddenDependeePropertyIds() {
+    _add_field("forbiddenDependeePropertyIds");
+    return this;
+  }
+  /**
+   * **BETA** `CustomMetadataProperty` permissions.
+   */
+  public On_CustomMetadataProperty permissions(CustomMetadataProperty_permissions callBuilder) {
+    _add_call(callBuilder);
     return this;
   }
 }

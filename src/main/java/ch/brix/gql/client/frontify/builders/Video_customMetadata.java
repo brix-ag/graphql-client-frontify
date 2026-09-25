@@ -4,6 +4,10 @@ public class Video_customMetadata extends ch.brix.gql.client.CallBuilder<java.ut
   public Video_customMetadata() {
     super(new ch.brix.gql.client.Call<>("customMetadata", "CustomMetadata"));
   }
+  public Video_customMetadata onCustomMetadataCatalogValue(On_CustomMetadataCatalogValue typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
   public Video_customMetadata onCustomMetadataValue(On_CustomMetadataValue typeBuilder) {
     _add_on(typeBuilder);
     return this;

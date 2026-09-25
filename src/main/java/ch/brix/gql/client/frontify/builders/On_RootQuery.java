@@ -84,9 +84,51 @@ public class On_RootQuery extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * **BETA** Retrieve a `Catalog` by its id.
+   */
+  public On_RootQuery catalog(RootQuery_catalog callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Retrieve a `CatalogSelection` by its id.
+   */
+  public On_RootQuery catalogSelection(RootQuery_catalogSelection callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Retrieve a `GuidelinePage` by its id.
+   */
+  public On_RootQuery guidelinePage(RootQuery_guidelinePage callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Retrieve a `GuidelinePageBlock` by its id.
+   */
+  public On_RootQuery guidelinePageBlock(RootQuery_guidelinePageBlock callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * Retrieve `Node` details by Id.
    */
   public On_RootQuery node(RootQuery_node callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Retrieve a single `Guideline` navigation item by the Id of any navigation item type. Returns `null` when the<br>item does not exist or is not visible to the requester.
+   */
+  public On_RootQuery guidelineNavigationItem(RootQuery_guidelineNavigationItem callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Retrieve the account-bound ServiceApps
+   */
+  public On_RootQuery serviceApps(RootQuery_serviceApps callBuilder) {
     _add_call(callBuilder);
     return this;
   }

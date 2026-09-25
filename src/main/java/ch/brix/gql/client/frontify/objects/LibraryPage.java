@@ -18,6 +18,11 @@ public class LibraryPage implements ch.brix.gql.client.frontify.interfaces.Node 
   @com.google.gson.annotations.SerializedName("type")
   private ch.brix.gql.client.frontify.enums.LibraryType type;
   /**
+   * **BETA** `LibraryPage` `Collection` items list.
+   */
+  @com.google.gson.annotations.SerializedName("collections")
+  private ch.brix.gql.client.frontify.objects.LibraryPageCollectionItems collections;
+  /**
    * `LibraryPage` `Asset` items list.
    */
   @com.google.gson.annotations.SerializedName("assets")

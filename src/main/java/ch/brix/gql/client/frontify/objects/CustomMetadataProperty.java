@@ -48,8 +48,34 @@ public class CustomMetadataProperty implements ch.brix.gql.client.frontify.inter
   @com.google.gson.annotations.SerializedName("isRequired")
   private ch.brix.gql.client.frontify.scalars.BooleanScalar isRequired;
   /**
+   * **BETA** Indicates if a `CustomMetadataProperty` is searchable.
+   */
+  @com.google.gson.annotations.SerializedName("isSearchable")
+  private ch.brix.gql.client.frontify.scalars.BooleanScalar isSearchable;
+  /**
+   * **BETA** Indicates if a `CustomMetadataProperty` is viewable. This is a stored flag that hides the property from users entirely, independent of the current user's access. See `currentUserPermissions` for the per-request, access-rule-based canEdit/canAdmin checks.
+   */
+  @com.google.gson.annotations.SerializedName("isViewable")
+  private ch.brix.gql.client.frontify.scalars.BooleanScalar isViewable;
+  /**
    * `CustomMetadataProperty` value set to newly update `Assets` by default.
    */
   @com.google.gson.annotations.SerializedName("defaultValue")
   private ch.brix.gql.client.frontify.scalars.AnyScalar defaultValue;
+  /**
+   * **BETA** `CustomMetadataPropertyDependency` details.
+   */
+  @com.google.gson.annotations.SerializedName("dependency")
+  private ch.brix.gql.client.frontify.interfaces.CustomMetadataPropertyDependency dependency;
+  /**
+   * **BETA** `CustomMetadataProperty` Ids that cannot be used as dependee properties.
+   */
+  @com.google.gson.annotations.SerializedName("forbiddenDependeePropertyIds")
+  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.scalars.IdScalar.class)
+  private java.util.List<ch.brix.gql.client.frontify.scalars.IdScalar> forbiddenDependeePropertyIds;
+  /**
+   * **BETA** `CustomMetadataProperty` permissions.
+   */
+  @com.google.gson.annotations.SerializedName("permissions")
+  private ch.brix.gql.client.frontify.objects.CustomMetadataPropertyPermissions permissions;
 }

@@ -6,7 +6,7 @@ public class CreativeColor {
    * ID of the `Color`.
    */
   @com.google.gson.annotations.SerializedName("id")
-  private ch.brix.gql.client.frontify.scalars.IntScalar id;
+  private ch.brix.gql.client.frontify.scalars.IdScalar id;
   /**
    * Name of the `Color`.
    */

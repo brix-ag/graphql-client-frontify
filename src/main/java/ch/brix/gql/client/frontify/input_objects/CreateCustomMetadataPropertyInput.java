@@ -39,6 +39,22 @@ public class CreateCustomMetadataPropertyInput extends ch.brix.gql.client.InputO
     return this;
   }
   /**
+   * **BETA** Define if `CustomMetadataProperty` is viewable.
+   */
+  @ch.brix.gql.client.DefaultValue("true")
+  public CreateCustomMetadataPropertyInput isViewable(ch.brix.gql.client.frontify.scalars.BooleanScalar v) {
+    values.put("isViewable", v);
+    return this;
+  }
+  /**
+   * **BETA** Define if `CustomMetadataProperty` is searchable.
+   */
+  @ch.brix.gql.client.DefaultValue("true")
+  public CreateCustomMetadataPropertyInput isSearchable(ch.brix.gql.client.frontify.scalars.BooleanScalar v) {
+    values.put("isSearchable", v);
+    return this;
+  }
+  /**
    * Set a `CustomMetadataProperty` default value. This setting will be ignored for properties that are not of `SELECT` or `MULTISELECT` type  (use options for these cases instead). Applies to newly uploaded `Assets` only.
    */
   public CreateCustomMetadataPropertyInput defaultValue(ch.brix.gql.client.frontify.scalars.StringScalar v) {
@@ -50,6 +66,20 @@ public class CreateCustomMetadataPropertyInput extends ch.brix.gql.client.InputO
    */
   public CreateCustomMetadataPropertyInput position(ch.brix.gql.client.frontify.input_objects.CustomMetadataPropertyPositionInput v) {
     values.put("position", v);
+    return this;
+  }
+  /**
+   * **BETA** Set a dependency to another `CustomMetadataProperty`.
+   */
+  public CreateCustomMetadataPropertyInput dependency(ch.brix.gql.client.frontify.input_objects.CustomMetadataPropertyDependencyInput v) {
+    values.put("dependency", v);
+    return this;
+  }
+  /**
+   * **BETA** Permissions defined for this property.
+   */
+  public CreateCustomMetadataPropertyInput permissions(java.util.List<ch.brix.gql.client.frontify.input_objects.CustomMetadataPropertyPermissionInput> v) {
+    values.put("permissions", v);
     return this;
   }
 }

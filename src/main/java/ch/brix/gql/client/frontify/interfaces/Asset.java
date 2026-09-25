@@ -38,11 +38,6 @@ public interface Asset {
    */
   ch.brix.gql.client.frontify.scalars.StringScalar getAlternativeText();
   /**
-   * List of `Asset`'s `Attachments`.
-   */
-  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.AssetAttachment.class)
-  java.util.List<ch.brix.gql.client.frontify.objects.AssetAttachment> getAttachments();
-  /**
    * External Id of the `Asset`.
    */
   ch.brix.gql.client.frontify.scalars.IdScalar getExternalId();
@@ -63,11 +58,6 @@ public interface Asset {
    * `Asset` available until date.
    */
   ch.brix.gql.client.frontify.scalars.DateTimeScalar getExpiresAt();
-  /**
-   * List of `Asset`'s licenses.
-   */
-  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.License.class)
-  java.util.List<ch.brix.gql.client.frontify.objects.License> getLicenses();
   /**
    * **DEPRECATED** Metadata values details. This field will be removed. Use `customMetadata` instead. | Date: 2026-07-01
    * This field will be removed. Use `customMetadata` instead. | Date: 2026-07-01
@@ -105,6 +95,10 @@ public interface Asset {
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.interfaces.CustomMetadata.class)
   java.util.List<ch.brix.gql.client.frontify.interfaces.CustomMetadata> getCustomMetadata();
   /**
+   * **BETA** The `WorkflowTask` this `Asset` is linked to.
+   */
+  ch.brix.gql.client.frontify.objects.WorkflowTask getWorkflowTask();
+  /**
    * `AssetVariant` items of the asset. Only available for assets in icon and logo libraries.
    */
   ch.brix.gql.client.frontify.objects.AssetVariantItems getVariants();
@@ -112,4 +106,27 @@ public interface Asset {
    * `Location` of the `Asset`.
    */
   ch.brix.gql.client.frontify.objects.AssetLocation getLocation();
+  /**
+   * **BETA** Background color of the `Asset` preview.
+   */
+  ch.brix.gql.client.frontify.objects.RgbaColor getPreviewBackgroundColor();
+  /**
+   * List of `Asset`'s `Attachments`.
+   */
+  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.AssetAttachment.class)
+  java.util.List<ch.brix.gql.client.frontify.objects.AssetAttachment> getAttachments();
+  /**
+   * **BETA** AI provenance read from the asset's current file, or `null` if none has been extracted yet.
+   */
+  ch.brix.gql.client.frontify.objects.AssetProvenance getProvenance();
+  /**
+   * List of `Asset`'s licenses.
+   */
+  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.License.class)
+  java.util.List<ch.brix.gql.client.frontify.objects.License> getLicenses();
+  /**
+   * **BETA** List of `Target` items linked to `Asset`
+   */
+  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.Target.class)
+  java.util.List<ch.brix.gql.client.frontify.objects.Target> getTargets();
 }

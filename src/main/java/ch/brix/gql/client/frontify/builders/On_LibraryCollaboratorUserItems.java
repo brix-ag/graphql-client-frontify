@@ -39,4 +39,11 @@ public class On_LibraryCollaboratorUserItems extends ch.brix.gql.client.TypeBuil
     _add_call(callBuilder);
     return this;
   }
+  /**
+   * **BETA** List of `LibraryCollaboratorUserEdge` edges.
+   */
+  public On_LibraryCollaboratorUserItems edges(LibraryCollaboratorUserItems_edges callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
 }

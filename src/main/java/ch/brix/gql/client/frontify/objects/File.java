@@ -43,11 +43,10 @@ public class File implements ch.brix.gql.client.frontify.interfaces.Node, ch.bri
   @com.google.gson.annotations.SerializedName("alternativeText")
   private ch.brix.gql.client.frontify.scalars.StringScalar alternativeText;
   /**
-   * `Attachment` items linked to `Asset`.
+   * Indicates whether the `Asset` is decorative and not meant to be read by screen readers. If true, alternative text is ignored.
    */
-  @com.google.gson.annotations.SerializedName("attachments")
-  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.AssetAttachment.class)
-  private java.util.List<ch.brix.gql.client.frontify.objects.AssetAttachment> attachments;
+  @com.google.gson.annotations.SerializedName("isDecorative")
+  private ch.brix.gql.client.frontify.scalars.BooleanScalar isDecorative;
   /**
    * External Id of the `Asset`.
    */
@@ -82,12 +81,6 @@ public class File implements ch.brix.gql.client.frontify.interfaces.Node, ch.bri
    */
   @com.google.gson.annotations.SerializedName("expiresAt")
   private ch.brix.gql.client.frontify.scalars.DateTimeScalar expiresAt;
-  /**
-   * `License` items linked to `Asset`.
-   */
-  @com.google.gson.annotations.SerializedName("licenses")
-  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.License.class)
-  private java.util.List<ch.brix.gql.client.frontify.objects.License> licenses;
   /**
    * Represents the Author of the `Asset`. Example: Photographer Name.
    */
@@ -125,6 +118,11 @@ public class File implements ch.brix.gql.client.frontify.interfaces.Node, ch.bri
   @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.interfaces.CustomMetadata.class)
   private java.util.List<ch.brix.gql.client.frontify.interfaces.CustomMetadata> customMetadata;
   /**
+   * **BETA** The `WorkflowTask` this `Asset` is linked to.
+   */
+  @com.google.gson.annotations.SerializedName("workflowTask")
+  private ch.brix.gql.client.frontify.objects.WorkflowTask workflowTask;
+  /**
    * `AssetVariant` items of the asset. Only available for assets in icon and logo libraries.
    */
   @com.google.gson.annotations.SerializedName("variants")
@@ -134,6 +132,11 @@ public class File implements ch.brix.gql.client.frontify.interfaces.Node, ch.bri
    */
   @com.google.gson.annotations.SerializedName("location")
   private ch.brix.gql.client.frontify.objects.AssetLocation location;
+  /**
+   * **BETA** Background color of the `Asset` preview.
+   */
+  @com.google.gson.annotations.SerializedName("previewBackgroundColor")
+  private ch.brix.gql.client.frontify.objects.RgbaColor previewBackgroundColor;
   /**
    * Original filename of the `Asset` `File`.
    */
@@ -169,4 +172,27 @@ public class File implements ch.brix.gql.client.frontify.interfaces.Node, ch.bri
    */
   @com.google.gson.annotations.SerializedName("downloadUrl")
   private ch.brix.gql.client.frontify.scalars.UrlScalar downloadUrl;
+  /**
+   * `Attachment` items linked to `Asset`.
+   */
+  @com.google.gson.annotations.SerializedName("attachments")
+  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.AssetAttachment.class)
+  private java.util.List<ch.brix.gql.client.frontify.objects.AssetAttachment> attachments;
+  /**
+   * **BETA** AI provenance read from the asset's current file, or `null` if none has been extracted yet.
+   */
+  @com.google.gson.annotations.SerializedName("provenance")
+  private ch.brix.gql.client.frontify.objects.AssetProvenance provenance;
+  /**
+   * `License` items linked to `Asset`.
+   */
+  @com.google.gson.annotations.SerializedName("licenses")
+  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.License.class)
+  private java.util.List<ch.brix.gql.client.frontify.objects.License> licenses;
+  /**
+   * **BETA** List of `Target` related to `Asset`
+   */
+  @com.google.gson.annotations.SerializedName("targets")
+  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.Target.class)
+  private java.util.List<ch.brix.gql.client.frontify.objects.Target> targets;
 }

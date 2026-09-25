@@ -33,13 +33,6 @@ public class On_ProjectWebhook extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * The randomly generated secret of the current `Webhook`.
-   */
-  public On_ProjectWebhook secret() {
-    _add_field("secret");
-    return this;
-  }
-  /**
    * The `Url` which will be called by the `Webhook`
    */
   public On_ProjectWebhook notificationUrl() {
@@ -47,10 +40,24 @@ public class On_ProjectWebhook extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * The randomly generated secret of the current `Webhook`.
+   */
+  public On_ProjectWebhook secret() {
+    _add_field("secret");
+    return this;
+  }
+  /**
    * Returns the associated `Project`.
    */
   public On_ProjectWebhook project(ProjectWebhook_project callBuilder) {
     _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Version number of the `Webhook`.
+   */
+  public On_ProjectWebhook version() {
+    _add_field("version");
     return this;
   }
 }

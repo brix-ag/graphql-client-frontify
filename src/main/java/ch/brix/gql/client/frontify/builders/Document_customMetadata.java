@@ -4,6 +4,10 @@ public class Document_customMetadata extends ch.brix.gql.client.CallBuilder<java
   public Document_customMetadata() {
     super(new ch.brix.gql.client.Call<>("customMetadata", "CustomMetadata"));
   }
+  public Document_customMetadata onCustomMetadataCatalogValue(On_CustomMetadataCatalogValue typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
   public Document_customMetadata onCustomMetadataValue(On_CustomMetadataValue typeBuilder) {
     _add_on(typeBuilder);
     return this;

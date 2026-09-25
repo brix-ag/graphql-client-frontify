@@ -23,8 +23,40 @@ public class Guideline implements ch.brix.gql.client.frontify.interfaces.Node {
   @com.google.gson.annotations.SerializedName("url")
   private ch.brix.gql.client.frontify.scalars.UrlScalar url;
   /**
+   * **BETA** The default language of the `Guideline`, or `null` if not set.
+   */
+  @com.google.gson.annotations.SerializedName("defaultLanguage")
+  private ch.brix.gql.client.frontify.objects.Language defaultLanguage;
+  /**
+   * **BETA** Languages in which the `Guideline` is available.
+   */
+  @com.google.gson.annotations.SerializedName("translationLanguages")
+  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.Language.class)
+  private java.util.List<ch.brix.gql.client.frontify.objects.Language> translationLanguages;
+  /**
    * Paginated list of `LibraryPage` items for `Guideline`.
    */
   @com.google.gson.annotations.SerializedName("libraryPages")
   private ch.brix.gql.client.frontify.objects.LibraryPageItems libraryPages;
+  /**
+   * **BETA** A list of `GuidelinePage`s that belong to this `Guideline`
+   */
+  @com.google.gson.annotations.SerializedName("pages")
+  private ch.brix.gql.client.frontify.objects.GuidelinePageItems pages;
+  /**
+   * **BETA** Paginated navigation items for `Guideline`. The `language` argument must be set at the<br>highest applicable level within the query (e.g. on `brand.guidelines`); when omitted here,<br>the language already set upstream is reused.
+   */
+  @com.google.gson.annotations.SerializedName("navigation")
+  private ch.brix.gql.client.frontify.objects.GuidelineNavigationItems navigation;
+  /**
+   * **BETA** The block types available for the `Guideline`.
+   */
+  @com.google.gson.annotations.SerializedName("availableBlockTypes")
+  @ch.brix.gql.client.InnerType(ch.brix.gql.client.frontify.objects.GuidelinePageBlockType.class)
+  private java.util.List<ch.brix.gql.client.frontify.objects.GuidelinePageBlockType> availableBlockTypes;
+  /**
+   * **BETA** Searches the content of the `Guideline`.
+   */
+  @com.google.gson.annotations.SerializedName("contentSearch")
+  private ch.brix.gql.client.frontify.objects.GuidelineContentSearchItems contentSearch;
 }

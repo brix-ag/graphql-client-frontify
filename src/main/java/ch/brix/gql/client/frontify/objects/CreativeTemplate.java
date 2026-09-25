@@ -25,6 +25,11 @@ public class CreativeTemplate {
   @com.google.gson.annotations.SerializedName("description")
   private ch.brix.gql.client.frontify.scalars.StringScalar description;
   /**
+   * **BETA** Mode of the `CreativeTemplate`.
+   */
+  @com.google.gson.annotations.SerializedName("mode")
+  private ch.brix.gql.client.frontify.enums.CreativeTemplateMode mode;
+  /**
    * Retrieve list of all `CreativeTemplatePage` items belonging to `CreativeTemplate`.
    */
   @com.google.gson.annotations.SerializedName("pages")

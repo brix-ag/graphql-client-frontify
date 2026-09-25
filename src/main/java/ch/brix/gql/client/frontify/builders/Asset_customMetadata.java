@@ -4,6 +4,10 @@ public class Asset_customMetadata extends ch.brix.gql.client.CallBuilder<java.ut
   public Asset_customMetadata() {
     super(new ch.brix.gql.client.Call<>("customMetadata", "CustomMetadata"));
   }
+  public Asset_customMetadata onCustomMetadataCatalogValue(On_CustomMetadataCatalogValue typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
   public Asset_customMetadata onCustomMetadataValue(On_CustomMetadataValue typeBuilder) {
     _add_on(typeBuilder);
     return this;

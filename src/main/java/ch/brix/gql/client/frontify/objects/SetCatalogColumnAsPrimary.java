@@ -1,0 +1,10 @@
+package ch.brix.gql.client.frontify.objects;
+
+@lombok.Data
+public class SetCatalogColumnAsPrimary {
+  /**
+   * **BETA** The `CatalogColumn` that was just set as primary key.
+   */
+  @com.google.gson.annotations.SerializedName("column")
+  private ch.brix.gql.client.frontify.interfaces.CatalogColumn column;
+}

@@ -16,10 +16,6 @@ public class RootQuery_node extends ch.brix.gql.client.CallBuilder<ch.brix.gql.c
     _add_on(typeBuilder);
     return this;
   }
-  public RootQuery_node onAssetAttachment(On_AssetAttachment typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
   public RootQuery_node onAssetComment(On_AssetComment typeBuilder) {
     _add_on(typeBuilder);
     return this;
@@ -29,6 +25,22 @@ public class RootQuery_node extends ch.brix.gql.client.CallBuilder<ch.brix.gql.c
     return this;
   }
   public RootQuery_node onBrand(On_Brand typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RootQuery_node onBrandEssentialsColor(On_BrandEssentialsColor typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RootQuery_node onBrandEssentialsColorPalette(On_BrandEssentialsColorPalette typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RootQuery_node onCatalog(On_Catalog typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RootQuery_node onCatalogRow(On_CatalogRow typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -72,15 +84,15 @@ public class RootQuery_node extends ch.brix.gql.client.CallBuilder<ch.brix.gql.c
     _add_on(typeBuilder);
     return this;
   }
+  public RootQuery_node onLibraryPageCollection(On_LibraryPageCollection typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
   public RootQuery_node onLogoLibrary(On_LogoLibrary typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
   public RootQuery_node onMediaLibrary(On_MediaLibrary typeBuilder) {
-    _add_on(typeBuilder);
-    return this;
-  }
-  public RootQuery_node onProjectWebhook(On_ProjectWebhook typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }
@@ -97,6 +109,14 @@ public class RootQuery_node extends ch.brix.gql.client.CallBuilder<ch.brix.gql.c
     return this;
   }
   public RootQuery_node onWorkspace(On_Workspace typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RootQuery_node onAssetAttachment(On_AssetAttachment typeBuilder) {
+    _add_on(typeBuilder);
+    return this;
+  }
+  public RootQuery_node onProjectWebhook(On_ProjectWebhook typeBuilder) {
     _add_on(typeBuilder);
     return this;
   }

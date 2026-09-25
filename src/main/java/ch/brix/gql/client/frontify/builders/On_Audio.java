@@ -61,10 +61,10 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * `Attachment` items linked to `Asset`.
+   * Indicates whether the `Asset` is decorative and not meant to be read by screen readers. If true, alternative text is ignored.
    */
-  public On_Audio attachments(Audio_attachments callBuilder) {
-    _add_call(callBuilder);
+  public On_Audio isDecorative() {
+    _add_field("isDecorative");
     return this;
   }
   /**
@@ -109,13 +109,6 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
    */
   public On_Audio expiresAt() {
     _add_field("expiresAt");
-    return this;
-  }
-  /**
-   * `License` items linked to `Asset`.
-   */
-  public On_Audio licenses(Audio_licenses callBuilder) {
-    _add_call(callBuilder);
     return this;
   }
   /**
@@ -168,6 +161,13 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * **BETA** The `WorkflowTask` this `Asset` is linked to.
+   */
+  public On_Audio workflowTask(Audio_workflowTask callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * `AssetVariant` items of the asset. Only available for assets in icon and logo libraries.
    */
   public On_Audio variants(Audio_variants callBuilder) {
@@ -178,6 +178,13 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
    * `Location` of the `Asset`.
    */
   public On_Audio location(Audio_location callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Background color of the `Asset` preview.
+   */
+  public On_Audio previewBackgroundColor(Audio_previewBackgroundColor callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -228,6 +235,34 @@ public class On_Audio extends ch.brix.gql.client.TypeBuilder {
    */
   public On_Audio thumbnailUrl() {
     _add_field("thumbnailUrl");
+    return this;
+  }
+  /**
+   * `Attachment` items linked to `Asset`.
+   */
+  public On_Audio attachments(Audio_attachments callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** AI provenance read from the asset's current file, or `null` if none has been extracted yet.
+   */
+  public On_Audio provenance(Audio_provenance callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * `License` items linked to `Asset`.
+   */
+  public On_Audio licenses(Audio_licenses callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** List of `Target` related to `Asset`
+   */
+  public On_Audio targets(Audio_targets callBuilder) {
+    _add_call(callBuilder);
     return this;
   }
 }

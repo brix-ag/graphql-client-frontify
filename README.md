@@ -2,7 +2,7 @@
 <dependency>
    <groupId>ch.brix.gql.client</groupId>
    <artifactId>frontify-client</artifactId>
-   <version>1.0.6</version>
+   <version>1.0.7</version>
 </dependency>
 ```
 
@@ -106,3 +106,7 @@ We actively use this client in our [Frontify Connector for CELUM](https://www.br
 #### 1.0.6
 
 > Generated & Released: 2026-07-10
+
+#### 1.0.7
+
+> Generated & Released (including BETA): 2026-09-25

@@ -15,4 +15,11 @@ public class CreateCustomMetadataPropertyTypeInput extends ch.brix.gql.client.In
     values.put("options", v);
     return this;
   }
+  /**
+   * **BETA** CATALOG-specific configuration. Required when type name is `CATALOG`; ignored otherwise.
+   */
+  public CreateCustomMetadataPropertyTypeInput catalogOptions(ch.brix.gql.client.frontify.input_objects.CatalogPropertyTypeOptionsInput v) {
+    values.put("catalogOptions", v);
+    return this;
+  }
 }

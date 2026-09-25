@@ -26,8 +26,8 @@ public class On_Library extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * **DEPRECATED** Amount of `Assets` contained in this `Library`. This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01
-   * This field will be removed. Use `assets`.`total` instead. | Date: 2024-07-01
+   * **DEPRECATED** Amount of `Assets` contained in this `Library`. This field will be removed. Use `assets.total` instead. | Date: 2024-07-01
+   * This field will be removed. Use `assets.total` instead. | Date: 2024-07-01
    */
   @java.lang.Deprecated
   public On_Library assetCount() {
@@ -47,13 +47,6 @@ public class On_Library extends ch.brix.gql.client.TypeBuilder {
    * Search or list `Assets` in this `Library`.
    */
   public On_Library assets(Library_assets callBuilder) {
-    _add_call(callBuilder);
-    return this;
-  }
-  /**
-   * Retrieve list of all `Licenses` belonging to this `Library`.
-   */
-  public On_Library licenses(Library_licenses callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -86,9 +79,37 @@ public class On_Library extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * **BETA** The `Workflow` belonging to the given `Library`.
+   */
+  public On_Library workflow(Library_workflow callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * List of `CustomMetadataProperty` items belonging to a `Library`.
    */
   public On_Library customMetadataProperties(Library_customMetadataProperties callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * Search this `Library`'s/`Workspace`'s `Assets` with fully typed filters. Backed by our search index rather than the primary database — results are eventually consistent, so an asset just created, edited, or deleted can take a few minutes (up to around 10) to be reflected.
+   */
+  public On_Library searchAssets(Library_searchAssets callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * Fetch `Assets` in this `Library` by their externalId. Requires edit access to the `Library`.
+   */
+  public On_Library assetsByExternalId(Library_assetsByExternalId callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * Retrieve list of all `Licenses` belonging to this `Library`.
+   */
+  public On_Library licenses(Library_licenses callBuilder) {
     _add_call(callBuilder);
     return this;
   }

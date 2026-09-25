@@ -61,10 +61,10 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
-   * `Attachment` items linked to `Asset`.
+   * Indicates whether the `Asset` is decorative and not meant to be read by screen readers. If true, alternative text is ignored.
    */
-  public On_Image attachments(Image_attachments callBuilder) {
-    _add_call(callBuilder);
+  public On_Image isDecorative() {
+    _add_field("isDecorative");
     return this;
   }
   /**
@@ -109,13 +109,6 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
    */
   public On_Image expiresAt() {
     _add_field("expiresAt");
-    return this;
-  }
-  /**
-   * `License` items linked to `Asset`.
-   */
-  public On_Image licenses(Image_licenses callBuilder) {
-    _add_call(callBuilder);
     return this;
   }
   /**
@@ -168,6 +161,13 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
     return this;
   }
   /**
+   * **BETA** The `WorkflowTask` this `Asset` is linked to.
+   */
+  public On_Image workflowTask(Image_workflowTask callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
    * `AssetVariant` items of the asset. Only available for assets in icon and logo libraries.
    */
   public On_Image variants(Image_variants callBuilder) {
@@ -178,6 +178,13 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
    * `Location` of the `Asset`.
    */
   public On_Image location(Image_location callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** Background color of the `Asset` preview.
+   */
+  public On_Image previewBackgroundColor(Image_previewBackgroundColor callBuilder) {
     _add_call(callBuilder);
     return this;
   }
@@ -249,6 +256,34 @@ public class On_Image extends ch.brix.gql.client.TypeBuilder {
    */
   public On_Image height() {
     _add_field("height");
+    return this;
+  }
+  /**
+   * `Attachment` items linked to `Asset`.
+   */
+  public On_Image attachments(Image_attachments callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** AI provenance read from the asset's current file, or `null` if none has been extracted yet.
+   */
+  public On_Image provenance(Image_provenance callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * `License` items linked to `Asset`.
+   */
+  public On_Image licenses(Image_licenses callBuilder) {
+    _add_call(callBuilder);
+    return this;
+  }
+  /**
+   * **BETA** List of `Target` related to `Asset`
+   */
+  public On_Image targets(Image_targets callBuilder) {
+    _add_call(callBuilder);
     return this;
   }
 }

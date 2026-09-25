@@ -23,6 +23,13 @@ public class CreateAssetInput extends ch.brix.gql.client.InputObject {
     return this;
   }
   /**
+   * Indicates whether the `Asset` is decorative and not meant to be read by screen readers. If true, alternative text is ignored.
+   */
+  public CreateAssetInput isDecorative(ch.brix.gql.client.frontify.scalars.BooleanScalar v) {
+    values.put("isDecorative", v);
+    return this;
+  }
+  /**
    * `Asset` description.
    */
   @ch.brix.gql.client.DefaultValue("\"\"")
@@ -93,6 +100,13 @@ public class CreateAssetInput extends ch.brix.gql.client.InputObject {
   @ch.brix.gql.client.DefaultValue("\"\"")
   public CreateAssetInput author(ch.brix.gql.client.frontify.scalars.StringScalar v) {
     values.put("author", v);
+    return this;
+  }
+  /**
+   * **BETA** Background color of the `Asset` preview.
+   */
+  public CreateAssetInput previewBackgroundColor(ch.brix.gql.client.frontify.input_objects.RgbaColorInput v) {
+    values.put("previewBackgroundColor", v);
     return this;
   }
 }

@@ -70,10 +70,46 @@ public class Query {
     return new ch.brix.gql.client.frontify.builders.RootQuery_brands();
   }
   /**
+   * **BETA** Retrieve a `Catalog` by its id.
+   */
+  public static ch.brix.gql.client.frontify.builders.RootQuery_catalog catalog() {
+    return new ch.brix.gql.client.frontify.builders.RootQuery_catalog();
+  }
+  /**
+   * **BETA** Retrieve a `CatalogSelection` by its id.
+   */
+  public static ch.brix.gql.client.frontify.builders.RootQuery_catalogSelection catalogSelection() {
+    return new ch.brix.gql.client.frontify.builders.RootQuery_catalogSelection();
+  }
+  /**
+   * **BETA** Retrieve a `GuidelinePage` by its id.
+   */
+  public static ch.brix.gql.client.frontify.builders.RootQuery_guidelinePage guidelinePage() {
+    return new ch.brix.gql.client.frontify.builders.RootQuery_guidelinePage();
+  }
+  /**
+   * **BETA** Retrieve a `GuidelinePageBlock` by its id.
+   */
+  public static ch.brix.gql.client.frontify.builders.RootQuery_guidelinePageBlock guidelinePageBlock() {
+    return new ch.brix.gql.client.frontify.builders.RootQuery_guidelinePageBlock();
+  }
+  /**
    * Retrieve `Node` details by Id.
    */
   public static ch.brix.gql.client.frontify.builders.RootQuery_node node() {
     return new ch.brix.gql.client.frontify.builders.RootQuery_node();
+  }
+  /**
+   * **BETA** Retrieve a single `Guideline` navigation item by the Id of any navigation item type. Returns `null` when the<br>item does not exist or is not visible to the requester.
+   */
+  public static ch.brix.gql.client.frontify.builders.RootQuery_guidelineNavigationItem guidelineNavigationItem() {
+    return new ch.brix.gql.client.frontify.builders.RootQuery_guidelineNavigationItem();
+  }
+  /**
+   * **BETA** Retrieve the account-bound ServiceApps
+   */
+  public static ch.brix.gql.client.frontify.builders.RootQuery_serviceApps serviceApps() {
+    return new ch.brix.gql.client.frontify.builders.RootQuery_serviceApps();
   }
   /**
    * Retrieve `WebhookItems` related to current `Account`.
